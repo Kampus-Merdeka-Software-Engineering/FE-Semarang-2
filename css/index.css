@@ -1587,7 +1587,7 @@ body {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .title-newsletter {
         padding: 30px 30px;
         font-size: 14px;
@@ -1613,11 +1613,10 @@ body {
     }
     .text-newsletter {
         height: auto;
-        font-size: 13px;
     }
     .button-newsletter {
-        width: auto;
-        font-size: 8px;
+        width: 90px;
+        font-size: 10px;
     }
     .f-info {
         flex-direction: column;

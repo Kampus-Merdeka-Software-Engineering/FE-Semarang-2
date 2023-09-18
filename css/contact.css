@@ -856,7 +856,7 @@ main .contactUs .box .map iframe:hover {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .title-newsletter {
         padding: 30px 30px;
         font-size: 14px;
@@ -882,11 +882,10 @@ main .contactUs .box .map iframe:hover {
     }
     .text-newsletter {
         height: auto;
-        font-size: 13px;
     }
     .button-newsletter {
-        width: auto;
-        font-size: 8px;
+        width: 90px;
+        font-size: 10px;
     }
     .f-info {
         flex-direction: column;
@@ -954,6 +953,33 @@ main .contactUs .box .map iframe:hover {
 
     main .contactUs .box .contact {
         padding: 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main .contactUs {
+        padding: 20px 0;
+    }
+    
+    main .contactUs .box {
+        padding: 0 15px;
+    }
+
+    main .contactUs .box .contact h3 {
+        font-size: 1.1em;
+    }
+
+    main .contactUs .box .form .formBox .inputBox span {
+        font-size: 0.9em;
+    }
+
+    main .contactUs .box .form .formBox .inputBox input {
+        font-size: 0.8em;
+    }
+
+    main .contactUs .box .form .formBox .inputBox input[type="submit"] {
+        max-width: 100%;
+        font-size: 1em;
     }
 }
 /* -------- END RESPONSIVE MAIN CONTENT -------- */
