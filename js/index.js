@@ -12,44 +12,47 @@ window.onscroll = function() {
     navScroll = currentNavScroll;
 }
 
-function myFunction() {
-    var x = document.getElementById("navbarRight");
-    if (x.className === "navbar-right") {
-        x.className += " responsive";
+const navLink = document.getElementById("toggleButton");
+
+navLink.addEventListener("click", () => {
+    let responsiv = document.getElementById("navbarRight");
+    if (responsiv.className === "navbar-right") {
+        responsiv.className += " responsive";
     } else {
-        x.className = "navbar-right";
+        responsiv.className = "navbar-right";
     }
-}
-
-const button1 = document.querySelector('.button-b-s-7-1');
-const button2 = document.querySelector('.button-b-s-7-2');
-
-button1.addEventListener('mouseover', () => {
-    button1.value = 'Start Selling';
-    button1.style.width = '200px';
-    button1.style.boxShadow = '-2px 2px 5px rgba(0, 0, 0, 0.8)';
-    button1.style.background = 'linear-gradient(90deg, #f9e9de 0, #e7c5ae 100%)';
 });
 
-button1.addEventListener('mouseout', () => {
-    button1.value = 'Sell';
-    button1.style.width = '70px';
-    button1.style.boxShadow = 'none';
-    button1.style.background = '#f9e9de';
+
+const buttonSell = document.querySelector('.button-b-s-7-1');
+const buttonBuy = document.querySelector('.button-b-s-7-2');
+
+buttonSell.addEventListener('mouseover', () => {
+    buttonSell.value = 'Start Selling';
+    buttonSell.style.width = '200px';
+    buttonSell.style.boxShadow = '-2px 2px 5px rgba(0, 0, 0, 0.8)';
+    buttonSell.style.background = 'linear-gradient(90deg, #f9e9de 0, #e7c5ae 100%)';
 });
 
-button2.addEventListener('mouseover', () => {
-    button2.value = 'Start Buying';
-    button2.style.width = '200px';
-    button2.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.8)';
-    button2.style.background = 'linear-gradient(270deg, #f9e9de 0, #e7c5ae 100%)';
+buttonSell.addEventListener('mouseout', () => {
+    buttonSell.value = 'Sell';
+    buttonSell.style.width = '70px';
+    buttonSell.style.boxShadow = 'none';
+    buttonSell.style.background = '#f9e9de';
 });
 
-button2.addEventListener('mouseout', () => {
-    button2.value = 'Buy';
-    button2.style.width = '70px';
-    button2.style.boxShadow = 'none';
-    button2.style.background = '#f9e9de';
+buttonBuy.addEventListener('mouseover', () => {
+    buttonBuy.value = 'Start Buying';
+    buttonBuy.style.width = '200px';
+    buttonBuy.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.8)';
+    buttonBuy.style.background = 'linear-gradient(270deg, #f9e9de 0, #e7c5ae 100%)';
+});
+
+buttonBuy.addEventListener('mouseout', () => {
+    buttonBuy.value = 'Buy';
+    buttonBuy.style.width = '70px';
+    buttonBuy.style.boxShadow = 'none';
+    buttonBuy.style.background = '#f9e9de';
 });
 
   
