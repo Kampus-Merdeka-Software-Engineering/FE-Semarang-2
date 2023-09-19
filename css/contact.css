@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -51,6 +55,7 @@ body {
     font-weight: 600;
     font-size: 26px;
     letter-spacing: 1.5px;
+    text-decoration: none;
 }
 
 .navbar-right{
@@ -203,6 +208,26 @@ body {
     width: 100%;
 }
 
+.fa-chevron-down {
+    position: absolute;
+    bottom: 0;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #9ad4d8;
+    animation: appearDisappear 3s infinite;
+}
+
+@keyframes appearDisappear {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
 /** -------- SECTION ROW1 -------- */
 main #row1 {
     background-image: url("https://www.sooribali.com/img/site_images/soori-bali-journeys-explore-local-culture-traditional-village.jpg");
@@ -215,7 +240,8 @@ main #row1 .row1-1 {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 35vh;
+    /* height: 35vh; */
+    height: 100vh;
 }
 
 main #row1 .row1-1 .col {
@@ -229,9 +255,18 @@ main #row1 .row1-1 .col {
 
 main #row1 .row1-1 .col h2 {
     color: #fff;
+    text-align: center;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 38px;
     text-shadow: 1px 1px 10px rgb(29, 29, 29);
+}
+
+main #row1 .row1-1 .col p {
+    margin-top: 7px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
 }
 /** -------- END SECTION ROW1 -------- */
 
@@ -313,7 +348,7 @@ main .contactUs .box .form .formBox .row100 .inputBox {
     width: 100%;
 }
 
-main .contactUs .box .form .formBox .inputBox span {
+main .contactUs .box .form .formBox .inputBox label {
     color: #654823;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -326,6 +361,10 @@ main .contactUs .box .form .formBox .inputBox input {
     outline: none;
     border: 1px solid;
     border-color: #333;
+}
+
+main .contactUs .box .form .formBox .inputBox input[type="submit"]:hover {
+    background-color: #895e3f;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -923,7 +962,8 @@ main .contactUs .box .map iframe:hover {
 /* -------- RESPONSIVE MAIN CONTENT -------- */
 @media screen and (max-width: 991px) {
     main .contactUs {
-        padding: 20px;
+        /* padding: 20px; */
+        padding: 10px;
     }
 
     main #row1 .row1-1 .col {
@@ -934,6 +974,7 @@ main .contactUs .box .map iframe:hover {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas: "form" "info" "map";
+        /* padding: 0; */
     }
 
     main .contactUs .box .map {
@@ -956,6 +997,51 @@ main .contactUs .box .map iframe:hover {
     }
 }
 
+@media screen and (max-width: 800px) {
+    main #row1 .row1-1 .col h2 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    main #row1 .row1-1 .col p {
+        text-align: center;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 600px) {
+    main #row1 .row1-1 .col h2 {
+        text-align: center;
+        font-size: 24x;
+    }
+
+    main #row1 .row1-1 .col p {
+        text-align: center;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:450px) {
+    main #row1 .row1-1 .col h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    main #row1 .row1-1 .col p {
+        text-align: center;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:400px) {
+    main #row1 .row1-1 .col h2 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    main #row1 .row1-1 .col p {
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 550px) {
     main .contactUs {
         padding: 20px 0;
@@ -969,7 +1055,7 @@ main .contactUs .box .map iframe:hover {
         font-size: 1.1em;
     }
 
-    main .contactUs .box .form .formBox .inputBox span {
+    main .contactUs .box .form .formBox .inputBox label {
         font-size: 0.9em;
     }
 
