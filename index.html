@@ -12,23 +12,24 @@
         <!-- HEADER/NAVBAR -->
         <header class="header">
             <div class="navcount">
-            <nav class="navbar">
-                <div class="navbar-left">
-                    <a class="logo">Company</a>
-                    <a href="javascript:void(0);" class="nav-icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div>
-                <div class="navbar-right" id="navbarRight">
-                    <a href="index.html" class="nav-active nav-first">Beranda</a>
-                    <a href="produk.html" class="nav-link">Produk</a>
-                    <a href="css/tentang.html" class="nav-link">Tentang Kami</a>
-                    <a href="kontak.html" class="nav-link">Kontak</a>
-                </div>
-            </nav>
+                <nav class="navbar">
+                    <div class="navbar-left">
+                        <a class="logo">Company</a>
+                        <a href="javascript:void(0);" class="nav-icon" id="toggleButton">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-right" id="navbarRight">
+                        <a href="index.html" class="nav-active nav-first">Beranda</a>
+                        <a href="produk.html" class="nav-link">Produk</a>
+                        <a href="tentang.html" class="nav-link">Tentang Kami</a>
+                        <a href="kontak.html" class="nav-link">Kontak</a>
+                    </div>
+                </nav>
             </div>
         </header>
         
+        <main>
         <!-- SECTION 1 (GAMBAR COVER) -->
         <section class="container-beranda-s-1">
             <img class="gambar-beranda-s-1-1" src="img/building.jpg" alt="">
@@ -197,9 +198,9 @@
                             <p class="nesletter-isi-box2">NEWSLETTER</p>
                         </div>
                         <div class="input-newsletter">
-                            <form class="newsletter" action="">
-                                <input class="text-newsletter" type="email" placeholder=" Masukkan e-mail kamu">
-                                <input class="button-newsletter" type="button" value="Subscribe">
+                            <form class="newsletter" id="formNewsLetter">
+                                <input class="text-newsletter" type="text" id="emailNewsLetter" name="emailNewsLetter" placeholder=" Masukkan e-mail kamu" required="">
+                                <input class="button-newsletter" type="submit" id="btnNewsLetter" value="Subscribe">
                             </form>
                         </div>
                     </div>
@@ -280,8 +281,10 @@
                 </div>
             </section>
         </footer>
+        </main>
 
         <!-- LINK JAVASCRIPT -->
         <script src="js/index.js"></script>
+        <script src="js/contact.js"></script>
     </body>
 </html>

@@ -1,15 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    overflow-x: hidden;
-    font-family: 'Red Hat Display';
+    margin: 0;
+}
+.icon {
+    size: 100px;
 }
 
-/** -------- HEADER -------- */
 /* -------- HEADER -------- */
 .header {
     position: fixed;
@@ -49,8 +44,9 @@ body {
     color: #23230a;
     font-family: 'Red Hat Display';
     font-weight: 600;
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: 1.5px;
+    height: 70px;
 }
 
 .navbar-right{
@@ -179,16 +175,97 @@ body {
         padding-right: 25px;
     }
 }
-
-/** -------- MAIN CONTENT -------- */
-/* -------- SECTION 1 -------- */
-.container-kontak-s-1 {
-    background: linear-gradient(#efe4d7 0%, #efe4d7 30%, #fcf5eb 30%, #fcf5eb 100%);
+/* -------- halaman 1 -------- */
+.img-1 {
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+}
+.slowFade {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.slowFade .slide img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    background: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    opacity: 0;
+    transform: scale(1.5) rotate(15deg);
+    -webkit-animation: slowFade 32s infinite;
+            animation: slowFade 32s infinite;
+}
+.slowFade .slide:nth-child(3) img {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+}
+.slowFade .slide:nth-child(2) img {
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+}
+.slowFade .slide:nth-child(1) img {
+    -webkit-animation-delay: 24s;
+            animation-delay: 24s;
+}
+@keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
 }
 
-.container-kontak-s-1-1 {
+@-webkit-keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+
+
+.container-contoh-s-1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-contoh-s-1-1 {
     background-color: transparent;
-    /* background: #000; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.isi-contoh-s-1 {
+    background-color: transparent;
+    margin: 150px 110px 125px 100px;
+    color: rgb(0, 0, 0);
+    font-family: 'Red Hat Display';
+    max-width: 1300px;
+    position: absolute;
+
+}
+
+/* -------- SECTION 1 -------- */
+.container-tentang-s-1 {
+    background-color: #fcf5eb;
+}
+
+.container-tentang-s-1-1 {
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,266 +274,283 @@ body {
     margin: auto;
 }
 
-.isi-kontak-s-1 {
+.isi-tentang-s-1 {
+    color: black;
+    font-family: 'Red Hat Display' ;
+    font-size: large;
+    align-items: center;
+    text-align: center;
+}
+.isi-t-s-3 {
     background-color: transparent;
-    /* background: #000; */
     width: 100%;
 }
 
-/** -------- SECTION ROW1 -------- */
-main #row1 {
-    background-image: url("https://www.sooribali.com/img/site_images/soori-bali-journeys-explore-local-culture-traditional-village.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.title-t-s-3 {
+    margin-top: 50px;
+    margin-left: 80px;
 }
 
-main #row1 .row1-1 {
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 35vh;
-}
-
-main #row1 .row1-1 .col {
+.title-t-s-3-1 {
+    margin-top: 0px;
+    margin-bottom: 50px;
     font-family: 'Red Hat Display';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 73px;
-    /* font-size: 2em; */
+    font-size: 32px;
 }
 
-main #row1 .row1-1 .col h2 {
-    color: #fff;
-    font-weight: 500;
-    font-size: 40px;
-    text-shadow: 1px 1px 10px rgb(29, 29, 29);
-}
-/** -------- END SECTION ROW1 -------- */
-
-/** -------- SECTION ROW2 -------- */
-/** -------- CONTACT US -------- */
-main .contactUs {
-    /* background: linear-gradient(#0e3959 0%, #0e3959 30%, #03a9f5 30%, #03a9f5 100%); */
-    position: relative;
-    width: 100%;
-    padding: 40px 0; /* padding: 40px 100px; */
-}
-
-main .contactUs .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-}
-
-main .contactUs .title h2 {
-    color: #fff;
-    font-weight: 500;
-}
-
-main .contactUs .box {
-    position: relative;
+.isi-t-s-3-1 {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 5fr 4fr;
-    grid-template-areas: "form info" "form map";
-    grid-gap: 20px;
-    padding: 0 100px; /* margin-top: 20px; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    margin: 50px;
 }
 
-main .contactUs .box .form {
-    grid-area: form;
+.isi-t-s-3-1-1,
+.isi-t-s-3-1-2,
+.isi-t-s-3-1-3,
+.isi-t-s-3-1-4,
+.isi-t-s-3-1-5,
+.isi-t-s-3-1-6 {
+    display: block;
+    text-align: center;
+    background-color: #fcf5eb;
+    justify-content: center;
+    border-style: solid;
+    border-radius: 30px 0 30px 0;
+    border-width: 1px;
+    border-color: #e8b897;
+    box-shadow: 2px 2px 10px #2121217e;
 }
 
-main .contactUs .box .info {
-    grid-area: info;
+.isi-t-s-3-1-1:hover,
+.isi-t-s-3-1-2:hover,
+.isi-t-s-3-1-3:hover,
+.isi-t-s-3-1-4:hover,
+.isi-t-s-3-1-5:hover,
+.isi-t-s-3-1-6:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
 }
 
-main .contactUs .box .map {
-    grid-area: map;
+.isi-t-s-3-1-1:not(:hover),
+.isi-t-s-3-1-2:not(:hover),
+.isi-t-s-3-1-3:not(:hover),
+.isi-t-s-3-1-4:not(:hover),
+.isi-t-s-3-1-5:not(:hover),
+.isi-t-s-3-1-6:not(:hover) {
+    transition-duration: 0.3s;
 }
 
-main .contactUs .box .contact {
-    padding: 40px;
-    background: #fff;
-    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+
+.img-t-s-3 {
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    border-radius: 100px;
 }
 
-main .contactUs .box .contact h3 {
-    color: #0e3959;
+.team-name {
+    font-family: 'Red Hat Display';
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.team-pos {
+    font-family: 'Red Hat Display';
+    font-size: 16px;
     font-weight: 500;
-    font-size: 1.4em;
-    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
-/** -------- FORM -------- */
-main .contactUs .box .form .formBox {
-    position: relative;
-    width: 100%;
+.team-contact {
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    background-color: #f1ece7;
+    border: 1px solid rgb(62, 114, 235);
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-main .contactUs .box .form .formBox .row50 {
-    display: flex;
-    gap: 20px;
+.team-contact:hover {
+    background-color: #cabfb4;
 }
 
-main .contactUs .box .form .formBox .inputBox {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    width: 50%;
-}
-
-main .contactUs .box .form .formBox .row100 .inputBox {
-    width: 100%;
-}
-
-main .contactUs .box .form .formBox .inputBox span {
-    color: #654823;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
-
-main .contactUs .box .form .formBox .inputBox input {
-    padding: 10px;
-    font-size: 1.1em;
-    outline: none;
-    border: 1px solid;
-    border-color: #333;
-}
-
-/* Chrome, Safari, Edge, Opera */
-main .contactUs .box .form .formBox .inputBox input[type=number]::-webkit-outer-spin-button,
-main .contactUs .box .form .formBox .inputBox input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+.text-team-contact {
+    font-family: 'Red Hat Display';
+    text-decoration: none;
+    color: black;
+    font-size: 11px;
+    font-weight: 600;
     margin: 0;
 }
 
-/* Firefox */
-main .contactUs .box .form .formBox .inputBox input[type=number] {
-    appearance: textfield;
-    -moz-appearance: textfield;
+.logo-team-contact {
+    width: auto;
+    max-height: 13px;
+    margin-left: 5px;
 }
 
-main .contactUs .box .form .formBox .inputBox textarea {
-    padding: 10px;
-    font-size: 1.1em;
-    outline: none;
-    border: 1px solid;
-    border-color: #333;
-    resize: none;
-    min-height: 220px;
-    margin-bottom: 10px;
+/* -------- SECTION 2 -------- */
+.container-tentang-s-2 {
+    border-radius: 25px;
+    background: wheat;
+    width: 100%;
+    height: 200px;
+    
 }
 
-main .contactUs .box .form .formBox .inputBox input[type="submit"] {
-    background: #8B4513;
-    color: #fff;
-    border: none;
-    font-size: 1.1em;
-    max-width: 120px;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 14px 15px;
-}
-
-main .contactUs .box .form .formBox .inputBox input[type="submit"]:disabled {
-    cursor: not-allowed;
-}
-
-main .contactUs .box .form .formBox .inputBox ::placeholder {
-    color: #999;
-}
-/** -------- END FORM -------- */
-
-/** -------- INFO -------- */
-main .contactUs .box .info {
-    /* background: #0e3959; */
-    background: #efe4d7;
-}
-
-main .contactUs .box .info h3 {
-    color: #23230a;
-}
-
-main .contactUs .box .info .infoBox div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-main .contactUs .box .info .infoBox div span {
-    min-width: 40px;
-    height: 40px;
-    color: #23230a;
-    background: #fcf5eb;
+.container-tentang-s-2-1{
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-main .contactUs .box .info .infoBox div p {
-    color: #23230a;
-    font-size: 1.1em;
-}
-
-main .contactUs .box .info .infoBox div a {
-    color: #23230a;
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-main .contactUs .box .info .infoBox .sci {
-    margin-top: 30px;
-    display: flex;
-}
-
-main .contactUs .box .info .infoBox .sci li {
-    list-style: none;
-    margin-right: 15px;
-}
-
-main .contactUs .box .info .infoBox .sci li a {
-    font-size: 2em;
-    color: #23230a;
-}
-
-main .contactUs .box .info .infoBox .sci li a:hover {
-    color: #8B4513;
-}
-/** -------- END INFO -------- */
-
-/** -------- MAP -------- */
-main .contactUs .box .map {
-    padding: 0;
-}
-
-main .contactUs .box .map iframe {
     width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+.isi-tentang-s-2 {
+    font-family: 'Red Hat Display';
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.isi-tentang-s-2-1 {
+    font-family: "Red Hat Display";
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/* -------- SECTION 3 -------- */
+.container-tentang-s-3 {
+    background-color: transparent;
+}
+
+.container-tentang-s-3-1 {
+    background-color:  white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.isi-t-s-3{
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px 80px;
+    gap: 50px;
+}
+
+.img-t-s-3-1 {
+    max-width: 175px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 1px;
+}
+
+.desc-t-s-3 {
+    color: black;
+    font-family: 'Red Hat Display';
+    font-weight: 500;
+    font-size: medium;
+    line-height: 35px;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+} 
+/* .container-tentang-s-4 {
+    background-color: transparent;
+}
+
+.container-tentang-s-4-1 {
+    background-color:  rgb(175, 107, 12);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+.isi-t-s-4 {
+    background-color: transparent;
+}
+.isi-t-s-4-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px 80px;
+    gap: 50px;
+}
+
+.img-t-s-4-1 {
+    max-width: 100px;
     height: 100%;
+    
 }
 
-main .contactUs .box .info:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+.desc-t-s-4 {
+    color: black;
+    font-family: 'Red Hat Display';
+    font-weight: 500;
+    font-size: medium;
+    line-height: 35px;
+    letter-spacing: 1.5px;
+}  */
+
+/* -------- SECTION 4 -------- */
+.container-tentang-s-4 {
+    background-color: transparent;
 }
 
-main .contactUs .box .map iframe:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+.container-tentang-s-4-1 {
+    background-color:  white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
 }
-/** -------- END MAP -------- */
-/** -------- END CONTACT US -------- */
-/**-------- END SECTION ROW2 -------- */
-/** -------- END MAIN -------- */
+.isi-t-s-4 {
+    background-color: transparent;
+    width: 100%;
+    padding: 80px;
+}
+.judul-t-s-4{
+    display: block;
+}
 
-/** -------- FOOTER -------- */
+/* .isi-t-s-4-1 {
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px 80px;
+    gap: 50px;
+} */
+
+.img-t-s-4-1 {
+    max-width: 200px;
+    height: 80%;
+    margin-left: 40px;
+    float: right;
+}
+
+.desc-t-s-4 {
+    color: black;
+    font-family: 'Red Hat Display';
+    font-weight: 500;
+    font-size: medium;
+    line-height: 35px;
+    letter-spacing: 1.5px;
+} 
+
 /* -------- FOOTER -------- */
 .footer {
     background-color: white;
@@ -510,7 +604,7 @@ main .contactUs .box .map iframe:hover {
 .newsletter-box {
     display: block;
     background-color: #e7c5ae;
-    width: 34.405%;  /* width: 30%; */
+    width: 30%;
     text-align: center;
     padding-right: 20px;
     padding-left: 80px;
@@ -614,7 +708,7 @@ main .contactUs .box .map iframe:hover {
     font-weight: 600;
     font-size: 20px;
     letter-spacing: 1.5px;
-    margin: 10px 0 20px; /* margin-top: 10px; */
+    margin-top: 10px;
 }
 
 .info-text {
@@ -623,7 +717,7 @@ main .contactUs .box .map iframe:hover {
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 1.1px;
-    margin: 10px 0 14px; /* margin-top: 10px; */
+    margin-top: 10px;
 }
 
 .fa-facebook-f,.fa-instagram,.fa-x-twitter,.fa-youtube {
@@ -692,7 +786,6 @@ main .contactUs .box .map iframe:hover {
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 1.5px;
-    margin: 14px 0;
 }
 
 .info-3-text2 {
@@ -701,7 +794,6 @@ main .contactUs .box .map iframe:hover {
     font-weight: 600;
     font-size: 12px;
     letter-spacing: 1.5px;
-    margin: 12px 0;
 }
 
 .info-4-text {
@@ -711,7 +803,6 @@ main .contactUs .box .map iframe:hover {
     font-size: 14px;
     letter-spacing: 1.5px;
     margin-left: 10px;
-    margin: 14px 0 14px 10px; /* margin: 15px 0; */
 }
 
 .ps-store {
@@ -763,7 +854,7 @@ main .contactUs .box .map iframe:hover {
     color: #e7c5ae;
 }
 
-/** RESPONSIVE FOOTER */
+/* RESPONSIVE FOOTER */
 @media screen and (max-width: 800px) {
     .title-newsletter {
         padding: 30px 30px;
@@ -856,7 +947,7 @@ main .contactUs .box .map iframe:hover {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
     .title-newsletter {
         padding: 30px 30px;
         font-size: 14px;
@@ -882,10 +973,11 @@ main .contactUs .box .map iframe:hover {
     }
     .text-newsletter {
         height: auto;
+        font-size: 13px;
     }
     .button-newsletter {
-        width: 90px;
-        font-size: 10px;
+        width: auto;
+        font-size: 8px;
     }
     .f-info {
         flex-direction: column;
@@ -917,71 +1009,3 @@ main .contactUs .box .map iframe:hover {
         font-size: 12px;
     }
 }
-/** -------- END FOOTER -------- */
-
-/** -------- RESPONSIVE BREAKPOINT -------- */
-/* -------- RESPONSIVE MAIN CONTENT -------- */
-@media screen and (max-width: 991px) {
-    main .contactUs {
-        padding: 20px;
-    }
-
-    main #row1 .row1-1 .col {
-        font-size: 1.5em;
-    }
-
-    main .contactUs .box {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "form" "info" "map";
-    }
-
-    main .contactUs .box .map {
-        min-height: 300px;
-        padding: 0;
-    }
-
-    main .contactUs .box .form .formBox .row50 {
-        display: flex;
-        gap: 0;
-        flex-direction: column;
-    }
-
-    main .contactUs .box .form .formBox .inputBox {
-        width: 100%;
-    }
-
-    main .contactUs .box .contact {
-        padding: 30px;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    main .contactUs {
-        padding: 20px 0;
-    }
-    
-    main .contactUs .box {
-        padding: 0 15px;
-    }
-
-    main .contactUs .box .contact h3 {
-        font-size: 1.1em;
-    }
-
-    main .contactUs .box .form .formBox .inputBox span {
-        font-size: 0.9em;
-    }
-
-    main .contactUs .box .form .formBox .inputBox input {
-        font-size: 0.8em;
-    }
-
-    main .contactUs .box .form .formBox .inputBox input[type="submit"] {
-        max-width: 100%;
-        font-size: 1em;
-    }
-}
-/* -------- END RESPONSIVE MAIN CONTENT -------- */
-
-/** -------- END RESPONSIVE BREAKPOINT -------- */
