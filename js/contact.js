@@ -4,6 +4,13 @@ const colors = {
     default: "#333"
 };
 
+function validateForm() {
+    const emailInput = document.getElementById("email");
+    const borderColor = window.getComputedStyle(emailInput).borderColor;
+
+    document.getElementById("btnSubmit").disabled = borderColor === 'rgb(255, 0, 0)' ? true : false;
+}
+
 function resetInputContact() {
     const form = document.getElementById('formContact');
     const inputs = form.querySelectorAll('input[type=text], input[type=number], textarea');
@@ -79,6 +86,12 @@ form.addEventListener('keydown', () => {
             } else {
                 document.getElementById("btnSubmit").disabled = true
             }
+
+            validateForm();
+        });
+
+        input.addEventListener('blur', function() {
+            validateForm();
         });
     });
 
