@@ -90,7 +90,7 @@ form.addEventListener('keydown', () => {
             validateForm();
         });
 
-        input.addEventListener('blur', function() {
+        input.addEventListener('blur', function () {
             validateForm();
         });
     });
@@ -115,6 +115,49 @@ form.addEventListener('keydown', () => {
 
 const noHP = document.getElementById("noHp");
 /* Submit a form with the id `formContact` for the process of saving new Contact data to the database */
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+
+//     const firstName = document.getElementById("firstName").value;
+//     const lastName = document.getElementById("lastName").value;
+//     const email = document.getElementById("email").value;
+//     const noHPValue = noHP.value;
+//     const message = document.getElementById("message").value;
+//     const url = '/postContact';
+
+//     fetch(url, {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({ firstName, lastName, email, noHPValue, message }),
+//     })
+//         .then((response) => {
+//             if (response.ok) {
+//                 return response.json();
+//             } else {
+//                 resetInput()
+//                 throw new Error("Failed to create contact");
+//             }
+//         })
+//         .then((data) => {
+//             // alert(data.message);
+//             window.location.href = '/contact'; /* Navigate to the contact page */
+//         })
+//         .catch((error) => {
+//             // resetInput()
+//             const inputs = form.querySelectorAll('input[type=text], input[type=number], textarea');
+//             let text = document.getElementById('text')
+//             inputs.forEach(input => {
+//                 for (let i = 0; i < inputs.length; i++) {
+//                     inputs[i].value = ''
+//                     inputs[i].style.borderColor = colors.default
+//                 }
+//                 text.innerHTML = ""
+//             });
+//         });
+// })
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -123,13 +166,23 @@ form.addEventListener('submit', (event) => {
     const email = document.getElementById("email").value;
     const noHPValue = noHP.value;
     const message = document.getElementById("message").value;
-    const url = '/postContact';
+    const captchaResponse = grecaptcha.getResponse()
+    // const url = '/postContact';
+    const url = 'http://httpbin.org/post';
+
+    if (!captchaResponse.length > 0) {
+        throw new Error("Captcha not complete")
+    }
+
+    // const fd = new FormData(event.target)
+    // const params = new URLSearchParams(fd)
 
     fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
+        // body: params,
         body: JSON.stringify({ firstName, lastName, email, noHPValue, message }),
     })
         .then((response) => {
@@ -141,10 +194,12 @@ form.addEventListener('submit', (event) => {
             }
         })
         .then((data) => {
-            // alert(data.message);
-            window.location.href = '/contact'; /* Navigate to the contact page */
+            // console.log(data)
+            // window.location.href = '/contact'; /* Navigate to the contact page */
+            window.location.href = 'kontak.html'; /* Navigate to the contact page */
         })
         .catch((error) => {
+            console.log(error)
             // resetInput()
             const inputs = form.querySelectorAll('input[type=text], input[type=number], textarea');
             let text = document.getElementById('text')
@@ -193,6 +248,7 @@ formNewsLetter.addEventListener('keydown', () => {
             formNewsLetter.classList.remove("valid")
             formNewsLetter.classList.remove("invalid")
             formNewsLetter.style.borderColor = colors.default
+            document.getElementById("btnNewsLetter").removeAttribute("disabled");
         }
     })
 })
@@ -200,9 +256,9 @@ formNewsLetter.addEventListener('keydown', () => {
 /* Submit a form with the id `formNewsLetter` for the process of saving new NewsLetter data to the database */
 formNewsLetter.addEventListener('submit', (event) => {
     event.preventDefault();
-
     let emailNewsLetter = document.getElementById('emailNewsLetter').value;
-    const url = '/newsLetter';
+    // const url = '/newsLetter';
+    const url = 'http://httpbin.org/post';
 
     fetch(url, {
         method: "POST",
@@ -221,10 +277,13 @@ formNewsLetter.addEventListener('submit', (event) => {
             }
         })
         .then((data) => {
-            window.location.href = '/contact'; /* Navigate to the contact page */
+            // window.location.href = '/contact'; 
+            window.location.href = 'kontak.html'; /* Navigate to the contact page */
         })
         .catch((error) => {
             document.getElementById('emailNewsLetter').value = ''
             formNewsLetter.style.borderColor = colors.default
         });
 })
+
+// function onSubmit(token) {}

@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Red Hat Display" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/ae87e11e18.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/contact.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -92,6 +93,13 @@
                                             </div>
                                         </div>
 
+                                        <!-- <div class="row100">
+                                            <div class="inputBox">
+                                                <div class="g-recaptcha"
+                                                    data-sitekey="6LconTgoAAAAAGQhI0SQP_edUcqIwYMVPo5IIs5Z"></div>
+                                            </div>
+                                        </div> -->
+
                                         <div class="row100">
                                             <div class="inputBox">
                                                 <input type="submit" id="btnSubmit" value="Send" />
@@ -170,7 +178,8 @@
                         <form class="newsletter" id="formNewsLetter">
                             <input class="text-newsletter" type="text" id="emailNewsLetter" name="emailNewsLetter"
                                 placeholder=" Masukkan e-mail kamu" required />
-                            <input class="button-newsletter" type="submit" id="btnNewsLetter" value="Subscribe" />
+                            <!-- <input type="hidden" class="g-recaptcha" data-sitekey="6LdZEzkoAAAAAD2jqYCvBJCOakjIo4qsStQlDAWd" data-callback="onSubmit"> -->
+                            <input class="button-newsletter" type="submit" id="btnNewsLetter" value="Subscribe"/>
                         </form>
                     </div>
                 </div>

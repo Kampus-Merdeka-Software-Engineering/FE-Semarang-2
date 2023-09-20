@@ -611,6 +611,9 @@ main .contactUs .box .map iframe:hover {
     background-color: #966e52;
     border: 1px solid #895e3f;
 }
+.button-newsletter:disabled {
+    cursor: not-allowed;
+}
 
 .text-newsletter:focus{
     outline: none;
