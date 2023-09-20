@@ -115,49 +115,6 @@ form.addEventListener('keydown', () => {
 
 const noHP = document.getElementById("noHp");
 /* Submit a form with the id `formContact` for the process of saving new Contact data to the database */
-// form.addEventListener('submit', (event) => {
-//     event.preventDefault();
-
-//     const firstName = document.getElementById("firstName").value;
-//     const lastName = document.getElementById("lastName").value;
-//     const email = document.getElementById("email").value;
-//     const noHPValue = noHP.value;
-//     const message = document.getElementById("message").value;
-//     const url = '/postContact';
-
-//     fetch(url, {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({ firstName, lastName, email, noHPValue, message }),
-//     })
-//         .then((response) => {
-//             if (response.ok) {
-//                 return response.json();
-//             } else {
-//                 resetInput()
-//                 throw new Error("Failed to create contact");
-//             }
-//         })
-//         .then((data) => {
-//             // alert(data.message);
-//             window.location.href = '/contact'; /* Navigate to the contact page */
-//         })
-//         .catch((error) => {
-//             // resetInput()
-//             const inputs = form.querySelectorAll('input[type=text], input[type=number], textarea');
-//             let text = document.getElementById('text')
-//             inputs.forEach(input => {
-//                 for (let i = 0; i < inputs.length; i++) {
-//                     inputs[i].value = ''
-//                     inputs[i].style.borderColor = colors.default
-//                 }
-//                 text.innerHTML = ""
-//             });
-//         });
-// })
-
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -166,13 +123,13 @@ form.addEventListener('submit', (event) => {
     const email = document.getElementById("email").value;
     const noHPValue = noHP.value;
     const message = document.getElementById("message").value;
-    const captchaResponse = grecaptcha.getResponse()
+    // const captchaResponse = grecaptcha.getResponse()
     // const url = '/postContact';
     const url = 'http://httpbin.org/post';
 
-    if (!captchaResponse.length > 0) {
-        throw new Error("Captcha not complete")
-    }
+    // if (!captchaResponse.length > 0) {
+    //     throw new Error("Captcha not complete")
+    // }
 
     // const fd = new FormData(event.target)
     // const params = new URLSearchParams(fd)
