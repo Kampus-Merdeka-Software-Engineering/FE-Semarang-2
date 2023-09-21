@@ -10,11 +10,7 @@ var colors = {
 
 /* Define variable */
 const form = document.getElementById('formContact');
-var formNewsLetter = document.getElementById('formNewsLetter');
 const noHP = document.getElementById("noHp");
-
-/* Define email validation emailPattern */
-var emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 /* Function to set border color of email input */
 function setBorderColorEmail() {
