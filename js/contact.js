@@ -1,5 +1,5 @@
 /* Define colors */
-const colors = {
+var colors = {
     validColorHex: "#00aaff",
     invalidColorHex: "#ff0000",
     defaultColorHex: "#333",
@@ -10,11 +10,7 @@ const colors = {
 
 /* Define variable */
 const form = document.getElementById('formContact');
-const formNewsLetter = document.getElementById('formNewsLetter');
 const noHP = document.getElementById("noHp");
-
-/* Define email validation emailPattern */
-const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 /* Function to set border color of email input */
 function setBorderColorEmail() {
@@ -151,66 +147,6 @@ function handleErrorContact() {
     window.location.href = 'kontak.html';
 }
 
-/* Function to validate email input in form newsletter */
-function handleEmailInputNewsletter(event) {
-    const value = event.target.value;
-
-    /* email validation */
-    if (value.length > 0) {
-        /* Conditions for email input */
-        if (value.match(emailPattern)) {
-            formNewsLetter.classList.add("valid")
-            formNewsLetter.classList.remove("invalid")
-            formNewsLetter.style.borderColor = colors.validColorHex
-            document.getElementById("btnNewsLetter").removeAttribute("disabled");
-        } else {
-            formNewsLetter.classList.remove("valid")
-            formNewsLetter.classList.add("invalid")
-            formNewsLetter.style.borderColor = colors.invalidColorHex
-            document.getElementById("btnNewsLetter").setAttribute("disabled", "true");
-        }
-    } else {
-        formNewsLetter.classList.remove("valid")
-        formNewsLetter.classList.remove("invalid")
-        formNewsLetter.style.borderColor = colors.defaultColorHex
-        document.getElementById("btnNewsLetter").removeAttribute("disabled");
-    }
-}
-
-/* Function to post data contact to server in form newsletter */
-async function postDataNewsletterToServer(email) {
-    // const url = '/newsLetter';
-    const url = 'http://httpbin.org/post';
-
-    const response = await fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-    });
-
-    if (!response.ok) {
-        throw new Error("Failed to create NewsLetter");
-    }
-
-    return response.json();
-}
-
-/* Function to handle while success fetch in form newsletter */
-function handleSuccessNewsletter() {
-    // window.location.href = '/contact';
-    window.location.href = 'kontak.html'; /* Navigate to the contact page */
-}
-
-/* Function to handle while error fetch in form newsletter */
-function handleErrorNewsletter() {
-    const emailInput = document.getElementById('emailNewsLetter');
-    emailInput.value = '';
-    formNewsLetter.style.borderColor = colors.defaultColorHex;
-    window.location.href = 'kontak.html';
-}
-
 /* `keydown` trigger for forms with id `formContact` */
 form.addEventListener('keydown', () => {
     const emailInput = document.getElementById('email');
@@ -244,6 +180,11 @@ form.addEventListener('keydown', () => {
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
+    // const captchaResponse = grecaptcha.getResponse()
+    // if (!captchaResponse.length > 0) {
+    //     throw new Error("Captcha not complete")
+    // }
+    
     try {
         const formData = getFormContactValues();
         await postDataContactToServer(formData);
@@ -263,28 +204,3 @@ noHP.addEventListener('keydown', (event) => {
         event.preventDefault();
     }
 })
-
-/* `keydown` trigger for forms with id `formNewsLetter` */
-formNewsLetter.addEventListener('keydown', () => {
-    const emailInput = document.getElementById('emailNewsLetter');
-
-    /* email validation */
-    emailInput.addEventListener('input', handleEmailInputNewsletter)
-})
-
-/* Submit a form with the id `formNewsLetter` for the process of saving new NewsLetter data to the database */
-formNewsLetter.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const emailNewsLetter = document.getElementById('emailNewsLetter').value;
-
-    try {
-        await postDataNewsletterToServer(emailNewsLetter);
-        handleSuccessNewsletter();
-    } catch (error) {
-        handleErrorNewsletter();
-    }
-    
-})
-
-// function onSubmit(token) {}
