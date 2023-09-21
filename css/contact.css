@@ -756,6 +756,10 @@ main .contactUs .box .map iframe:hover {
     margin: 14px 0 14px 10px; /* margin: 15px 0; */
 }
 
+.info-str {
+    text-decoration: none;
+}
+
 .ps-store {
     max-width: 120px;
     height: auto;

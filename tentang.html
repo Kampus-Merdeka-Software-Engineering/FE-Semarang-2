@@ -16,14 +16,14 @@
             <nav class="navbar">
                 <div class="navbar-left">
                     <img class="logo" src="img/a-bel.png">
-                    <a href="javascript:void(0);" class="nav-icon" onclick="myFunction()">
+                    <a href="javascript:void(0);"  class="nav-icon" id="toggleButton">
                         <i class="fa fa-bars"></i>
                     </a>
                 </div>
                 <div class="navbar-right" id="navbarRight">
-                    <a href="index.html" class="nav-link">Beranda</a>
+                    <a href="index.html" class="nav-link nav-first">Beranda</a>
                     <a href="produk.html" class="nav-link">Produk</a>
-                    <a href="css/tentang.html" class="nav-active nav-first">Tentang Kami</a>
+                    <a href="tentang.html" class="nav-active">Tentang Kami</a>
                     <a href="kontak.html" class="nav-link">Kontak</a>
                 </div>
             </nav>
@@ -32,38 +32,45 @@
 
         <!--VISI MISI-->
         <section class="container-contoh-s-1">
+            <div class="slides slowFade">
+                <div class="slide">
+                    <img class="img-1" src="img/background (1).jpg" alt="img"/>
+                </div>
+                <div class="slide">
+                    <img class="img-1" src="img/background (2).jpg" alt="img"/>
+                </div>
+                <div class="slide">
+                    <img class="img-1" src="img/background (3).jpg" alt="img"/>
+                </div>
+                <div class="slide">
+                    <img class="img-1" src="img/background (4).jpg" alt="img"/>
+                </div>
                 <div class="container-contoh-s-1-1">
-                    <div class="slides slowFade">
-                        <div class="slide">
-                            <img class="img-1" src="img/background (1).jpg" alt="img"/>
-                        </div>
-                        <div class="slide">
-                            <img class="img-1" src="img/background (2).jpg" alt="img"/>
-                        </div>
-                        <div class="slide">
-                            <img class="img-1" src="img/background (3).jpg" alt="img"/>
-                        </div>
-                        <div class="slide">
-                            <img class="img-1" src="img/background (4).jpg" alt="img"/>
-                        </div>
                     <div class="isi-contoh-s-1">
-                        <p class="desc-contoh-s-1"><h1>VISI :</h1></p>
-                        <p class="desc-contoh-s-1">Menjadi platform jual beli kerajinan tangan yang 
-                                                    fokus untuk menjembatani potensi kreatif hingga 
-                                                    dapat dipasarkan keberbagai belahan bumi dengan 
-                                                    mengutamakan kualitas, keaslian, dan keindahan</p>
-                        <p class="desc-contoh-s-1"><h1>MISI :</h1></p>
-                        <p class="desc-contoh-s-1">1. Mendorong pengrajin lokal untuk mengekspresikan
-                                                     karya kreatif dan inovatif mereka melalui penyediaan 
-                                                     platform jual beli online</p>
-                        <p class="desc-contoh-s-1">2.Menyediakan platform jual beli kerajinan tangan
-                                                     yang terjamin keamanan dan kualitasnya </p>
-                        <p class="desc-contoh-s-1">3.Berkomitmen menyediakan kerajinan tangan 
-                                                    berkualitas tinggi dari dalam setiap produk kami</p>
-                        <p class="desc-contoh-s-1">4. Menggunakan bahan-bahan ramah lingkungan dan
-                                                     praktik- produksi berkelanjutan untuk menjaga planet ini bagi generasi mendatang</p>
-                        </div> 
-                    </div>
+                        <h2 class="visi-contoh-s-1">VISI</h2>
+                        <div class="background-visi">
+                            <p class="desc-contoh-s-1">Menjadi platform jual beli kerajinan tangan yang 
+                                fokus untuk menjembatani potensi kreatif hingga dapat dipasarkan keberbagai 
+                                belahan bumi dengan mengutamakan kualitas, keaslian, dan keindahan
+                            </p>
+                        </div>
+                        <h2 class="misi-contoh-s-1">MISI</h2>
+                        <div class="background-misi">
+                            <p class="desc-contoh-s-1">1.   Mendorong pengrajin lokal untuk mengekspresikan
+                                karya kreatif dan inovatif mereka melalui penyediaan platform jual beli 
+                                online
+                            </p>
+                            <p class="desc-contoh-s-1">2.   Menyediakan platform jual beli kerajinan tangan
+                                yang terjamin keamanan dan kualitasnya
+                            </p>
+                            <p class="desc-contoh-s-1">3.   Berkomitmen menyediakan kerajinan tangan 
+                                berkualitas tinggi dari dalam setiap produk kami
+                            </p>
+                            <p class="desc-contoh-s-1">4.   Menggunakan bahan-bahan ramah lingkungan dan
+                                praktik- produksi berkelanjutan untuk menjaga planet ini bagi generasi mendatang
+                            </p>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </section>
@@ -138,11 +145,12 @@
         <section class="container-tentang-s-2">
             <div class="container-tentang-s-2-1">
                 <div class="isi-tentang-s-2">
-                    <h2 class="isi tentang-s-2">Perjalan Company</h2>
-                    <p class="isi tentang-s-2-1">Kami melihat pentingnya peran platform jual beli online 
+                    <h2 class="isi-tentang-s-2-1" id="perjalanan">Perjalanan Company</h2>
+                    <p class="isi-tentang-s-2-2">Kami melihat pentingnya peran platform jual beli online 
                         supaya potensi kreatif anak bangsa dapat mencapai tempat tertingginya. Meski menemui 
                         kesulitan diawal perjalanannya, company berhasil menghantarkan banyak produk kreatif 
-                        pada tempat yang tepat serta mensukseskan banyak mitra nama.</p>
+                        pada tempat yang tepat serta mensukseskan banyak mitra nama.
+                    </p>
                 </div>
             </div>
         </section>
@@ -151,18 +159,21 @@
         <section class="container-tentang-s-3">
             <div class="container-tentang-s-3-1">
                 <div class="isi-t-s-3">
+                    <div class="img-t-s-3-bg">
                         <img class="img-t-s-3-1" src="img/batok.png" alt="" >
+                    </div>
                     <div class="desc-t-s-3">
-                    <h2>Inspirasi kami</h2>
-                    <p>Seperti kisah ari yang berhasil menciptakan lapangan kerja baru di 
-                    desanya. Berawal dari Ari yang melihat limbah batok kelapa menumpuk dan dianggap tak bernilai 
-                    di desanya. Ari yang kesehariannya bekerja serabutan pun melihat potensi dari batok kelapa ini. 
-                    Dari situlah Ari mulai memberanikan diri mengelola batok kelapa tersebut menjadi lampu hias 
-                    dengan nilai jual tinggi. Company menjadi salah satu bagian perjalanan Ari hingga mendapat 
-                    orderan hingga 2000 pcs setiap bulannya. Bermula dari batok kelapa yang hanya dibuang, kini 
-                    Ari menghidupkan mata pencaharian baru bagi warga desanya yaitu sebagai pemasok batok kelapa 
-                    bagi usaha Ari
-                    </p>
+                        <h2>Inspirasi kami</h2>
+                        <p>Seperti kisah ari yang berhasil menciptakan lapangan kerja baru di 
+                        desanya. Berawal dari Ari yang melihat limbah batok kelapa menumpuk dan dianggap tak bernilai 
+                        di desanya. Ari yang kesehariannya bekerja serabutan pun melihat potensi dari batok kelapa ini. 
+                        Dari situlah Ari mulai memberanikan diri mengelola batok kelapa tersebut menjadi lampu hias 
+                        dengan nilai jual tinggi. Company menjadi salah satu bagian perjalanan Ari hingga mendapat 
+                        orderan hingga 2000 pcs setiap bulannya. Bermula dari batok kelapa yang hanya dibuang, kini 
+                        Ari menghidupkan mata pencaharian baru bagi warga desanya yaitu sebagai pemasok batok kelapa 
+                        bagi usaha Ari
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -172,17 +183,20 @@
             <div class="container-tentang-s-4-1">
                 <div class="isi-t-s-4">
                     <div class="judul-t-s-4">
-                        <img class="img-t-s-4-1" src="img/batok.png" alt="" >
-                        <h2 class="judul-t-s-4-1">CSR</h2>
+                        <h2 class="judul-t-s-4-1"><div class="garis-b-s-4"></div>CSR</h2>
                         <p class="desc-t-s-4">Terinspirasi dari salah satu seller top ternama yang merupakan penggerak kaum difabel didesanya, dimana
                             barang-barang yang laris terjual tiap bulannya ialah karya para kelompok difabel di desa tersebut. 
                             Kami menyadari, banyaknya harapan yang bisa didapatkan kelompok difabel diseluruh Indonesia apabila 
                             mereka dijembatani dengan pelatihan keterampilan oleh orang yang tepat. Demi mewujudkan cita-cita yang
                             besar, kami menggandeng sejumlah pelatih yang telah diberi bekal bagaimana mengajarkan keterampilan 
                             pada kaum difabel. Dengan upaya yang terus nama lakukan, hingga kini sudah ratusan kelompok difabel yang
-                            berhasil mendapat ketrampilan baru bahkan menjual karyanya sendiri.</p>
+                            berhasil mendapat ketrampilan baru bahkan menjual karyanya sendiri.
+                        </p>
                     </div>
+                    <img class="img-t-s-4-1" src="img/dfb.jpg" alt="" >
                 </div>
+            </div>
+            <div class="img-t-s-4">
             </div>
         </section>
     
@@ -203,9 +217,9 @@
                             <p class="nesletter-isi-box2">NEWSLETTER</p>
                         </div>
                         <div class="input-newsletter">
-                            <form class="newsletter" action="">
-                                <input class="text-newsletter" type="email" placeholder=" Masukkan e-mail kamu">
-                                <input class="button-newsletter" type="button" value="Subscribe">
+                            <form class="newsletter" id="formNewsLetter">
+                                <input class="text-newsletter" type="text" id="emailNewsLetter" name="emailNewsLetter" placeholder=" Masukkan e-mail kamu" required="">
+                                <input class="button-newsletter" type="submit" id="btnNewsLetter" value="Subscribe">
                             </form>
                         </div>
                     </div>
@@ -287,6 +301,7 @@
             </section>
         </footer>
         <!-- LINK JAVASCRIPT -->
-        <script src="js/index.js"></script>
+        <script src="js/header-footer.js"></script>
+        <script src="js/tentang.js"></script>
     </body>
 </html>
