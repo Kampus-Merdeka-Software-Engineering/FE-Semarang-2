@@ -154,7 +154,7 @@ body {
     text-align: left;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .logo {
         font-size: 18px;
         padding-left: 25px;
@@ -281,7 +281,7 @@ body {
         padding-right: 30vh;
     }
 }
-@media screen and (max-width:400px) {
+@media screen and (max-width:500px) {
     .slogan-b-s-1 {
         font-family: 'Red Hat Display';
         text-align: left;
@@ -374,7 +374,7 @@ body {
         cursor: pointer;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .isi-beranda-s-2 {
         background-color: transparent;
         width: 100%;
@@ -457,7 +457,7 @@ body {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .isi-beranda-s-3 {
         background-color: transparent;
         width: 100%;
@@ -602,7 +602,7 @@ body {
         border-radius: 10px 0 10px 0;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .judul-b-s-4 {
         font-family: 'Red Hat Display';
         font-size: 18px;
@@ -773,7 +773,7 @@ body {
         color: #e8a273;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .isi-beranda-s-5 {
         flex-direction: column;
         align-items: center;
@@ -841,7 +841,7 @@ body {
 
 .judul-b-s-6 {
     text-align: left;
-    width: 400px;
+    width: 500px;
 }
 
 .judul-b-s-6-1 {
@@ -985,7 +985,7 @@ body {
         border-radius: 15px;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .container-beranda-s-6-1 {
         height: 180px;
     }
@@ -1144,7 +1144,7 @@ body {
         font-size: 16px;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .isi-beranda-s-7 {
         display: flex;
         flex-direction: column;
@@ -1443,6 +1443,10 @@ body {
     font-size: 14px;
     letter-spacing: 1.5px;
     margin-left: 10px;
+}
+
+.info-str {
+    text-decoration: none;
 }
 
 .ps-store {
