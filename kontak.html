@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/ae87e11e18.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/contact.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Contact Us - Company</title>
     
 </head>
@@ -105,7 +105,7 @@
 
                                         <div class="row100">
                                             <div class="inputBox">
-                                                <input type="submit" id="btnSubmit" value="Send" />
+                                                <input type="submit" id="btnSubmit" value="Send"/>
                                             </div>
                                         </div>
                                     </div>
@@ -156,6 +156,25 @@
                 </div>
             </div>
         </section>
+        
+        <section class="container-kontak-s-1" id="row3">
+            <div class="container-kontak-s-1-1">
+                <div class="isi-kontak-s-1">
+                    <div class="container">
+                        <!-- <button type="submit" class="btn" id="btn" onclick="openPopup()">Kirim</button> -->
+                        <div class="container-popup">
+                            <div class="popup" id="popup">
+                                <img src="./img/tick.png" alt="tick">
+                                <h2>Thank you</h2>
+                                <p>We got your message</p>
+                                <button type="submit" id="btnClose">OKE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#row2" class="fa-solid fa-chevron-down"></a>
+            </div>
+        </section>
     </main>
 
     <!-- FOOTER -->
@@ -188,6 +207,7 @@
                 </div>
             </div>
         </section>
+
         <section class="f-sec-1">
             <div class="f-info">
                 <div class="f-info-con">
@@ -250,6 +270,7 @@
                 </div>
             </div>
         </section>
+
         <section class="f-sec-2">
             <div class="f-cpr">
                 <div class="f-cpr-con">
@@ -261,6 +282,7 @@
                 </div>
             </div>
         </section>
+
     </footer>
 
     <!-- LINK JAVASCRIPT -->
