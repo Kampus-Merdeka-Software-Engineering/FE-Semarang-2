@@ -66,28 +66,27 @@ function handleEmailInputNewsletter(event) {
 
 /* Function to post data contact to server in form newsletter */
 async function postDataNewsletterToServer(email) {
-    // const url = '/newsLetter';
-    const url = 'http://httpbin.org/post';
+    const url = 'https://express-back-end-production.up.railway.app/api/newsletters/';
 
-    const response = await fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-    });
+    try {
+        const response = await axios.post(url, { email }, {
+        });
 
-    if (!response.ok) {
+        if (!response.data) {
+            throw new Error('Failed to create NewsLetter');
+        }
+        
+        return response.data;
+    } catch (error) {
         throw new Error("Failed to create NewsLetter");
     }
-
-    return response.json();
 }
 
 /* Function to handle while success fetch in form newsletter */
 function handleSuccessNewsletter() {
+    openPopup()
     // window.location.href = '/contact';
-    window.location.href = 'kontak.html'; /* Navigate to the contact page */
+    // window.location.href = 'kontak.html'; /* Navigate to the contact page */
 }
 
 /* Function to handle while error fetch in form newsletter */
@@ -95,7 +94,8 @@ function handleErrorNewsletter() {
     const emailInput = document.getElementById('emailNewsLetter');
     emailInput.value = '';
     formNewsLetter.style.borderColor = colors.defaultColorHex;
-    window.location.href = 'kontak.html';
+    openPopup()
+    // window.location.href = 'kontak.html';
 }
 
 /* `keydown` trigger for forms with id `formNewsLetter` */
@@ -122,3 +122,19 @@ formNewsLetter.addEventListener('submit', async (event) => {
 })
 
 // function onSubmit(token) {}
+
+// Popup
+let popup = document.getElementById("popup");
+const btnClose = document.getElementById("btnClose");
+
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+
+function closePopup() {
+    popup.classList.remove("open-popup");
+}
+
+btnClose.addEventListener('click', () => {
+    closePopup()
+})

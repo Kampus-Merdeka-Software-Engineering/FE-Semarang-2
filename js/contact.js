@@ -10,7 +10,7 @@ var colors = {
 
 /* Define variable */
 const form = document.getElementById('formContact');
-const noHP = document.getElementById("noHp");
+const noHPElement = document.getElementById("noHp");
 
 /* Function to set border color of email input */
 function setBorderColorEmail() {
@@ -111,40 +111,41 @@ function getFormContactValues() {
     const firstName = document.getElementById("firstName").value;
     const lastName = document.getElementById("lastName").value;
     const email = document.getElementById("email").value;
-    const noHPValue = noHP.value;
+    const noHp = noHPElement.value;
     const message = document.getElementById("message").value;
 
-    return { firstName, lastName, email, noHPValue, message };
+    return { firstName, lastName, email, noHp, message };
 }
 
 /* Function to post data contact to server in form contact */
 async function postDataContactToServer(data) {
-    const url = '/postContact';
-    const response = await fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-    });
+    try {
+        const apiUrl = 'https://express-back-end-production.up.railway.app/api/contacts/';
+        const response = await axios.post(apiUrl, data, {
+        });
 
-    if (!response.ok) {
-        throw new Error("Failed to create contact");
+        if (!response.data) {
+            throw new Error('Failed to create contact');
+        }
+
+        return response.data;
+    } catch (error) {
+        throw new Error(error.message);
     }
-
-    return response.json();
 }
 
 /* Function to handle while success fetch in form contact */
 function handleSuccessContact() {
+    openPopup()
     // window.location.href = '/contact';
-    window.location.href = 'kontak.html'; /* Navigate to the contact page */
+    // window.location.href = 'kontak.html'; /* Navigate to the contact page */
 }
 
 /* Function to handle while error fetch in form contact */
 function handleErrorContact() {
+    openPopup()
     resetInputContact();
-    window.location.href = 'kontak.html';
+    // window.location.href = 'kontak.html';
 }
 
 /* `keydown` trigger for forms with id `formContact` */
@@ -184,20 +185,21 @@ form.addEventListener('submit', async (event) => {
     // if (!captchaResponse.length > 0) {
     //     throw new Error("Captcha not complete")
     // }
-    
+
     try {
         const formData = getFormContactValues();
         await postDataContactToServer(formData);
         handleSuccessContact();
     } catch (error) {
+        // console.log('error: ', error)
         handleErrorContact();
     }
 
-    resetInputContact()
-    window.location.href = 'kontak.html';
+    // resetInputContact()
+    // window.location.href = 'kontak.html';
 })
 
-noHP.addEventListener('keydown', (event) => {
+noHPElement.addEventListener('keydown', (event) => {
     const disallowedKeys = [69, 43, 101, 190];
 
     if (disallowedKeys.includes(event.keyCode)) {
