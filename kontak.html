@@ -5,13 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css?family=Red Hat Display" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/ae87e11e18.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/contact.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Contact Us - Company</title>
-    
+
+    <link href="https://fonts.googleapis.com/css?family=Red Hat Display" rel="stylesheet" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+
+    <title>Contact Us - Creatopia</title>
 </head>
 
 <body>
@@ -20,7 +24,7 @@
         <div class="navcount">
             <nav class="navbar">
                 <div class="navbar-left">
-                    <a class="logo">Vivace</a>
+                    <a class="logo">Creatopia</a>
                     <a href="javascript:void(0);" class="nav-icon" id="toggleButton">
                         <i class="fa fa-bars"></i>
                     </a>
@@ -36,25 +40,23 @@
     </header>
 
     <main>
-        <section id="row1">
-            <div class="row1-1">
-                <div class="col">
-                    <div class="col-row">
-                        <!-- <h2>Get in Touch</h2> -->
-                        <h2>Let's make something awesome together.</h2>
-                        <p class="desc">
-                            Drop us a line, or give us a heads up if you're interested in
-                            vising us.
-                        </p>
-                    </div>
+        <!-- SECTION 1 (GAMBAR COVER) -->
+        <section class="container-kontak-s-1">
+            <img class="gambar-kontak-s-1-1" src="img/bg-contact.jpg" alt="" />
+            <div class="container-kontak-s-1-1">
+                <div class="isi-kontak-s-1">
+                    <h2 class="slogan-b-s-1">Your insights matter!</h2>
+                    <p class="desc">Share your experience and be a part of our continuous improvement journey.</p>
                 </div>
                 <a href="#row2" class="fa-solid fa-chevron-down"></a>
             </div>
         </section>
+        <!-- END SECTION 1 (GAMBAR COVER) -->
 
-        <section class="container-kontak-s-1" id="row2">
-            <div class="container-kontak-s-1-1">
-                <div class="isi-kontak-s-1">
+        <!-- SECTION 2 -->
+        <section class="container-kontak-s-2" id="row2">
+            <div class="container-kontak-s-2-1">
+                <div class="isi-kontak-s-2">
                     <div class="contactUs">
                         <div class="box">
                             <div class="contact form">
@@ -117,11 +119,11 @@
                                 <div class="infoBox">
                                     <div>
                                         <span><ion-icon name="location"></ion-icon></span>
-                                        <p>Vivace, Jakarta <br />INDONESIA</p>
+                                        <p>Creatopia, Jakarta <br />INDONESIA</p>
                                     </div>
                                     <div>
                                         <span><ion-icon name="mail"></ion-icon></span>
-                                        <a href="mailto:loremipsum@email.com">socmed@vivace.com</a>
+                                        <a href="mailto:loremipsum@email.com">socmed@creatopia.com</a>
                                     </div>
                                     <div>
                                         <span><ion-icon name="call"></ion-icon></span>
@@ -156,13 +158,14 @@
                 </div>
             </div>
         </section>
-        
-        <section class="container-kontak-s-1" id="row3">
-            <div class="container-kontak-s-1-1">
-                <div class="isi-kontak-s-1">
-                    <div class="container">
-                        <!-- <button type="submit" class="btn" id="btn" onclick="openPopup()">Kirim</button> -->
-                        <div class="container-popup">
+        <!-- END SECTION 2 -->
+
+        <!-- SECTION Pop Up -->
+        <section class="container-kontak-s-2" id="row3">
+            <div class="container-kontak-s-2-1">
+                <div class="isi-kontak-s-2">
+                    <div class="container-popup-1">
+                        <div class="container-popup-2">
                             <div class="popup" id="popup">
                                 <img src="./img/tick.png" alt="tick">
                                 <h2>Thank you</h2>
@@ -172,13 +175,14 @@
                         </div>
                     </div>
                 </div>
-                <a href="#row2" class="fa-solid fa-chevron-down"></a>
             </div>
         </section>
+        <!-- SECTION Pop Up -->
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
+        <!-- FOOTER SECTION 0 -->
         <section class="f-sec-0">
             <div class="f-newsletter">
                 <p class="title-newsletter">
@@ -207,11 +211,13 @@
                 </div>
             </div>
         </section>
+        <!-- END FOOTER SECTION 0 -->
 
+        <!-- FOOTER SECTION 1 -->
         <section class="f-sec-1">
             <div class="f-info">
                 <div class="f-info-con">
-                    <p class="info-logo">Vivace</p>
+                    <p class="info-logo">Creatopia</p>
                     <p class="info-text">Dapatkan berita terbaru</p>
                     <ul class="sos-ul">
                         <li class="sos-li">
@@ -260,7 +266,7 @@
                     </p>
                 </div>
                 <div class="f-info-con4">
-                    <p class="info-4-text">Unduh App Vivace</p>
+                    <p class="info-4-text">Unduh App Creatopia</p>
                     <a class="info-str" target="_blank" href="https://www.apple.com/id/app-store/">
                         <img class="as-store" src="img/as.png" alt="" />
                     </a>
@@ -270,11 +276,13 @@
                 </div>
             </div>
         </section>
+        <!-- FOOTER SECTION 1 -->
 
+        <!-- FOOTER SECTION 2 -->
         <section class="f-sec-2">
             <div class="f-cpr">
                 <div class="f-cpr-con">
-                    <div class="cpr">2023 Vivace, PT Vivace Tbk.</div>
+                    <div class="cpr">2023 Creatopia, PT Creatopia Tbk.</div>
                     <div class="tnc-plcy">
                         <a class="tnc" href="">Peraturan & Kebijakan</a>
                         <a class="plcy" href="">Pemberitahuan Privasi</a>
@@ -282,16 +290,13 @@
                 </div>
             </div>
         </section>
-
+        <!-- FOOTER SECTION 2 -->
     </footer>
 
     <!-- LINK JAVASCRIPT -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-        nonce="nonce-randomnonce12345"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" nonce="nonce-randomnonce12345"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <!-- <script src="javascripts/kontak.js"></script> -->
 
-    <!-- Ketika menggunakan helmet -->
     <script src="js/header-footer.js"></script>
     <script src="js/contact.js"></script>
 </body>

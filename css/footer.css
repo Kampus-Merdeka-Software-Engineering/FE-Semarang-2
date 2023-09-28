@@ -1,0 +1,516 @@
+/** -------- FOOTER -------- */
+.footer {
+    background-color: white;
+}
+
+.f-sec-0 {
+    background-color: #e8b897;
+}
+
+.f-newsletter {
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.f-newsletter-icon {
+    display: flex;
+    padding-left: 80px;
+    padding-right: 80px;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.icon-newsletter {
+    font-size: 50px;
+    color: #895e3f;
+    text-shadow: 3px 3px 1px #f1ece7;
+}
+
+.title-newsletter {
+    font-family: 'Red Hat Display';
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: #23230a;
+    padding-top: 50px;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.form-newsletter {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #895e3f;
+}
+
+.newsletter-box {
+    display: block;
+    background-color: #e7c5ae;
+    width: 30%;
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 80px;
+
+}
+
+.nesletter-isi-box1 {
+    font-family: 'Red Hat Display';
+    font-size: 16px;
+    font-weight: 500;
+    color: #23230a;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.nesletter-isi-box2 {
+    font-family: 'Red Hat Display';
+    font-size: 24px;
+    font-weight: 600;
+    color: #23230a;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.input-newsletter {
+    width: 70%;
+    align-self: center;
+    padding-left: 30px;
+    padding-right: 80px;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    border: 1px solid #895e3f;
+    border-radius: 20px;
+    background-color: #e7c5ae;
+}
+
+.text-newsletter {
+    width: 100%;
+    height: 30px;
+    border-radius: 20px 0 0 20px;
+    border-width: 0;
+    background-color: #e7c5ae;
+    margin-left: 10px;
+}
+
+.button-newsletter {
+    width: 120px;
+    background-color: #895e3f;
+    border: none;
+    font-family: 'Red Hat Display';
+    color: #f1ece7;
+    letter-spacing: 1.2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.button-newsletter:hover {
+    background-color: #966e52;
+    border: 1px solid #895e3f;
+}
+
+.button-newsletter:disabled {
+    cursor: not-allowed;
+}
+
+.text-newsletter:focus {
+    outline: none;
+}
+
+.f-sec-1 {
+    background-color: #e8b897;
+    border-top: 1px solid #895e3f;
+}
+
+.f-info {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: auto;
+    padding: 15px;
+    padding-bottom: 40px;
+}
+
+.f-info-con,
+.f-info-con2,
+.f-info-con3,
+.f-info-con4 {
+    background-color: transparent;
+}
+
+.f-info-con {
+    padding-left: 80px;
+}
+
+.f-info-con3 {
+    width: 250px;
+}
+
+.f-info-con4 {
+    padding-right: 80px;
+}
+
+.info-logo {
+    color: #23230a;
+    font-family: 'Red Hat Display';
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+}
+
+.info-text {
+    color: #23230a;
+    font-family: 'Red Hat Display';
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.1px;
+    margin-top: 10px;
+}
+
+.fa-facebook-f,
+.fa-instagram,
+.fa-x-twitter,
+.fa-youtube {
+    text-align: center;
+    align-items: center;
+    font-size: 24px;
+    color: #23230a;
+}
+
+.sos-ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.sos-li {
+    display: inline-block;
+}
+
+.info-sos {
+    margin-right: 30px;
+}
+
+.fa-facebook-f:hover {
+    color: rgb(0, 123, 255);
+}
+
+.fa-instagram:hover {
+    color: #e843a0;
+}
+
+.fa-x-twitter:hover {
+    color: rgb(0, 0, 0);
+}
+
+.fa-youtube:hover {
+    color: rgb(242, 0, 0);
+}
+
+.info-menu-list {
+    list-style: none;
+    columns: 2;
+    padding: 0;
+    margin-top: 0;
+}
+
+.info-li {
+    margin-right: 30px;
+}
+
+.info-menu {
+    color: #23230a;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Red Hat Display';
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    line-height: 3;
+}
+
+.info-3-text {
+    color: #23230a;
+    font-family: 'Red Hat Display';
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin: 14px 0;
+}
+
+.info-3-text2 {
+    color: #23230a;
+    font-family: 'Red Hat Display';
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.info-4-text {
+    color: #23230a;
+    font-family: 'Red Hat Display';
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-left: 10px;
+}
+
+.info-str {
+    text-decoration: none;
+}
+
+.ps-store {
+    max-width: 120px;
+    height: auto;
+}
+
+.as-store {
+    max-width: 120px;
+    height: auto;
+}
+
+.f-sec-2 {
+    background-color: #895e3f;
+}
+
+.f-cpr {
+    background-color: transparent;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.f-cpr-con {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 80px;
+}
+
+.cpr {
+    font-family: 'Red Hat Display';
+    color: #e6d5ca;
+    font-size: 14px;
+}
+
+.tnc-plcy {
+    display: flex;
+    gap: 50px;
+}
+
+.tnc,
+.plcy {
+    text-decoration: none;
+    font-family: 'Red Hat Display';
+    color: #e6d5ca;
+    font-size: 14px;
+}
+
+.tnc:hover,
+.plcy:hover {
+    color: #e7c5ae;
+}
+
+/** RESPONSIVE FOOTER */
+@media screen and (max-width: 800px) {
+    .title-newsletter {
+        padding: 30px 30px;
+        font-size: 14px;
+    }
+
+    .f-newsletter-icon {
+        gap: 40px;
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    .icon-newsletter {
+        font-size: 35px;
+    }
+
+    .form-newsletter {
+        flex-direction: column;
+    }
+
+    .newsletter-box {
+        width: 100%;
+        padding: 0;
+    }
+
+    .input-newsletter {
+        padding: 20px 0;
+        width: 60%;
+    }
+
+    .nesletter-isi-box1 {
+        font-size: 14px;
+    }
+
+    .nesletter-isi-box2 {
+        font-size: 20px;
+    }
+
+    .text-newsletter {
+        height: auto;
+        font-size: 14px;
+    }
+
+    .button-newsletter {
+        width: auto;
+        font-size: 11px;
+    }
+
+    .f-info {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .f-info-con {
+        padding: 0;
+    }
+
+    .info-logo {
+        font-size: 20px;
+    }
+
+    .info-text {
+        font-size: 15px;
+    }
+
+    .info-sos {
+        margin-right: 25px;
+    }
+
+    .f-info-con2 {
+        margin-top: 15px;
+    }
+
+    .info-menu-list {
+        columns: 1;
+    }
+
+    .info-menu {
+        font-size: 15px;
+    }
+
+    .info-3-text {
+        font-size: 15px;
+    }
+
+    .info-3-text2 {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .info-4-text {
+        margin-left: 0;
+        font-size: 15px;
+    }
+
+    .as-store,
+    .ps-store {
+        max-width: 100px;
+    }
+
+    .f-cpr-con {
+        flex-direction: column;
+        padding: 20px 15px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cpr,
+    .tnc,
+    .plcy {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title-newsletter {
+        padding: 30px 30px;
+        font-size: 14px;
+    }
+
+    .f-newsletter-icon {
+        gap: 40px;
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    .icon-newsletter {
+        font-size: 35px;
+    }
+
+    .input-newsletter {
+        padding: 20px 0;
+        width: 90%;
+    }
+
+    .nesletter-isi-box1 {
+        font-size: 12px;
+    }
+
+    .nesletter-isi-box2 {
+        font-size: 18px;
+    }
+
+    .text-newsletter {
+        height: auto;
+    }
+
+    .button-newsletter {
+        width: 90px;
+        font-size: 10px;
+    }
+
+    .f-info {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .info-logo {
+        font-size: 18px;
+    }
+
+    .info-text {
+        font-size: 14px;
+    }
+
+    .info-menu {
+        font-size: 14px;
+    }
+
+    .info-3-text {
+        font-size: 14px;
+    }
+
+    .info-3-text2 {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .info-4-text {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .cpr,
+    .tnc,
+    .plcy {
+        font-size: 12px;
+    }
+}
+/** -------- END FOOTER -------- */
