@@ -9,7 +9,7 @@ var colors = {
 };
 
 /* Define variable */
-const form = document.getElementById('formContact');
+const form = document.getElementById('formReview');
 
 /* Function to set border color of email input */
 function setBorderColorEmail() {
@@ -20,9 +20,9 @@ function setBorderColorEmail() {
 }
 
 /* Function to reset form inputs and text */
-function resetInputContact() {
-    const form = document.getElementById('formContact');
-    const inputs = form.querySelectorAll('input[type=text], input[type=number], textarea');
+function resetInputReview() {
+    const form = document.getElementById('formReview');
+    const inputs = form.querySelectorAll('input[type=text], textarea');
     let text = document.getElementById('text');
     inputs.forEach(input => {
         for (let i = 0; i < inputs.length; i++) {
@@ -33,8 +33,8 @@ function resetInputContact() {
     });
 }
 
-/* Function to validate email input in form contact */
-function handleEmailInputContact(event) {
+/* Function to validate email input in form review */
+function handleEmailInputReview(event) {
     const value = event.target.value;
     const text = document.getElementById('text');
 
@@ -61,18 +61,18 @@ function handleEmailInputContact(event) {
     }
 }
 
-/* Function to set border color input in form contact */
+/* Function to set border color input in form review */
 function setBorderColorInputChange(inputs) {
     for (let i = 0; i < inputs.length; i++) {
         if (i === 0) {
-            continue; /* Skip index 2 */
+            continue; /* Skip index 0, yaitu email */
         }
 
         inputs[i].style.borderColor = inputs[i].value.length > 0 ? colors.validColorHex : colors.defaultColorHex;
     }
 }
 
-/* Function to update submit button in form contact */
+/* Function to update submit button in form review */
 function updateSubmitButton(input) {
     const computedStyle = getComputedStyle(input);
     const borderColor = computedStyle.getPropertyValue('border-color');
@@ -87,18 +87,18 @@ function updateSubmitButton(input) {
     }
 }
 
-/* Function to disabled button send in form contact */
+/* Function to disabled button send in form review */
 function disableSubmitButton() {
     document.getElementById("btnSubmit").setAttribute("disabled", "true");
 }
 
-/* Function to enable button send in form contact */
+/* Function to enable button send in form review */
 function enableSubmitButton() {
     document.getElementById("btnSubmit").removeAttribute("disabled");
 }
 
-/* Function to get value input in form contact */
-function getFormContactValues() {
+/* Function to get value input in form review */
+function getFormReviewValues() {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
@@ -106,15 +106,15 @@ function getFormContactValues() {
     return { name, email, message };
 }
 
-/* Function to post data contact to server in form contact */
-async function postDataContactToServer(data) {
+/* Function to post data review to server in form review */
+async function postDataReviewToServer(data) {
     try {
-        const apiUrl = 'https://express-back-end-production.up.railway.app/api/contacts/';
+        const apiUrl = 'https://express-back-end-production.up.railway.app/api/reviews/';
         const response = await axios.post(apiUrl, data, {
         });
 
         if (!response.data) {
-            throw new Error('Failed to create contact');
+            throw new Error('Failed to create Review');
         }
 
         return response.data;
@@ -123,28 +123,25 @@ async function postDataContactToServer(data) {
     }
 }
 
-/* Function to handle while success fetch in form contact */
-function handleSuccessContact() {
+/* Function to handle while success fetch in form Review */
+function handleSuccessReview() {
     openPopup()
-    // window.location.href = '/contact';
-    // window.location.href = 'kontak.html'; /* Navigate to the contact page */
+    resetInputReview();
 }
 
-/* Function to handle while error fetch in form contact */
-function handleErrorContact() {
+/* Function to handle while error fetch in form Review */
+function handleErrorReview() {
     openPopup()
-    resetInputContact();
-    // window.location.href = 'kontak.html';
+    resetInputReview();
 }
 
-/* `keydown` trigger for forms with id `formContact` */
+/* `keydown` trigger for forms with id `formReview` */
 form.addEventListener('keydown', () => {
     const emailInput = document.getElementById('email');
-    const noHp = document.getElementById('noHp');
-    const inputs = form.querySelectorAll('input[type=text], input[type=number], textarea');
+    const inputs = form.querySelectorAll('input[type=text], textarea');
 
-    /* `input` trigger for forms with id `formContact` in email input */
-    emailInput.addEventListener('input', handleEmailInputContact)
+    /* `input` trigger for forms with id `formReview` in email input */
+    emailInput.addEventListener('input', handleEmailInputReview)
 
     /* Gives border-color to inputs that have value*/
     inputs.forEach(input => {
@@ -162,7 +159,7 @@ form.addEventListener('keydown', () => {
     });
 })
 
-/* Submit a form with the id `formContact` for the process of saving new Contact data to the database */
+/* Submit a form with the id `formReview` for the process of saving new Review data to the database */
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -172,14 +169,14 @@ form.addEventListener('submit', async (event) => {
     // }
 
     try {
-        const formData = getFormContactValues();
-        await postDataContactToServer(formData);
-        handleSuccessContact();
+        const formData = getFormReviewValues();
+        await postDataReviewToServer(formData);
+        handleSuccessReview();
     } catch (error) {
         // console.log('error: ', error)
-        handleErrorContact();
+        handleErrorReview();
     }
 
-    // resetInputContact()
+    // resetInputReview()
     // window.location.href = 'kontak.html';
 })
