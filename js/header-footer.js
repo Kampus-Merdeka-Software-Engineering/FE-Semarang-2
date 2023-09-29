@@ -66,7 +66,7 @@ function handleEmailInputNewsletter(event) {
 
 /* Function to post data contact to server in form newsletter */
 async function postDataNewsletterToServer(email) {
-    const url = 'https://express-back-end-production.up.railway.app/api/newsletters/';
+    const url = 'https://express-back-end-production.up.railway.app/api/newsletters/'; /* sementara pakai api ini */
 
     try {
         const response = await axios.post(url, { email }, {
@@ -82,20 +82,22 @@ async function postDataNewsletterToServer(email) {
     }
 }
 
+function resetInputNewsletter() {
+    const emailInput = document.getElementById('emailNewsLetter');
+    emailInput.value = '';
+    formNewsLetter.style.borderColor = colors.defaultColorHex;
+}
+
 /* Function to handle while success fetch in form newsletter */
 function handleSuccessNewsletter() {
     openPopup()
-    // window.location.href = '/contact';
-    // window.location.href = 'kontak.html'; /* Navigate to the contact page */
+    resetInputNewsletter()
 }
 
 /* Function to handle while error fetch in form newsletter */
 function handleErrorNewsletter() {
-    const emailInput = document.getElementById('emailNewsLetter');
-    emailInput.value = '';
-    formNewsLetter.style.borderColor = colors.defaultColorHex;
     openPopup()
-    // window.location.href = 'kontak.html';
+    resetInputNewsletter()
 }
 
 /* `keydown` trigger for forms with id `formNewsLetter` */
