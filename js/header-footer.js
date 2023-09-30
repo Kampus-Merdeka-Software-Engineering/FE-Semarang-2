@@ -5,22 +5,37 @@ let screenWidth = window.innerWidth;
 window.onscroll = function() {
     let currentNavScroll = window.pageYOffset;
     screenWidth = window.innerWidth;
-    if (navScroll > currentNavScroll) {
+    
+    if (currentNavScroll === 0) {
+        document.querySelector('.header').style.backgroundColor = 'transparent';
+        document.querySelector('.header').style.backdropFilter = 'blur(0)';
+        document.querySelector('.header').style.boxShadow = 'none';
+    } else if (navScroll > currentNavScroll) {
         document.querySelector('.header').style.top = '0';
+        document.querySelector('.header').style.backgroundColor = 'rgba(194, 167, 128, 0.5)';
+        document.querySelector('.header').style.backdropFilter = 'blur(8px)';
+        document.querySelector('.header').style.boxShadow = '0px 5px 5px rgba(0, 0, 0, 0.3)';
     } else {
         document.querySelector('.header').style.top = '-260px';
+        document.querySelector('.header').style.backgroundColor = 'transparent';
     }
     navScroll = currentNavScroll;
 }
+
 
 const navLink = document.getElementById("toggleButton");
 
 navLink.addEventListener("click", () => {
     let responsiv = document.getElementById("navbarRight");
+    let header = document.querySelector('.header');
+    
+    header.style.backgroundColor = 'rgba(194, 167, 128, 0.5)';
+
     if (responsiv.className === "navbar-right") {
         responsiv.className += " responsive";
     } else {
         responsiv.className = "navbar-right";
+        header.style.backgroundColor = 'transparent';
     }
 });
 
