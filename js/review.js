@@ -23,7 +23,7 @@ function setBorderColorEmail() {
 function resetInputReview() {
     const form = document.getElementById('formReview');
     const inputs = form.querySelectorAll('input[type=text], textarea');
-    let text = document.getElementById('text');
+    const text = document.getElementById('text');
     inputs.forEach(input => {
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].value = ''
@@ -87,16 +87,6 @@ function updateSubmitButton(input) {
     }
 }
 
-/* Function to disabled button send in form review */
-function disableSubmitButton() {
-    document.getElementById("btnSubmit").setAttribute("disabled", "true");
-}
-
-/* Function to enable button send in form review */
-function enableSubmitButton() {
-    document.getElementById("btnSubmit").removeAttribute("disabled");
-}
-
 /* Function to get value input in form review */
 function getFormReviewValues() {
     const name = document.getElementById("name").value;
@@ -114,12 +104,25 @@ async function postDataReviewToServer(data) {
         });
 
         if (!response.data) {
-            throw new Error('Failed to create Review');
+            // throw new Error('Failed to create Review');
+            openPopupError('Failed to create Review')
         }
 
         return response.data;
     } catch (error) {
-        throw new Error(error.message);
+        // console.log('error 1: ', error.message)
+        // throw new Error(error.message);
+        // handleErrorReview();
+
+        // error.response.data
+        if (error.response && error.response.data.error) {
+            const errorMessage = error.response.data.error;
+            console.error(errorMessage);
+            handleErrorNewsletter(errorMessage);
+        } else {
+            console.error(error.message);
+            handleErrorNewsletter(error.message);
+        }
     }
 }
 
@@ -130,8 +133,8 @@ function handleSuccessReview() {
 }
 
 /* Function to handle while error fetch in form Review */
-function handleErrorReview() {
-    openPopup()
+function handleErrorReview(desc) {
+    openPopupError(desc)
     resetInputReview();
 }
 
@@ -168,15 +171,18 @@ form.addEventListener('submit', async (event) => {
     //     throw new Error("Captcha not complete")
     // }
 
-    try {
-        const formData = getFormReviewValues();
-        await postDataReviewToServer(formData);
-        handleSuccessReview();
-    } catch (error) {
-        // console.log('error: ', error)
-        handleErrorReview();
-    }
+    const emailReview = document.getElementById('email').value;
 
-    // resetInputReview()
-    // window.location.href = 'kontak.html';
+    if(!emailPattern.test(emailReview)) {
+        openPopupError('Email Invalid')
+    } else {
+        try {
+            const formData = getFormReviewValues();
+            await postDataReviewToServer(formData);
+            handleSuccessReview();
+        } catch (error) {
+            // console.log('error 2: ', error)
+            handleErrorReview('Failed to create Review');
+        }
+    }
 })
