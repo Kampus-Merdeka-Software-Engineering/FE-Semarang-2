@@ -100,7 +100,8 @@ async function postDataNewsletterToServer(email) {
 
         return response.data;
     } catch (error) {
-        if (error.response && error.response.data && error.response.data.error) {
+        // error.response.data
+        if (error.response && error.response.data.error) {
             const errorMessage = error.response.data.error;
             console.error(errorMessage);
             handleErrorNewsletter(errorMessage);
