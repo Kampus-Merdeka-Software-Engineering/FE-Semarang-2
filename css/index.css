@@ -422,7 +422,6 @@ body {
 /* -------- SECTION 3 -------- */
 .container-beranda-s-3 {
     background-color: transparent;
-    /* background: linear-gradient(90deg, #e8b897 0%, #fcf5eb 100%); */
 }
 
 .container-beranda-s-3-1 {
@@ -458,8 +457,9 @@ body {
 }
 
 .isi-beranda-s-3 hr{
-    height: 1px;
+    height: 0.8px;
     background-color: #957647;
+    margin-top: 150px;
 }
 
 @media screen and (max-width: 800px) {
@@ -521,7 +521,16 @@ body {
     font-family: 'Red Hat Display';
     font-size: 34px;
     font-weight: 600;
-    color: #23230a;
+    color: #957647;
+    margin-bottom: 80px;
+    margin-top: 0;
+}
+
+.judul-b-s-4 span{
+    font-family: 'Red Hat Display';
+    font-size: 34px;
+    font-weight: 600;
+    color: #50362A;
     margin-bottom: 50px;
 }
 
@@ -529,6 +538,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    padding: 0 50px;
 }
 
 .dampak-b-s-4-1,
@@ -538,14 +548,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 10px;
-    box-shadow: 2px 2px 8px #3f3f3f;
+    border-radius: 20px;
+    border: 1.5px solid #957647;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
 }
-
-/* .dampak-b-s-4-1:hover {
-    transform: scale(1.1);
-    transition-duration: 0.3s;
-} */
 
 .isi-dampak {
     display: flex;
@@ -553,7 +559,7 @@ body {
 }
 
 .img-b-s-4 {
-    max-width: 120px;
+    max-width: 165px;
     height: auto;
     color: #895e3f;
     align-self: baseline;
@@ -565,7 +571,7 @@ body {
     font-family: 'Red Hat Display';
     font-size: 24px;
     font-weight: 600;
-    color: #895e3f;
+    color: #725B38;
     margin-bottom: 50px;
     text-align: left;
     margin-right: 30px;
@@ -578,6 +584,12 @@ body {
     background-color: #895e3f23;
     align-self: end;
     border-radius: 10px 0 10px 0;
+}
+
+.isi-beranda-s-4 hr{
+    height: 0.8px;
+    background-color: #957647;
+    margin-top: 150px;
 }
 
 @media screen and (max-width: 800px) {
@@ -681,10 +693,11 @@ body {
 
 .isi-beranda-s-5 {
     display: flex;
-    background-color: #fcf2eb;
+    background-color: transparent;
     width: 100%;
+    height: 500px;
     padding: 30px;
-    gap: 50px;
+    gap: 35px;
     border-radius: 20px;
     margin-left: 80px;
     margin-right: 80px;
@@ -695,9 +708,10 @@ body {
 
 .img-b-s-5 {
     position: relative;
-    max-width: 60%;
+    max-width: 55%;
     height: auto;
     padding: 15px;
+    align-self: center;
 }
 
 .img-b-s-5-1 {
@@ -717,9 +731,10 @@ body {
 }
 
 .desc-b-s-5 {
-    max-width: 40%;
+    max-width: 45%;
     height: auto;
     text-align: left;
+    align-self: center;
 }
 
 .garis-b-s-5 {
@@ -731,26 +746,43 @@ body {
 
 .judul-b-s-5 {
     display: flex;
-    font-family: 'Red Hat Display';
-    font-size: 28px;
-    font-weight: 600;
-    color: #23230a;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0;
+    color: #957647;
 }
 
-.desc-b-s-5-1 {
-    font-family: 'Red Hat Display';
-    font-size: 18px;
-    font-weight: 500;
+.desc-b-s-5-1{
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
     color: #766a61;
     line-height: 30px;
 }
 
+.desc-b-s-5-1 span{
+    font-family: 'Poppins';
+    font-size: 35px;
+    font-weight: 700;
+    color: #50362A;
+}
+
 .button-b-s-5 {
-    text-decoration: none;
-    font-family: 'Red Hat Display';
-    font-size: 16px;
-    font-weight: 600;
-    color: #e8a273;
+    background-color: #957647;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    width: 200px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.button-b-s-5:hover {
+    box-shadow: 1px 2px 3px rgb(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 800px) {
@@ -832,6 +864,29 @@ body {
     }
 }
 
+/* -------- SECTION REVIEW -------- */
+
+.container-beranda-review {
+    background-color: white;
+}
+
+.container-beranda-review-1 {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 800px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.isi-beranda-review {
+    background-color: transparent;
+    width: 100%;
+    padding: 80px;
+}
+
 /* -------- SECTION 6 -------- */
 .container-beranda-s-6 {
     background-color: white;
@@ -843,7 +898,6 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 230px;
     max-width: 1300px;
     margin: auto;
 }
@@ -859,25 +913,51 @@ body {
 }
 
 .judul-b-s-6 {
-    text-align: left;
-    width: 500px;
+    text-align: right;
+    width: 30%;
+    align-self: center;
+}
+
+.garis-media {
+    display: inline-flex;
+    width: 120px;
+    height: 1px;
+    background-color: #957647;
 }
 
 .judul-b-s-6-1 {
-    display: flex;
-    font-family: 'Red Hat Display';
-    font-size: 28px;
-    font-weight: 600;
-    color: #23230a;
+    font-family: 'Poppins';
+    font-size: 40px;
+    font-weight: 700;
+    color: #50362A;
     margin-top: 0;
 }
 
 .desc-b-s-6 {
     display: flex;
-    font-family: 'Red Hat Display';
-    font-size: 16px;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 300;
+    color: #151515;
+}
+
+.button-b-s-6 {
+    background-color: #957647;
+    font-family: 'Poppins';
+    font-size: 14px;
     font-weight: 500;
-    color: #766a61;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    width: 200px;
+    height: 34px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.button-b-s-6:hover {
+    box-shadow: 1px 2px 3px rgb(0, 0, 0, 0.5);
 }
 
 .news-b-s-6 {
@@ -888,6 +968,8 @@ body {
     overflow-y: hidden;
     white-space: nowrap;
     padding-bottom: 20px;
+    padding-left: 40px;
+    width: 70%;
 }
 
 .news-b-s-6::-webkit-scrollbar-track
@@ -911,22 +993,23 @@ body {
 
 .news-b-s-6-1 {
     position: relative;
-    background-color: red;
+    background-color: white;
     width: 100%;
     height: 100%;
     text-align: left;
     white-space: normal;
-    border-radius: 15px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px 5px rgb(0, 0, 0, 0.15);
 }
 
 .img-news-b-s-6 {
-    width: 310px;
-    height: 190px;
-    border-radius: 15px;
+    width: 275px;
+    height: 170px;
+    border-radius: 30px 30px 0 0;
 }
 
 .ornamen-news-b-s-6 {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     left: 0;
     width: 100%;
@@ -935,7 +1018,7 @@ body {
     border-radius: 0 0 15px 15px;
 }
 
-.judul-news-b-s-6 {
+/* .judul-news-b-s-6 {
     position: absolute;
     display: -webkit-box;
     overflow: hidden;
@@ -950,14 +1033,22 @@ body {
     margin-bottom: 35px;
     padding-left: 15px;
     padding-right: 15px;
+} */
+.judul-news-b-s-6 {
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 300;
+    color: #000000;
+    margin: 10px 20px;
+    padding-bottom: 70px;
 }
-
+/* 
 .judul-news-b-s-6:hover {
     -webkit-line-clamp: 4;
     background: linear-gradient(0deg, #00000000 0, #00000079 100%);
-}
+} */
 
-.button-b-s-6-1 {
+/* .button-b-s-6-1 {
     position: absolute;
     text-decoration: none;
     font-family: 'Red Hat Display';
@@ -969,7 +1060,18 @@ body {
     left: 0;
     margin-bottom: 15px;
     margin-left: 15px;
+} */
+.button-b-s-6-1 {
+    position: absolute;
+    bottom: 0;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 500;
+    color: #957647;
+    margin: 20px;
 }
+
 @media screen and (max-width: 800px) {
     .container-beranda-s-6-1 {
         height: 180px;
