@@ -340,23 +340,22 @@ body {
 .button-b-s-2 {
     width: 225px;
     height: 40px;
-    background-color: #957647;
+    background-color: #50362A;
     font-family: 'Red Hat Display';
     font-size: 14px;
     font-weight: 600;
     color: white;
     letter-spacing: 1.1px;
     border: none;
-    box-shadow: 1px 1px 4px #00000079;
     border-radius: 25px;
     cursor: pointer;
 }
 
 .button-b-s-2:hover {
-    background-color: transparent;
+    background-color: #957647;
     border: 1px outset #957647;
-    color: #957647;
-    box-shadow: 1px 1px 4px #00000079;
+    color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 800px) {
@@ -518,7 +517,7 @@ body {
 }
 
 .judul-b-s-4 {
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     font-size: 34px;
     font-weight: 600;
     color: #957647;
@@ -527,9 +526,9 @@ body {
 }
 
 .judul-b-s-4 span{
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     font-size: 34px;
-    font-weight: 600;
+    font-weight: 900;
     color: #50362A;
     margin-bottom: 50px;
 }
@@ -769,7 +768,7 @@ body {
 }
 
 .button-b-s-5 {
-    background-color: #957647;
+    background-color: #50362A;
     font-family: 'Poppins';
     font-size: 14px;
     font-weight: 500;
@@ -942,7 +941,7 @@ body {
 }
 
 .button-b-s-6 {
-    background-color: #957647;
+    background-color: #50362A;
     font-family: 'Poppins';
     font-size: 14px;
     font-weight: 500;
@@ -988,7 +987,7 @@ body {
 .news-b-s-6::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-    background-color: #e7c5ae;
+    background-color: #50362A;
 }
 
 .news-b-s-6-1 {
@@ -1156,7 +1155,7 @@ body {
 
 /* -------- SECTION 7 -------- */
 .container-beranda-s-7 {
-    background-color: #f9e9de;
+    background-color: transparent;
 }
 
 .container-beranda-s-7-1 {
@@ -1165,24 +1164,27 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
+    height: 450px;
     max-width: 1300px;
     margin: auto;
 }
 
 .isi-beranda-s-7 {
-    background-color: transparent;
+    align-self: baseline;
+    background-color: #F8F3ED;
+    box-shadow: 10px 10px 50px 15px rgb(0, 0, 0, 0.2);
+    border-radius: 30px;
     width: 100%;
     padding: 80px;
-    padding-top: 200px;
+    margin: 80px;
 }
 
 .judul-b-s-7 {
-    font-family: 'Red Hat Display';
-    font-size: 28px;
-    font-weight: 600;
-    color: #23230a;
+    font-family: 'Poppins';
+    font-size: 34px;
+    font-weight: 700;
+    color: #957647;
     margin-top: 0;
-    margin-bottom: 130px;
 }
 
 .img-b-s-7 {
@@ -1190,43 +1192,38 @@ body {
     justify-content: space-between;
     margin-top: 80px;
     margin-bottom: 80px;
-    background-color: white;
-    padding: 0 40px 20px 40px;
     border-radius: 15px;
-    height: 50px;
-    box-shadow: 1px 1px 4px gray;
 }
 
 .img-b-s-7-1 {
-    align-self: flex-end;
     width: 100px;
-    height: 100px;
+    height: auto;
 }
 
 .button-b-s-7-1 {
-    background-color: #f9e9de;
+    background-color: #50362A;
     width: 70px;
     height: 40px;
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     font-size: 18px;
     font-weight: 600;
-    color: #23230a;
-    border: 2px solid #e7c5ae;
-    border-radius: 20px 0 0 20px;
+    color: #F6F4F0;
+    border: 2px solid #50362A;
+    border-radius: 20px;
     cursor: pointer;
     transition: width 0.3s ease-in-out;
 }
 
 .button-b-s-7-2 {
-    background-color: #f9e9de;
+    background-color: #F8F3ED;
     width: 70px;
     height: 40px;
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     font-size: 18px;
     font-weight: 600;
-    color: #23230a;
-    border: 2px solid #e7c5ae;
-    border-radius: 0 20px 20px 0;
+    color: #50362A;
+    border: 2px solid #50362A;
+    border-radius: 20px;
     cursor: pointer;
     transition: width 0.3s ease-in-out;
 }
@@ -1318,7 +1315,7 @@ body {
 }
 
 .f-sec-0 {
-    background-color: #e8b897;
+    background-color: #50362A;
 }
 
 .f-newsletter {
@@ -1341,17 +1338,17 @@ body {
 
 .icon-newsletter {
     font-size: 50px;
-    color: #895e3f;
-    text-shadow: 3px 3px 1px #f1ece7;
+    color: #e6d5ca;
+    /* text-shadow: 3px 3px 1px #f1ece7; */
 }
 
 .title-newsletter {
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     font-size: 16px;
     font-weight: 600;
     text-align: center;
-    color: #23230a;
-    padding-top: 50px;
+    color: #e6d5ca;
+    padding-top: 300px;
     letter-spacing: 0.5px;
     margin: 0;
 }
@@ -1364,7 +1361,7 @@ body {
 
 .newsletter-box {
     display: block;
-    background-color: #e7c5ae;
+    background-color: #50362A;
     width: 30%;
     text-align: center;
     padding-right: 20px;
@@ -1373,19 +1370,19 @@ body {
 }
 
 .nesletter-isi-box1 {
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     font-size: 16px;
     font-weight: 500;
-    color: #23230a;
+    color: #e6d5ca;
     margin-top: 15px;
     margin-bottom: 5px;
 }
 
 .nesletter-isi-box2 {
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     font-size: 24px;
     font-weight: 600;
-    color: #23230a;
+    color: #e6d5ca;
     margin-top: 5px;
     margin-bottom: 15px;
 }
@@ -1403,28 +1400,28 @@ body {
     padding: 3px;
     border: 1px solid #895e3f;
     border-radius: 20px;
-    background-color: #e7c5ae;
+    background-color: #e6d5ca;
 }
 .text-newsletter {
     width: 100%;
     height: 30px;
     border-radius: 20px 0 0 20px;
     border-width: 0;
-    background-color: #e7c5ae;
+    background-color: #e6d5ca;
     margin-left: 10px;
 }
 .button-newsletter {
     width: 120px;
-    background-color: #895e3f;
+    background-color: #50362A;
     border: none;
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     color: #f1ece7;
     letter-spacing: 1.2px;
     border-radius: 20px;
     cursor: pointer;
 }
 .button-newsletter:hover {
-    background-color: #966e52;
+    background-color: #614436;
     border: 1px solid #895e3f;
 }
 
@@ -1433,7 +1430,7 @@ body {
 }
 
 .f-sec-1 {
-    background-color: #e8b897;
+    background-color: #50362A;
     border-top: 1px solid #895e3f;
 }
 
@@ -1464,8 +1461,8 @@ body {
 }
 
 .info-logo {
-    color: #23230a;
-    font-family: 'Red Hat Display';
+    color: #e6d5ca;
+    font-family: 'Poppins';
     font-weight: 600;
     font-size: 20px;
     letter-spacing: 1.5px;
@@ -1473,8 +1470,8 @@ body {
 }
 
 .info-text {
-    color: #23230a;
-    font-family: 'Red Hat Display';
+    color: #e6d5ca;
+    font-family: 'Poppins';
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 1.1px;
@@ -1485,7 +1482,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    color: #e7c5ae;
+    color: #50362A;
     height: 35px;
     width: 35px;
     justify-content: center;
@@ -1505,7 +1502,7 @@ body {
     text-decoration: none;
     margin: auto;
     justify-content: center;display: flex;
-    background-color: #895e3f;
+    background-color: #e6d5ca;
     flex-direction: column;
     width: 35px;
     height: 35px;
@@ -1515,7 +1512,7 @@ body {
 }
 
 .info-sos:hover {
-    background-color: #e7c5ae;
+    background-color: #e6d5ca;
     box-shadow: 0px 0px 4px #895e3f;
 }
 
@@ -1547,36 +1544,36 @@ body {
 }
 
 .info-menu {
-    color: #23230a;
+    color: #e6d5ca;
     text-decoration: none;
     text-align: center;
     font-size: 14px;
     font-weight: 600;
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     font-weight: 600;
     letter-spacing: 1.2px;
     line-height: 3;
 }
 
 .info-3-text {
-    color: #23230a;
-    font-family: 'Red Hat Display';
+    color: #e6d5ca;
+    font-family: 'Poppins';
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 1.5px;
 }
 
 .info-3-text2 {
-    color: #23230a;
-    font-family: 'Red Hat Display';
-    font-weight: 600;
+    color: #e6d5ca;
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 12px;
     letter-spacing: 1.5px;
 }
 
 .info-4-text {
-    color: #23230a;
-    font-family: 'Red Hat Display';
+    color: #e6d5ca;
+    font-family: 'Poppins';
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 1.5px;
@@ -1598,7 +1595,8 @@ body {
 }
 
 .f-sec-2 {
-    background-color: #895e3f;
+    background-color: #50362A;
+    border-top: 1px solid #895e3f;
 }
 
 .f-cpr {
@@ -1615,7 +1613,7 @@ body {
 }
 
 .cpr {
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     color: #e6d5ca;
     font-size: 14px;
 }
@@ -1627,7 +1625,7 @@ body {
 
 .tnc, .plcy {
     text-decoration: none;
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
     color: #e6d5ca;
     font-size: 14px;
 }

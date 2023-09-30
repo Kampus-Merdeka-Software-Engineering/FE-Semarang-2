@@ -6,28 +6,24 @@ buttonSell.addEventListener('mouseover', () => {
     buttonSell.value = 'Start Selling';
     buttonSell.style.width = '200px';
     buttonSell.style.boxShadow = '-2px 2px 5px rgba(0, 0, 0, 0.8)';
-    buttonSell.style.background = 'linear-gradient(90deg, #f9e9de 0, #e7c5ae 100%)';
 });
 
 buttonSell.addEventListener('mouseout', () => {
     buttonSell.value = 'Sell';
     buttonSell.style.width = '70px';
     buttonSell.style.boxShadow = 'none';
-    buttonSell.style.background = '#f9e9de';
 });
 
 buttonBuy.addEventListener('mouseover', () => {
     buttonBuy.value = 'Start Buying';
     buttonBuy.style.width = '200px';
     buttonBuy.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.8)';
-    buttonBuy.style.background = 'linear-gradient(270deg, #f9e9de 0, #e7c5ae 100%)';
 });
 
 buttonBuy.addEventListener('mouseout', () => {
     buttonBuy.value = 'Buy';
     buttonBuy.style.width = '70px';
     buttonBuy.style.boxShadow = 'none';
-    buttonBuy.style.background = '#f9e9de';
 });
 
   
