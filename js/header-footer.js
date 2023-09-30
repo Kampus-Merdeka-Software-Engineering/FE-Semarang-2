@@ -12,7 +12,7 @@ window.onscroll = function() {
         document.querySelector('.header').style.boxShadow = 'none';
     } else if (navScroll > currentNavScroll) {
         document.querySelector('.header').style.top = '0';
-        document.querySelector('.header').style.backgroundColor = 'rgba(194, 167, 128, 0.5)';
+        document.querySelector('.header').style.backgroundColor = 'rgba(252, 245, 235, 0.4)';
         document.querySelector('.header').style.backdropFilter = 'blur(8px)';
         document.querySelector('.header').style.boxShadow = '0px 5px 5px rgba(0, 0, 0, 0.3)';
     } else {
