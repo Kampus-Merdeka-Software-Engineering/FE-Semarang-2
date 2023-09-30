@@ -12,13 +12,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(252, 245, 235, 0.4);
-    border-style: solid;
-    border-width: 1px;
-    border-color: #895e3f;
+    background-color: transparent;
     border-radius: 0 0 25px 25px;
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(8px);
     transition-duration: 0.5s;
     z-index: 2;
 }
@@ -42,7 +37,8 @@ body {
 }
   
 .logo {
-    color: #23230a;
+    color: white;
+    text-shadow: 1px 1px 3.5px black;
     font-family: 'Red Hat Display';
     font-weight: 600;
     font-size: 26px;
@@ -56,7 +52,8 @@ body {
 }
 
 .nav-link {
-    color: #23230a;
+    color: white;
+    text-shadow: 1px 1px 3.5px black;
     text-decoration: none;
     text-align: center;
     font-size: 18px;
@@ -64,14 +61,15 @@ body {
     font-family: 'Red Hat Display';
     font-weight: 600;
     letter-spacing: 1.2px;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .nav-active {
-    color: #23230a;
-    border-bottom: 2px solid #895e3f;
+    color: white;
+    border-bottom: 3px solid white;
+    text-shadow: 1px 1px 3.5px black;
     text-decoration: none;
     text-align: center;
     font-size: 18px;
@@ -84,18 +82,18 @@ body {
 }
 
 .nav-link:hover {
-    color: #23230a;
-    border-bottom: 2px solid #895e3f;
+    color: white;
+    border-bottom: 3px solid white;
 }
 
 .nav-active:hover {
-    color: #23230a;
-    border-bottom: 2px solid #895e3f;
+    color: white;
+    border-bottom: 3px solid white;
 }
 
 .nav-icon {
     display: none;
-    color: #121212;
+    color: white;
 }
 
 @media screen and (max-width: 800px) {
@@ -295,7 +293,7 @@ body {
 }
 /* -------- SECTION 2 -------- */
 .container-beranda-s-2 {
-    background-color: #fcf5eb;
+    background-color: transparent;
 }
 
 .container-beranda-s-2-1{
@@ -311,7 +309,7 @@ body {
 .isi-beranda-s-2 {
     background-color: transparent;
     width: 100%;
-    padding: 80px;
+    padding: 100px 80px;
 }
 
 .judul-b-s-2 {
@@ -325,25 +323,39 @@ body {
 .desc-b-s-2 {
     font-family: 'Red Hat Display';
     font-size: 28px;
+    font-weight: 500;
     color: #23230a;
+    margin-bottom: 50px;
+    padding: 0px 50px;
+}
+
+.desc-b-s-2 span{
+    font-family: 'Red Hat Display';
+    font-size: 28px;
+    font-weight: 600;
+    color: #957647;
     margin-bottom: 50px;
 }
 
 .button-b-s-2 {
-    width: 250px;
-    height: 50px;
-    background-color: transparent;
+    width: 225px;
+    height: 40px;
+    background-color: #957647;
     font-family: 'Red Hat Display';
     font-size: 14px;
     font-weight: 600;
-    color: #23230a;
-    border: 2px outset #e8b897;
-    border-radius: 30px 5px 30px 5px;
+    color: white;
+    letter-spacing: 1.1px;
+    border: none;
+    box-shadow: 1px 1px 4px #00000079;
+    border-radius: 25px;
     cursor: pointer;
 }
 
 .button-b-s-2:hover {
-    background-color: #e7c5ae;
+    background-color: transparent;
+    border: 1px outset #957647;
+    color: #957647;
     box-shadow: 1px 1px 4px #00000079;
 }
 
@@ -409,8 +421,8 @@ body {
 
 /* -------- SECTION 3 -------- */
 .container-beranda-s-3 {
-    background-color: #e7c5ae;
-    background: linear-gradient(90deg, #e8b897 0%, #fcf5eb 100%);
+    background-color: transparent;
+    /* background: linear-gradient(90deg, #e8b897 0%, #fcf5eb 100%); */
 }
 
 .container-beranda-s-3-1 {
@@ -432,15 +444,22 @@ body {
 .video-b-s-3 {
     max-width: 85%;
     height: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     border-radius: 20px;
 }
 .desc-b-s-3 {
     font-family: 'Red Hat Display';
     font-size: 28px;
-    font-weight: 600;
-    color: #23230a;
-    margin-bottom: 50px;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    color: #50362A;
+    padding: 0 80px;
+    margin-bottom: 80px;
+}
+
+.isi-beranda-s-3 hr{
+    height: 1px;
+    background-color: #957647;
 }
 
 @media screen and (max-width: 800px) {
@@ -1361,10 +1380,13 @@ body {
 }
 
 .fa-facebook-f,.fa-instagram,.fa-x-twitter,.fa-youtube {
-    text-align: center;
-    align-items: center;
-    font-size: 24px;
-    color: #23230a;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: #e7c5ae;
+    height: 35px;
+    width: 35px;
+    justify-content: center;
 }
 
 .sos-ul {
@@ -1378,7 +1400,21 @@ body {
 }
 
 .info-sos {
-    margin-right: 30px;
+    text-decoration: none;
+    margin: auto;
+    justify-content: center;display: flex;
+    background-color: #895e3f;
+    flex-direction: column;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.info-sos:hover {
+    background-color: #e7c5ae;
+    box-shadow: 0px 0px 4px #895e3f;
 }
 
 .fa-facebook-f:hover {

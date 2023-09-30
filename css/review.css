@@ -15,30 +15,28 @@ body {
 
 /** -------- MAIN CONTENT -------- */
 /** -------- SECTION 1 -------- */
-.container-kontak-s-1 {
+.container-review-s-1 {
     display: block;
     height: 100vh;
 }
 
-.gambar-kontak-s-1-1 {
+.gambar-review-s-1-1 {
     position: absolute;
     width: 100%;
-    /* height: 35vh; */
     height: 100vh;
     object-fit: cover;
     transition: opacity 1s ease-in-out;
 }
 
-.gambar-kontak-s-1-2 {
+.gambar-review-s-1-2 {
     position: absolute;
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    /* font-size: 2em; */
     transition: opacity 1s ease-in-out;
 }
 
-.container-kontak-s-1-1 {
+.container-review-s-1-1 {
     position: relative;
     background: linear-gradient(90deg, #000000ce 0%, #00000000 100%);
     display: flex;
@@ -49,7 +47,7 @@ body {
     margin: auto;
 }
 
-.isi-kontak-s-1 {
+.isi-review-s-1 {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -67,7 +65,7 @@ body {
     text-shadow: 1px 1px 10px rgb(29, 29, 29);
 }
 
-.isi-kontak-s-1 p {
+.isi-review-s-1 p {
     margin-top: 7px;
     color: #fff;
     text-align: center;
@@ -100,11 +98,11 @@ body {
 /** -------- END SECTION 1 -------- */
 
 /** -------- SECTION 2 -------- */
-.container-kontak-s-2 {
+.container-review-s-2 {
     background: linear-gradient(#efe4d7 0%, #efe4d7 30%, #fcf5eb 30%, #fcf5eb 100%);
 }
 
-.container-kontak-s-2-1 {
+.container-review-s-2-1 {
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -114,19 +112,16 @@ body {
     margin: auto;
 }
 
-.isi-kontak-s-2 {
+.isi-review-s-2 {
     background-color: transparent;
     width: 100%;
 }
 
-
 /** -------- CONTACT US -------- */
 main .contactUs {
-    /* background: linear-gradient(#0e3959 0%, #0e3959 30%, #03a9f5 30%, #03a9f5 100%); */
     position: relative;
     width: 100%;
     padding: 40px 0;
-    /* padding: 40px 100px; */
 }
 
 main .contactUs .title {
@@ -148,9 +143,7 @@ main .contactUs .box {
     grid-template-rows: 5fr 4fr;
     grid-template-areas: "form info" "form map";
     grid-gap: 20px;
-    /* padding: 0 100px; */
     padding: 0 50px;
-    /* margin-top: 20px; */
 }
 
 main .contactUs .box .form {
@@ -252,6 +245,7 @@ main .contactUs .box .form .formBox .inputBox input[type="submit"] {
     font-weight: 500;
     cursor: pointer;
     padding: 14px 15px;
+    margin-top: 25px;
 }
 
 main .contactUs .box .form .formBox .inputBox input[type="submit"]:disabled {
@@ -321,14 +315,6 @@ main .contactUs .box .info .infoBox .sci li a {
 main .contactUs .box .info .infoBox .sci li a:hover {
     color: #8B4513;
 }
-
-.sci a {
-    text-decoration: none;
-}
-
-.sci i {
-    color: #23230a;
-}
 /** -------- END INFO -------- */
 
 /** -------- MAP -------- */
@@ -356,11 +342,9 @@ main .contactUs .box .map iframe:hover {
 /** -------- END MAIN -------- */
 
 /** -------- FOOTER -------- */
-.info-text {
-    margin-bottom: 10px;
-}
-/* .newsletter-box {
+.newsletter-box {
     width: 34.405%;
+
 }
 
 .info-logo {
@@ -368,7 +352,7 @@ main .contactUs .box .map iframe:hover {
 }
 
 .info-text {
-    margin: 10px 0 14px;
+    margin: 10px 0 16px;
 }
 
 .info-3-text2 {
@@ -376,12 +360,14 @@ main .contactUs .box .map iframe:hover {
 }
 
 .info-4-text {
-    margin: 14px 0 14px 10px;
-} */
+    margin: 14px 0 14px 0;
+}
 
-/* .f-info-con {
+.f-info-con {
+    /* padding-left: 8opx; */
+    /* agar iconnya pada footer rapih, pakai yang 80px */
     padding-left: 81px;
-} */
+}
 /** -------- END FOOTER -------- */
 
 /** -------- RESPONSIVE BREAKPOINT -------- */
@@ -432,7 +418,7 @@ main .contactUs .box .map iframe:hover {
     }
 
     /* main .contactUs .box .contact {
-        // padding: 30px;
+        // padding: 30px; 
     } */
 
     .popup p {
@@ -478,12 +464,12 @@ main .contactUs .box .map iframe:hover {
 }
 
 @media screen and (max-width: 600px) {
-    main #row1 .row1-1 .col h2 {
+    .slogan-b-s-1 {
         text-align: center;
-        font-size: 24x;
+        font-size: 24px;
     }
 
-    main #row1 .row1-1 .col p {
+    .isi-review-s-1 p {
         text-align: center;
         font-size: 16px;
     }
@@ -498,7 +484,7 @@ main .contactUs .box .map iframe:hover {
     }
 
     .popup button {
-        margin-top:40px;
+        margin-top: 40px;
     }
 
     .open-popup {
@@ -548,7 +534,7 @@ main .contactUs .box .map iframe:hover {
     }
 
     .popup button {
-        margin-top:40px;
+        margin-top: 40px;
     }
 
     .open-popup {
@@ -581,7 +567,7 @@ main .contactUs .box .map iframe:hover {
     }
 
     .popup button {
-        margin-top:40px;
+        margin-top: 40px;
     }
 
     .open-popup {

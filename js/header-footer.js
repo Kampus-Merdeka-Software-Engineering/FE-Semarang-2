@@ -5,22 +5,37 @@ let screenWidth = window.innerWidth;
 window.onscroll = function() {
     let currentNavScroll = window.pageYOffset;
     screenWidth = window.innerWidth;
-    if (navScroll > currentNavScroll) {
+
+    if (currentNavScroll === 0) {
+        document.querySelector('.header').style.backgroundColor = 'transparent';
+        document.querySelector('.header').style.backdropFilter = 'blur(0)';
+        document.querySelector('.header').style.boxShadow = 'none';
+    } else if (navScroll > currentNavScroll) {
         document.querySelector('.header').style.top = '0';
+        document.querySelector('.header').style.backgroundColor = 'rgba(252, 245, 235, 0.4)';
+        document.querySelector('.header').style.backdropFilter = 'blur(8px)';
+        document.querySelector('.header').style.boxShadow = '0px 5px 5px rgba(0, 0, 0, 0.3)';
     } else {
         document.querySelector('.header').style.top = '-260px';
+        document.querySelector('.header').style.backgroundColor = 'transparent';
     }
     navScroll = currentNavScroll;
 }
+
 
 const navLink = document.getElementById("toggleButton");
 
 navLink.addEventListener("click", () => {
     let responsiv = document.getElementById("navbarRight");
+    let header = document.querySelector('.header');
+
+    header.style.backgroundColor = 'rgba(194, 167, 128, 0.5)';
+
     if (responsiv.className === "navbar-right") {
         responsiv.className += " responsive";
     } else {
         responsiv.className = "navbar-right";
+        header.style.backgroundColor = 'transparent';
     }
 });
 
@@ -37,6 +52,12 @@ var formNewsLetter = document.getElementById('formNewsLetter');
 
 /* Define email validation emailPattern */
 var emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+function resetInputNewsletter() {
+    const emailInput = document.getElementById('emailNewsLetter');
+    emailInput.value = '';
+    formNewsLetter.style.borderColor = colors.defaultColorHex;
+}
 
 /* Function to validate email input in form newsletter */
 function handleEmailInputNewsletter(event) {
@@ -73,19 +94,22 @@ async function postDataNewsletterToServer(email) {
         });
 
         if (!response.data) {
-            throw new Error('Failed to create NewsLetter');
+            // throw new Error('Failed to create NewsLetter');
+            openPopupError('Failed to create Newsletter')
         }
-        
+
         return response.data;
     } catch (error) {
-        throw new Error("Failed to create NewsLetter");
+        // error.response.data
+        if (error.response && error.response.data.error) {
+            const errorMessage = error.response.data.error;
+            console.error(errorMessage);
+            handleErrorNewsletter(errorMessage);
+        } else {
+            console.error(error.message);
+            handleErrorNewsletter(error.message);
+        }
     }
-}
-
-function resetInputNewsletter() {
-    const emailInput = document.getElementById('emailNewsLetter');
-    emailInput.value = '';
-    formNewsLetter.style.borderColor = colors.defaultColorHex;
 }
 
 /* Function to handle while success fetch in form newsletter */
@@ -95,8 +119,8 @@ function handleSuccessNewsletter() {
 }
 
 /* Function to handle while error fetch in form newsletter */
-function handleErrorNewsletter() {
-    openPopup()
+function handleErrorNewsletter(desc) {
+    openPopupError(desc)
     resetInputNewsletter()
 }
 
@@ -114,13 +138,17 @@ formNewsLetter.addEventListener('submit', async (event) => {
 
     const emailNewsLetter = document.getElementById('emailNewsLetter').value;
 
+    if (!emailPattern.test(emailNewsLetter)) {
+        openPopupError('Email Invalid')
+    }
+
     try {
         await postDataNewsletterToServer(emailNewsLetter);
         handleSuccessNewsletter();
     } catch (error) {
-        handleErrorNewsletter();
+        handleErrorNewsletter('Email sudah terdaftar');
     }
-    
+
 })
 
 // function onSubmit(token) {}
@@ -130,6 +158,19 @@ let popup = document.getElementById("popup");
 const btnClose = document.getElementById("btnClose");
 
 function openPopup() {
+    popup.classList.add("open-popup");
+}
+
+function openPopupError(desc) {
+    const imgPopup = document.getElementById('img-popup')
+    const titlePopup = document.getElementById('title-popup')
+    const descPopup = document.getElementById('desc-popup')
+    const btnClose = document.getElementById('btnClose')
+    imgPopup.src = '../img/tick-error.png'
+    titlePopup.innerHTML = 'Failed'
+    titlePopup.style.color = colors.invalidColorHex
+    descPopup.innerHTML = desc
+    btnClose.style.backgroundColor = colors.invalidColorHex
     popup.classList.add("open-popup");
 }
 

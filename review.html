@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://kit.fontawesome.com/ae87e11e18.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Red Hat Display" rel="stylesheet" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/review.css" />
+    
+    <title>Review - Creatopia</title>
+</head>
+
+<body>
+    <!-- HEADER/NAVBAR -->
+    <header class="header">
+        <div class="navcount">
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <a class="logo">Creatopia</a>
+                    <a href="javascript:void(0);" class="nav-icon" id="toggleButton">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <div class="navbar-right" id="navbarRight">
+                    <a href="index.html" class="nav-link nav-first">Beranda</a>
+                    <a href="produk.html" class="nav-link">Produk</a>
+                    <a href="tentang.html" class="nav-link">Tentang Kami</a>
+                    <a href="kontak.html" class="nav-link">Kontak</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1 (GAMBAR COVER) -->
+        <section class="container-review-s-1">
+            <img class="gambar-review-s-1-1" src="img/bg-review.jpg" alt="" />
+            <div class="container-review-s-1-1">
+                <div class="isi-review-s-1">
+                    <h2 class="slogan-b-s-1">Your insights matter!</h2>
+                    <p class="desc">Share your experience and be a part of our continuous improvement journey.</p>
+                </div>
+                <a href="#row2" class="fa-solid fa-chevron-down"></a>
+            </div>
+        </section>
+        <!-- END SECTION 1 (GAMBAR COVER) -->
+
+        <!-- SECTION 2 -->
+        <section class="container-review-s-2" id="row2">
+            <div class="container-review-s-2-1">
+                <div class="isi-review-s-2">
+                    <div class="contactUs">
+                        <div class="box">
+                            <div class="contact form">
+                                <h3>Send a Review</h3>
+                                <form id="formReview">
+                                    <div class="formBox">
+                                        <div class="row50">
+                                            <div class="inputBox">
+                                                <label for="email">Email</label>
+                                                <input type="text" id="email" name="email" placeholder="Your Email"
+                                                    required />
+                                                <span id="text"></span>
+                                            </div>
+                                            <div class="inputBox">
+                                                <label for="name">Name</label>
+                                                <input type="text" id="name" name="name" placeholder="Your Name"
+                                                    required />
+                                            </div>
+                                        </div>
+
+                                        <div class="row100">
+                                            <div class="inputBox">
+                                                <label for="message">Review</label>
+                                                <textarea id="message" name="message"
+                                                    placeholder="Write your review here..." required></textarea>
+
+                                                <label>Your email will not be displayed</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="row100">
+                                            <div class="inputBox">
+                                                <div class="g-recaptcha"
+                                                    data-sitekey="6LconTgoAAAAAGQhI0SQP_edUcqIwYMVPo5IIs5Z"></div>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="row100">
+                                            <div class="inputBox">
+                                                <input type="submit" id="btnSubmit" value="Send" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="contact info">
+                                <h3>Contact Info</h3>
+                                <div class="infoBox">
+                                    <div>
+                                        <span><ion-icon name="location"></ion-icon></span>
+                                        <p>Creatopia, Jakarta <br />INDONESIA</p>
+                                    </div>
+                                    <div>
+                                        <span><ion-icon name="mail"></ion-icon></span>
+                                        <a href="mailto:loremipsum@email.com">creatopia@yahoo.com</a>
+                                    </div>
+                                    <div>
+                                        <span><ion-icon name="call"></ion-icon></span>
+                                        <a href="tel:+62 812 3456 7890">+62 812-3456-7890</a>
+                                    </div>
+
+                                    <ul class="sci">
+                                        <li>
+                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="contact map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.276983007019!2d106.82385307384129!3d-6.22716549376093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e4734a8de3%3A0xb2ad7eacc88d7f3e!2sRevoU!5e0!3m2!1sen!2sid!4v1694417961568!5m2!1sen!2sid"
+                                    style="border: 0" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION 2 -->
+
+        <!-- SECTION Pop Up -->
+        <section class="container-review-s-2" id="row3">
+            <div class="container-review-s-2-1">
+                <div class="isi-review-s-2">
+                    <div class="container-popup-1">
+                        <!-- <button type="submit" class="btn" id="btn" onclick="openPopup()">Kirim</button> -->
+                        <div class="container-popup-2">
+                            <div class="popup" id="popup">
+                                <img src="./img/tick.png" alt="tick" id="img-popup" />
+                                <h2 id="title-popup">Thank you</h2>
+                                <p id="desc-popup">We got your message</p>
+                                <button type="submit" id="btnClose">OKE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION POP Up -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <!-- FOOTER SECTION 0 -->
+        <section class="f-sec-0">
+            <div class="f-newsletter">
+                <p class="title-newsletter">
+                    Jangan lewatkan informasi komunitas, acara, berita, promosi, dan
+                    masih banyak lagi.
+                </p>
+                <div class="f-newsletter-icon">
+                    <i class="icon-newsletter fa-solid fa-users-between-lines"></i>
+                    <i class="icon-newsletter fa-regular fa-calendar"></i>
+                    <i class="icon-newsletter fa-regular fa-newspaper"></i>
+                    <i class="icon-newsletter fa-solid fa-percent"></i>
+                </div>
+                <div class="form-newsletter">
+                    <div class="newsletter-box">
+                        <p class="nesletter-isi-box1">SUBSCRIBE TO OUR</p>
+                        <p class="nesletter-isi-box2">NEWSLETTER</p>
+                    </div>
+                    <div class="input-newsletter">
+                        <form class="newsletter" id="formNewsLetter">
+                            <input class="text-newsletter" type="text" id="emailNewsLetter" name="emailNewsLetter"
+                                placeholder=" Masukkan e-mail kamu" required />
+                            <!-- <input type="hidden" class="g-recaptcha" data-sitekey="6LdZEzkoAAAAAD2jqYCvBJCOakjIo4qsStQlDAWd" data-callback="onSubmit"> -->
+                            <input class="button-newsletter" type="submit" id="btnNewsLetter" value="Subscribe" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END FOOTER SECTION 0 -->
+
+        <!-- FOOTER SECTION 1 -->
+        <section class="f-sec-1">
+            <div class="f-info">
+                <div class="f-info-con">
+                    <p class="info-logo">Creatopia</p>
+                    <p class="info-text">Dapatkan berita terbaru</p>
+                    <ul class="sos-ul">
+                        <li class="sos-li">
+                            <a class="info-sos" href="https://facebook.com" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="sos-li">
+                            <a class="info-sos" href="https://instagram.com" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="sos-li">
+                            <a class="info-sos" href="https://x.com" target="_blank">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="sos-li">
+                            <a class="info-sos" href="https://youtube.com" target="_blank">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-info-con2">
+                    <ul class="info-menu-list">
+                        <li class="info-li">
+                            <a class="info-menu" href="index.html">Beranda</a>
+                        </li>
+                        <li class="info-li2">
+                            <a class="info-menu" href="produk.html">Produk</a>
+                        </li>
+                        <li class="info-li3">
+                            <a class="info-menu" href="tentang.html">Tentang</a>
+                        </li>
+                        <li class="info-li4">
+                            <a class="info-menu" href="kontak.html">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-info-con3">
+                    <p class="info-3-text">Kantor Pusat</p>
+                    <p class="info-3-text2">
+                        Jalan Jend. A Yani No. 34, Kel. Panjunan, Kec. Kota Kudus, Kab.
+                        Kudus, Jawa Tengah, 59317.
+                    </p>
+                </div>
+                <div class="f-info-con4">
+                    <p class="info-4-text">Unduh App Creatopia</p>
+                    <a class="info-str" target="_blank" href="https://www.apple.com/id/app-store/">
+                        <img class="as-store" src="img/as.png" alt="" />
+                    </a>
+                    <a class="info-str" target="_blank" href="https://play.google.com/store/games?device=windows">
+                        <img class="ps-store" src="img/ps.png" alt="" />
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER SECTION 1 -->
+
+        <!-- FOOTER SECTION 2 -->
+        <section class="f-sec-2">
+            <div class="f-cpr">
+                <div class="f-cpr-con">
+                    <div class="cpr">2023 Creatopia, PT Creatopia Tbk.</div>
+                    <div class="tnc-plcy">
+                        <a class="tnc" href="">Peraturan & Kebijakan</a>
+                        <a class="plcy" href="">Pemberitahuan Privasi</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER SECTION 2-->
+    </footer>
+
+    <!-- LINK JAVASCRIPT -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" nonce="nonce-randomnonce12345"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="js/header-footer.js"></script>
+    <script src="js/review.js"></script>
+</body>
+
+</html>
