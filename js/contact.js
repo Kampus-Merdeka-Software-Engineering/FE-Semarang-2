@@ -66,7 +66,7 @@ function handleEmailInputContact(event) {
 function setBorderColorInputChange(inputs) {
     for (let i = 0; i < inputs.length; i++) {
         if (i === 2) {
-            continue; /* Skip index 2 */
+            continue; /* Skip index 2, yaitu email */ 
         }
 
         inputs[i].style.borderColor = inputs[i].value.length > 0 ? colors.validColorHex : colors.defaultColorHex;
@@ -120,7 +120,7 @@ function getFormContactValues() {
 /* Function to post data contact to server in form contact */
 async function postDataContactToServer(data) {
     try {
-        const apiUrl = 'https://express-back-end-production.up.railway.app/api/contacts/';
+        const apiUrl = 'https://express-back-end-production.up.railway.app/api/contacts/'; /* sementara pakai api ini */
         const response = await axios.post(apiUrl, data, {
         });
 
@@ -137,15 +137,13 @@ async function postDataContactToServer(data) {
 /* Function to handle while success fetch in form contact */
 function handleSuccessContact() {
     openPopup()
-    // window.location.href = '/contact';
-    // window.location.href = 'kontak.html'; /* Navigate to the contact page */
+    resetInputContact();
 }
 
 /* Function to handle while error fetch in form contact */
 function handleErrorContact() {
     openPopup()
     resetInputContact();
-    // window.location.href = 'kontak.html';
 }
 
 /* `keydown` trigger for forms with id `formContact` */

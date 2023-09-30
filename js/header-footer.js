@@ -87,7 +87,7 @@ function handleEmailInputNewsletter(event) {
 
 /* Function to post data contact to server in form newsletter */
 async function postDataNewsletterToServer(email) {
-    const url = 'https://express-back-end-production.up.railway.app/api/newsletters/';
+    const url = 'https://express-back-end-production.up.railway.app/api/newsletters/'; /* sementara pakai api ini */
 
     try {
         const response = await axios.post(url, { email }, {
