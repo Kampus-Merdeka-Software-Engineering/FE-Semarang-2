@@ -866,7 +866,7 @@ body {
 /* -------- SECTION REVIEW -------- */
 
 .container-beranda-review {
-    background-color: white;
+    background-color: #F8F3ED;
 }
 
 .container-beranda-review-1 {
@@ -875,15 +875,117 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 800px;
     max-width: 1300px;
     margin: auto;
 }
 
 .isi-beranda-review {
+    display: flex;
+    flex-direction: column;
     background-color: transparent;
     width: 100%;
     padding: 80px;
+}
+
+.judul-and-review1 {
+    display: flex;
+    gap: 40px;
+    background-color: transparent;
+}
+
+.review2-and-review1 {
+    display: flex;
+    gap: 40px;
+    background-color: transparent;
+    justify-content: right;
+}
+
+.judul-desc-review {
+    border-radius: 20px;
+    width: 30%;
+    text-align: right;
+    padding-top: 120px;
+}
+.review1 {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 39%;
+    height: fit-content;
+    text-align: left;
+    padding: 30px;
+    padding-bottom: 75px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.2);
+}
+.review2 {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 38%;
+    height: fit-content;
+    text-align: left;
+    padding: 30px;
+    padding-bottom: 75px;
+    margin-top: 40px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.2);
+}
+.review3 {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 36%;
+    height: fit-content;
+    text-align: left;
+    padding: 30px;
+    padding-bottom: 75px;
+    margin-top: 15px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.2);
+}
+.judul-review {
+    font-family: 'Poppins';
+    font-size: 40px;
+    font-weight: 700;
+    color: #50362A;
+    margin: 0;
+}.desc-review {
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: #50362A;
+    margin: 0;
+    margin-top: 10px;
+}.nama-review1 {
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin: 0;
+}.desc-review1 {
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin: 0;
+    margin-top: 10px;
+}.nama-review2 {
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin: 0;
+}.desc-review2 {
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin: 0;
+    margin-top: 10px;
+}.nama-review3 {
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin: 0;
+}.desc-review3 {
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin: 0;
+    margin-top: 10px;
+}
+.petik-review {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    margin-right: 15%;
+    margin-bottom: 30%;
 }
 
 /* -------- SECTION 6 -------- */
