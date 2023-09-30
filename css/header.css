@@ -4,10 +4,8 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(252, 245, 235, 0.4);
+    background-color: transparent;
     border-radius: 0 0 25px 25px;
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(8px);
     transition-duration: 0.5s;
     z-index: 2;
 }
@@ -29,24 +27,25 @@
 .navbar-left {
     display: flex;
 }
-
+  
 .logo {
-    color: #23230a;
+    color: white;
+    text-shadow: 1px 1px 3.5px black;
     font-family: 'Red Hat Display';
     font-weight: 600;
     font-size: 26px;
     letter-spacing: 1.5px;
-    text-decoration: none;
 }
 
-.navbar-right {
+.navbar-right{
     display: flex;
     gap: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nav-link {
-    color: #23230a;
+    color: white;
+    text-shadow: 1px 1px 3.5px black;
     text-decoration: none;
     text-align: center;
     font-size: 18px;
@@ -54,14 +53,15 @@
     font-family: 'Red Hat Display';
     font-weight: 600;
     letter-spacing: 1.2px;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .nav-active {
-    color: #23230a;
-    border-bottom: 2px solid #895e3f;
+    color: white;
+    border-bottom: 3px solid white;
+    text-shadow: 1px 1px 3.5px black;
     text-decoration: none;
     text-align: center;
     font-size: 18px;
@@ -74,18 +74,18 @@
 }
 
 .nav-link:hover {
-    color: #23230a;
-    border-bottom: 2px solid #895e3f;
+    color: white;
+    border-bottom: 3px solid white;
 }
 
 .nav-active:hover {
-    color: #23230a;
-    border-bottom: 2px solid #895e3f;
+    color: white;
+    border-bottom: 3px solid white;
 }
 
 .nav-icon {
     display: none;
-    color: #121212;
+    color: white;
 }
 
 @media screen and (max-width: 800px) {

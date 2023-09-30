@@ -293,7 +293,7 @@ body {
 }
 /* -------- SECTION 2 -------- */
 .container-beranda-s-2 {
-    background-color: #fcf5eb;
+    background-color: transparent;
 }
 
 .container-beranda-s-2-1{
@@ -309,7 +309,7 @@ body {
 .isi-beranda-s-2 {
     background-color: transparent;
     width: 100%;
-    padding: 80px;
+    padding: 100px 80px;
 }
 
 .judul-b-s-2 {
@@ -323,25 +323,39 @@ body {
 .desc-b-s-2 {
     font-family: 'Red Hat Display';
     font-size: 28px;
+    font-weight: 500;
     color: #23230a;
+    margin-bottom: 50px;
+    padding: 0px 50px;
+}
+
+.desc-b-s-2 span{
+    font-family: 'Red Hat Display';
+    font-size: 28px;
+    font-weight: 600;
+    color: #957647;
     margin-bottom: 50px;
 }
 
 .button-b-s-2 {
-    width: 250px;
-    height: 50px;
-    background-color: transparent;
+    width: 225px;
+    height: 40px;
+    background-color: #957647;
     font-family: 'Red Hat Display';
     font-size: 14px;
     font-weight: 600;
-    color: #23230a;
-    border: 2px outset #e8b897;
-    border-radius: 30px 5px 30px 5px;
+    color: white;
+    letter-spacing: 1.1px;
+    border: none;
+    box-shadow: 1px 1px 4px #00000079;
+    border-radius: 25px;
     cursor: pointer;
 }
 
 .button-b-s-2:hover {
-    background-color: #e7c5ae;
+    background-color: transparent;
+    border: 1px outset #957647;
+    color: #957647;
     box-shadow: 1px 1px 4px #00000079;
 }
 
@@ -407,8 +421,8 @@ body {
 
 /* -------- SECTION 3 -------- */
 .container-beranda-s-3 {
-    background-color: #e7c5ae;
-    background: linear-gradient(90deg, #e8b897 0%, #fcf5eb 100%);
+    background-color: transparent;
+    /* background: linear-gradient(90deg, #e8b897 0%, #fcf5eb 100%); */
 }
 
 .container-beranda-s-3-1 {
@@ -430,15 +444,22 @@ body {
 .video-b-s-3 {
     max-width: 85%;
     height: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     border-radius: 20px;
 }
 .desc-b-s-3 {
     font-family: 'Red Hat Display';
     font-size: 28px;
-    font-weight: 600;
-    color: #23230a;
-    margin-bottom: 50px;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    color: #50362A;
+    padding: 0 80px;
+    margin-bottom: 80px;
+}
+
+.isi-beranda-s-3 hr{
+    height: 1px;
+    background-color: #957647;
 }
 
 @media screen and (max-width: 800px) {
@@ -1359,10 +1380,13 @@ body {
 }
 
 .fa-facebook-f,.fa-instagram,.fa-x-twitter,.fa-youtube {
-    text-align: center;
-    align-items: center;
-    font-size: 24px;
-    color: #23230a;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: #e7c5ae;
+    height: 35px;
+    width: 35px;
+    justify-content: center;
 }
 
 .sos-ul {
@@ -1376,7 +1400,21 @@ body {
 }
 
 .info-sos {
-    margin-right: 30px;
+    text-decoration: none;
+    margin: auto;
+    justify-content: center;display: flex;
+    background-color: #895e3f;
+    flex-direction: column;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.info-sos:hover {
+    background-color: #e7c5ae;
+    box-shadow: 0px 0px 4px #895e3f;
 }
 
 .fa-facebook-f:hover {

@@ -321,6 +321,14 @@ main .contactUs .box .info .infoBox .sci li a {
 main .contactUs .box .info .infoBox .sci li a:hover {
     color: #8B4513;
 }
+
+.sci a {
+    text-decoration: none;
+}
+
+.sci i {
+    color: #23230a;
+}
 /** -------- END INFO -------- */
 
 /** -------- MAP -------- */
@@ -348,7 +356,10 @@ main .contactUs .box .map iframe:hover {
 /** -------- END MAIN -------- */
 
 /** -------- FOOTER -------- */
-.newsletter-box {
+.info-text {
+    margin-bottom: 10px;
+}
+/* .newsletter-box {
     width: 34.405%;
 }
 
@@ -366,13 +377,11 @@ main .contactUs .box .map iframe:hover {
 
 .info-4-text {
     margin: 14px 0 14px 10px;
-}
+} */
 
-.f-info-con {
-    /* padding-left: 8opx; */ 
-    /* agar iconnya pada footer rapih, pakai yang 80px */
+/* .f-info-con {
     padding-left: 81px;
-}
+} */
 /** -------- END FOOTER -------- */
 
 /** -------- RESPONSIVE BREAKPOINT -------- */
