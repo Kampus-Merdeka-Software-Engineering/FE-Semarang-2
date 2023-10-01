@@ -15,7 +15,7 @@ body {
     background-color: transparent;
     border-radius: 0 0 25px 25px;
     transition-duration: 0.5s;
-    z-index: 2;
+    z-index: 3;
 }
 
 .navcount {
@@ -176,6 +176,8 @@ body {
 
 /* -------- SECTION 1 -------- */
 .container-beranda-s-1 {
+    position: relative;
+    z-index: 1;
     display: block;
     height: 100vh;
 }
@@ -297,6 +299,8 @@ body {
 }
 
 .container-beranda-s-2-1{
+    position: relative;
+    z-index: 1;
     background-color: transparent;
     display: flex;
     text-align: center;
@@ -424,6 +428,8 @@ body {
 }
 
 .container-beranda-s-3-1 {
+    position: relative;
+    z-index: 1;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -497,6 +503,7 @@ body {
 
 /* -------- SECTION 4 -------- */
 .container-beranda-s-4 {
+    position: relative;
     background-color: white;
 }
 
@@ -511,12 +518,14 @@ body {
 }
 
 .isi-beranda-s-4 {
+    position: relative;
     background-color: transparent;
     width: 100%;
     padding: 80px;
 }
 
 .judul-b-s-4 {
+    position: relative;
     font-family: 'Poppins';
     font-size: 34px;
     font-weight: 600;
@@ -534,6 +543,7 @@ body {
 }
 
 .dampak-b-s-4 {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -548,6 +558,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     border-radius: 20px;
+    background-color: #FFFFFF;
     border: 1.5px solid #957647;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
 }
@@ -586,9 +597,19 @@ body {
 }
 
 .isi-beranda-s-4 hr{
+    position: relative;
     height: 0.8px;
     background-color: #957647;
     margin-top: 150px;
+}
+
+.svg-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
 }
 
 @media screen and (max-width: 800px) {
@@ -677,7 +698,7 @@ body {
 
 /* -------- SECTION 5 -------- */
 .container-beranda-s-5 {
-    background-color: white;
+    background-color: #F8F3ED;
 }
 
 .container-beranda-s-5-1 {
@@ -866,10 +887,12 @@ body {
 /* -------- SECTION REVIEW -------- */
 
 .container-beranda-review {
-    background-color: #F8F3ED;
+    position: relative;
+    background-color: white;
 }
 
 .container-beranda-review-1 {
+    position: relative;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -877,9 +900,20 @@ body {
     width: 100%;
     max-width: 1300px;
     margin: auto;
+    z-index: 1;
+}
+
+.svg-bg-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
 }
 
 .isi-beranda-review {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: transparent;
@@ -994,6 +1028,8 @@ body {
 }
 
 .container-beranda-s-6-1 {
+    position: relative;
+    z-index: 1;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -1261,6 +1297,8 @@ body {
 }
 
 .container-beranda-s-7-1 {
+    position: relative;
+    z-index: 2;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -1413,6 +1451,8 @@ body {
   
 /* -------- FOOTER -------- */
 .footer {
+    position: relative;
+    z-index: 1;
     background-color: white;
 }
 
