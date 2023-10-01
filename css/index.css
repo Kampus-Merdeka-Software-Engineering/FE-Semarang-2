@@ -1458,17 +1458,16 @@ body {
 .form-newsletter {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #895e3f;
+    border-top: 1px solid #e6d5ca;
 }
 
 .newsletter-box {
     display: block;
-    background-color: #50362A;
     width: 30%;
     text-align: center;
     padding-right: 20px;
     padding-left: 80px;
-
+    border-right: 1px solid #e6d5ca;
 }
 
 .nesletter-isi-box1 {
@@ -1500,7 +1499,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 3px;
-    border: 1px solid #895e3f;
+    border: 1px solid #e6d5ca;
     border-radius: 20px;
     background-color: #e6d5ca;
 }
@@ -1533,7 +1532,7 @@ body {
 
 .f-sec-1 {
     background-color: #50362A;
-    border-top: 1px solid #895e3f;
+    border-top: 1px solid #e6d5ca;
 }
 
 .f-info {
@@ -1636,7 +1635,7 @@ body {
 
 .info-menu-list {
     list-style: none;
-    columns: 2;
+    columns: 1;
     padding: 0;
     margin-top: 0;
 }
@@ -1679,7 +1678,6 @@ body {
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 1.5px;
-    margin-left: 10px;
 }
 
 .info-str {
@@ -1687,18 +1685,18 @@ body {
 }
 
 .ps-store {
-    max-width: 120px;
+    max-width: 140px;
     height: auto;
 }
 
 .as-store {
-    max-width: 120px;
+    max-width: 140px;
     height: auto;
 }
 
 .f-sec-2 {
     background-color: #50362A;
-    border-top: 1px solid #895e3f;
+    border-top: 1px solid #e6d5ca;
 }
 
 .f-cpr {
