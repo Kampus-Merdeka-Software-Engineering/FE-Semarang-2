@@ -311,6 +311,9 @@ body {
 }
 
 .isi-beranda-s-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: transparent;
     width: 100%;
     padding: 100px 80px;
@@ -342,6 +345,10 @@ body {
 }
 
 .button-b-s-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     width: 225px;
     height: 40px;
     background-color: #50362A;
@@ -789,6 +796,10 @@ body {
 }
 
 .button-b-s-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     background-color: #50362A;
     font-family: 'Poppins';
     font-size: 14px;
