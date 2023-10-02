@@ -101,7 +101,7 @@ function handleEmailInputNewsletter(event) {
 
 /* Function to post data contact to server in form newsletter */
 async function postDataNewsletterToServer(email) {
-    const url = 'https://express-back-end-production.up.railway.app/api/newsletters/'; /* sementara pakai api ini */
+    const url = 'https://back-end-semarang-group-2-production.up.railway.app/api/newsletters/';
 
     try {
         const response = await axios.post(url, { email }, {
@@ -154,13 +154,13 @@ formNewsLetter.addEventListener('submit', async (event) => {
 
     if (!emailPattern.test(emailNewsLetter)) {
         openPopupError('Email Invalid')
-    }
-
-    try {
-        await postDataNewsletterToServer(emailNewsLetter);
-        handleSuccessNewsletter();
-    } catch (error) {
-        handleErrorNewsletter('Email sudah terdaftar');
+    } else {
+        try {
+            await postDataNewsletterToServer(emailNewsLetter);
+            handleSuccessNewsletter();
+        } catch (error) {
+            handleErrorNewsletter(error.message);
+        }
     }
 
 })
@@ -194,4 +194,5 @@ function closePopup() {
 
 btnClose.addEventListener('click', () => {
     closePopup()
+    location.reload(true); // Halaman akan direfresh dan memaksa pengambilan ulang sumber daya dari server
 })

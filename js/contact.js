@@ -120,17 +120,26 @@ function getFormContactValues() {
 /* Function to post data contact to server in form contact */
 async function postDataContactToServer(data) {
     try {
-        const apiUrl = 'https://express-back-end-production.up.railway.app/api/contacts/'; /* sementara pakai api ini */
+        const apiUrl = 'https://back-end-semarang-group-2-production.up.railway.app/api/contacts/';
         const response = await axios.post(apiUrl, data, {
         });
 
         if (!response.data) {
-            throw new Error('Failed to create contact');
+            // throw new Error('Failed to create contact');
+            handleErrorContact('Failed to create contact')
         }
 
         return response.data;
     } catch (error) {
-        throw new Error(error.message);
+        // throw new Error(error.message);
+        if (error.response && error.response.data.error) {
+            const errorMessage = error.response.data.error;
+            console.error(errorMessage);
+            handleErrorContact(errorMessage);
+        } else {
+            console.error(error.message);
+            handleErrorContact(error.message);
+        }
     }
 }
 
@@ -141,9 +150,8 @@ function handleSuccessContact() {
 }
 
 /* Function to handle while error fetch in form contact */
-function handleErrorContact() {
-    openPopup()
-    resetInputContact();
+function handleErrorContact(desc) {
+    openPopupError(desc);
 }
 
 /* `keydown` trigger for forms with id `formContact` */
@@ -184,17 +192,20 @@ form.addEventListener('submit', async (event) => {
     //     throw new Error("Captcha not complete")
     // }
 
-    try {
-        const formData = getFormContactValues();
+    const emailContact = document.getElementById('email').value;
+
+    if(!emailPattern.test(emailContact)) {
+        openPopupError('Email Invalid')
+    } else {
+        try {
+            const formData = getFormContactValues();
         await postDataContactToServer(formData);
         handleSuccessContact();
-    } catch (error) {
-        // console.log('error: ', error)
-        handleErrorContact();
+        } catch (error) {
+            // console.log('error 2: ', error)
+            handleErrorContact(error.message);
+        }
     }
-
-    // resetInputContact()
-    // window.location.href = 'kontak.html';
 })
 
 noHPElement.addEventListener('keydown', (event) => {
