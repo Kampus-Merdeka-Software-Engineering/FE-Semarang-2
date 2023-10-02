@@ -1410,15 +1410,18 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+    .container-beranda-s-7-1 {
+        height: 250px;
+    }
     .isi-beranda-s-7 {
-        padding: 40px;
-        margin: 40px;
+        padding: 60px;
+        margin: 30px;
     }
     .judul-b-s-7 {
         font-size: 20px;
     }
     .img-b-s-7 {
-        margin: 40px 0;
+        margin: 60px 0;
         align-items: center;
         gap: 20px;
     }
