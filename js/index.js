@@ -99,3 +99,31 @@ async function fetchReviewAndDisplay() {
 }
 
 fetchReviewAndDisplay();
+
+// FETCH MEDIA
+
+async function fetchNewestMedia() {
+    try {
+        const response = await fetch('https://back-end-semarang-group-2-production.up.railway.app/api/media/latest');
+        const data = await response.json();
+
+        const firstThreeMedia = data.slice(0, 3);
+
+        const media1Elements = document.querySelectorAll('.news-b-s-6-1');
+
+        firstThreeMedia.forEach((media, index) => {
+            if (index < media1Elements.length) {
+                const media1Element = media1Elements[index];
+                media1Element.innerHTML = `
+                <img class="img-news-b-s-6" src="data:image/jpeg;base64,${media.mediaImage}" alt="">
+                <p class="judul-news-b-s-6">${media.mediaTitle}</p>
+                <a class="button-b-s-6-1" href="">Info Selengkapnya  ></a>
+                `;
+            }
+        });
+    } catch (error) {
+        console.error('Terjadi kesalahan:', error);
+    }
+}
+
+fetchNewestMedia();
