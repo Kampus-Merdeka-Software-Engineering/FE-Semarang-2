@@ -5,16 +5,30 @@ let screenWidth = window.innerWidth;
 window.onscroll = function() {
     let currentNavScroll = window.pageYOffset;
     screenWidth = window.innerWidth;
+    let navLinkScroll = document.querySelectorAll('.nav-link');
 
     if (currentNavScroll === 0) {
         document.querySelector('.header').style.backgroundColor = 'transparent';
         document.querySelector('.header').style.backdropFilter = 'blur(0)';
         document.querySelector('.header').style.boxShadow = 'none';
+        document.querySelector('.nav-active').style.color = 'white';
+        document.querySelector('.logo').style.color = 'white';
+        navLinkScroll.forEach(link => {
+            link.style.color = 'white';
+        })
     } else if (navScroll > currentNavScroll) {
         document.querySelector('.header').style.top = '0';
         document.querySelector('.header').style.backgroundColor = 'rgba(252, 245, 235, 0.4)';
         document.querySelector('.header').style.backdropFilter = 'blur(8px)';
         document.querySelector('.header').style.boxShadow = '0px 5px 5px rgba(0, 0, 0, 0.3)';
+        document.querySelector('.nav-active').style.color = 'black';
+        document.querySelector('.nav-active').style.textShadow = 'none';
+        document.querySelector('.logo').style.color = 'black';
+        document.querySelector('.logo').style.textShadow = 'none';
+        navLinkScroll.forEach(link => {
+            link.style.color = 'black';
+            link.style.textShadow = 'none';
+        })
     } else {
         document.querySelector('.header').style.top = '-260px';
         document.querySelector('.header').style.backgroundColor = 'transparent';
@@ -87,7 +101,7 @@ function handleEmailInputNewsletter(event) {
 
 /* Function to post data contact to server in form newsletter */
 async function postDataNewsletterToServer(email) {
-    const url = 'https://express-back-end-production.up.railway.app/api/newsletters/';
+    const url = 'https://back-end-semarang-group-2-production.up.railway.app/api/newsletters/';
 
     try {
         const response = await axios.post(url, { email }, {
@@ -140,13 +154,13 @@ formNewsLetter.addEventListener('submit', async (event) => {
 
     if (!emailPattern.test(emailNewsLetter)) {
         openPopupError('Email Invalid')
-    }
-
-    try {
-        await postDataNewsletterToServer(emailNewsLetter);
-        handleSuccessNewsletter();
-    } catch (error) {
-        handleErrorNewsletter('Email sudah terdaftar');
+    } else {
+        try {
+            await postDataNewsletterToServer(emailNewsLetter);
+            handleSuccessNewsletter();
+        } catch (error) {
+            handleErrorNewsletter(error.message);
+        }
     }
 
 })
@@ -180,4 +194,5 @@ function closePopup() {
 
 btnClose.addEventListener('click', () => {
     closePopup()
+    location.reload(true); // Halaman akan direfresh dan memaksa pengambilan ulang sumber daya dari server
 })

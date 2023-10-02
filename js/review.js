@@ -99,7 +99,7 @@ function getFormReviewValues() {
 /* Function to post data review to server in form review */
 async function postDataReviewToServer(data) {
     try {
-        const apiUrl = 'https://express-back-end-production.up.railway.app/api/reviews/';
+        const apiUrl = 'https://back-end-semarang-group-2-production.up.railway.app/api/reviews/';
         const response = await axios.post(apiUrl, data, {
         });
 
@@ -135,7 +135,6 @@ function handleSuccessReview() {
 /* Function to handle while error fetch in form Review */
 function handleErrorReview(desc) {
     openPopupError(desc)
-    resetInputReview();
 }
 
 /* `keydown` trigger for forms with id `formReview` */
