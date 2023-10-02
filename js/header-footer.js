@@ -13,6 +13,7 @@ window.onscroll = function() {
         document.querySelector('.header').style.boxShadow = 'none';
         document.querySelector('.nav-active').style.color = 'white';
         document.querySelector('.logo').style.color = 'white';
+        document.querySelector('.fa-bars').style.color = 'white';
         navLinkScroll.forEach(link => {
             link.style.color = 'white';
         })
@@ -25,6 +26,7 @@ window.onscroll = function() {
         document.querySelector('.nav-active').style.textShadow = 'none';
         document.querySelector('.logo').style.color = 'black';
         document.querySelector('.logo').style.textShadow = 'none';
+        document.querySelector('.fa-bars').style.color = 'black';
         navLinkScroll.forEach(link => {
             link.style.color = 'black';
             link.style.textShadow = 'none';
@@ -42,14 +44,27 @@ const navLink = document.getElementById("toggleButton");
 navLink.addEventListener("click", () => {
     let responsiv = document.getElementById("navbarRight");
     let header = document.querySelector('.header');
+    let navLinkScroll = document.querySelectorAll('.nav-link');
 
-    header.style.backgroundColor = 'rgba(194, 167, 128, 0.5)';
+    header.style.backdropFilter = 'blur(8px)';
+    header.style.backgroundColor = 'rgba(252, 245, 235, 0.4)';
+    document.querySelector('.logo').style.color = 'black';
+    document.querySelector('.logo').style.fontWeight = '600';
+    document.querySelector('.logo').style.textShadow = 'none';
+    document.querySelector('.nav-active').style.color = 'black';
+    document.querySelector('.nav-active').style.fontWeight = '600';
+    document.querySelector('.nav-active').style.textShadow = 'none';
+    navLinkScroll.forEach(link => {
+        link.style.color = 'black';
+        link.style.textShadow = 'none';
+    })
 
     if (responsiv.className === "navbar-right") {
         responsiv.className += " responsive";
     } else {
         responsiv.className = "navbar-right";
         header.style.backgroundColor = 'transparent';
+        document.querySelector('.logo').style.color = 'white';
     }
 });
 
