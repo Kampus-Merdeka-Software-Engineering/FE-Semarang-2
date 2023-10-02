@@ -860,7 +860,7 @@ body {
     border-radius: 20px;
     width: 30%;
     text-align: right;
-    padding-top: 120px;
+    padding-top: 80px;
 }
 .review1 {
     background-color: #FFFFFF;
@@ -968,6 +968,102 @@ body {
 .button-b-s-review:hover {
     color: white;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 900px) {
+    .isi-beranda-review {
+        padding: 50px;
+    }
+    .judul-and-review1 {
+        flex-direction: column;
+    }
+    .judul-review {
+        font-size: 34px;
+    }
+    .desc-review {
+        font-size: 18px;
+    }
+    .review2-and-review1 {
+        flex-direction: column;
+    }
+    .judul-desc-review {
+        width: 100%;
+        padding-top: 50px;
+    }
+    .review1 {
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+    }
+    .review2 {
+        align-self: end;
+        text-align: right;
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+    }
+    .review3 {
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+    }
+    .nama-review1, .desc-review1, .nama-review2, .desc-review2, .nama-review3, .desc-review3 {
+        font-size: 15px;
+    }
+    .petik-review {
+        width: 70px;
+        margin-right: 10%;
+        margin-bottom: 25%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .isi-beranda-review {
+        padding: 25px;
+    }
+    .judul-review {
+        font-size: 30px;
+    }
+    .desc-review {
+        font-size: 14px;
+    }
+    .review1 {
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    .review2 {
+        align-self: end;
+        text-align: right;
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    .review3 {
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    .nama-review1, .desc-review1, .nama-review2, .desc-review2, .nama-review3, .desc-review3 {
+        font-size: 12px;
+    }
+    .petik-review {
+        width: 60px;
+        margin-right: 10%;
+        margin-bottom: 40%;
+    }
+    .button-b-s-review {
+        width: 160px;
+        height: 30px;
+        font-size: 11px;
+        font-weight: 400;
+    }
 }
 
 /* -------- SECTION 6 -------- */
