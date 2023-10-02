@@ -4,13 +4,13 @@ html {
     scroll-behavior: smooth;
 }
 
-* {
-    margin: 0;
+/* * {
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 body {
+    margin: 0;
     overflow-x: hidden;
     font-family: 'Poppins';
 }
@@ -392,7 +392,7 @@ main .contactUs .box .map iframe:hover {
 /** -------- END FOOTER -------- */
 
 /** -------- RESPONSIVE BREAKPOINT -------- */
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
     .f-info-con {
         padding-left: 65px;
     }
@@ -404,7 +404,7 @@ main .contactUs .box .map iframe:hover {
     .f-info-con4 {
         padding-right: 65px;
     }
-}
+} */
 
 @media screen and (max-width: 991px) {
     main .contactUs {
