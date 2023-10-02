@@ -601,6 +601,7 @@ body {
     }
     .isi-dampak {
         flex-direction: row;
+        gap: 20px;
     }
     .desc-dampak {
         margin-right: 30px;
@@ -608,7 +609,7 @@ body {
         margin-top: 30px;
     }
     .img-b-s-4 {
-        max-width: 135px;
+        max-width: 130px;
     }
 }
 @media screen and (max-width: 500px) {
@@ -616,106 +617,25 @@ body {
         padding: 25px;
     }
     .judul-b-s-4 {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 40px;
     }
     .judul-b-s-4 span{
-        font-size: 20px;
+        font-size: 18px;
     }
     .isi-dampak {
-        gap: 20px;
-    }
-    .img-b-s-4 {
-        max-width: 100px;
-    }
-    .desc-dampak {
-        font-size: 18px;
-    }
-}
-
-/* @media screen and (max-width: 800px) {
-    .judul-b-s-4 {
-        font-family: 'Red Hat Display';
-        font-size: 28px;
-        font-weight: 600;
-        color: #23230a;
-        margin-bottom: 50px;
-    }
-    .isi-beranda-s-4 {
-        background-color: transparent;
-        width: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .dampak-b-s-4 {
-        gap: 1.5rem;
-    }
-    .img-b-s-4 {
-        max-width: 100px;
-        height: auto;
-        margin-left: 20px;
-        margin-top: 20px;
-    }
-
-    .desc-dampak {
-        font-family: 'Red Hat Display';
-        font-size: 20px;
-        font-weight: 600;
-        color: #895e3f;
-        margin-bottom: 40px;
-        text-align: left;
-        margin-right: 20px;
-        margin-top: 20px;
-    }
-    .ornamen-b-s-4 {
-        height: 40px;
-        background-color: #895e3f23;
-        align-self: end;
-        border-radius: 10px 0 10px 0;
-    }
-}
-@media screen and (max-width: 500px) {
-    .judul-b-s-4 {
-        font-family: 'Red Hat Display';
-        font-size: 18px;
-        font-weight: 600;
-        color: #23230a;
-        margin-bottom: 50px;
-    }
-    .isi-beranda-s-4 {
-        background-color: transparent;
-        width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .dampak-b-s-4 {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
+        gap: 0;
     }
     .img-b-s-4 {
         max-width: 80px;
-        height: auto;
-        margin-left: 20px;
-        margin-top: 20px;
     }
-
     .desc-dampak {
-        font-family: 'Red Hat Display';
         font-size: 16px;
-        font-weight: 600;
-        color: #895e3f;
-        margin-bottom: 40px;
-        text-align: left;
-        margin-right: 20px;
-        margin-top: 20px;
     }
-    .ornamen-b-s-4 {
-        height: 40px;
-        background-color: #895e3f23;
-        align-self: end;
-        border-radius: 10px 0 10px 0;
+    .isi-beranda-s-4 hr{
+        margin-top: 80px;
     }
-} */
+}
 
 /* -------- SECTION 5 -------- */
 .container-beranda-s-5 {
