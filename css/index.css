@@ -1056,7 +1056,7 @@ body {
     .petik-review {
         width: 60px;
         margin-right: 10%;
-        margin-bottom: 40%;
+        margin-bottom: 35%;
     }
     .button-b-s-review {
         width: 160px;
@@ -1253,84 +1253,81 @@ body {
     margin: 20px;
 }
 
-@media screen and (max-width: 800px) {
-    .container-beranda-s-6-1 {
-        height: 180px;
-    }
+@media screen and (max-width: 900px) {
     .isi-beranda-s-6 {
-        display: flex;
-        align-self: baseline;
-        background-color: transparent;
-        width: 100%;
         padding: 50px;
-        padding-right: 0;
-        overflow: hidden;
     }
     .judul-b-s-6-1 {
-        display: flex;
-        font-family: 'Red Hat Display';
-        font-size: 24px;
-        font-weight: 600;
-        color: #23230a;
+        font-size: 28px;
         margin-top: 0;
     }
     .desc-b-s-6 {
-        display: flex;
-        font-family: 'Red Hat Display';
         font-size: 14px;
-        font-weight: 500;
-        color: #766a61;
     }
-    .img-news-b-s-6 {
-        width: 280px;
-        height: 170px;
-        border-radius: 15px;
-    }
-}
-@media screen and (max-width: 500px) {
-    .container-beranda-s-6-1 {
-        height: 180px;
-    }
-    .isi-beranda-s-6 {
-        display: flex;
-        flex-direction: column;
-        align-self: baseline;
-        background-color: transparent;
-        width: 100%;
-        padding: 20px;
-        padding-right: 0;
-        overflow: hidden;
-    }
-    .judul-b-s-6-1 {
-        display: flex;
-        font-family: 'Red Hat Display';
-        font-size: 20px;
-        font-weight: 600;
-        color: #23230a;
-        margin-top: 0;
-    }
-    .desc-b-s-6 {
-        display: flex;
-        font-family: 'Red Hat Display';
-        font-size: 14px;
-        font-weight: 500;
-        width: 65%;
-        color: #766a61;
+    .button-b-s-6 {
+        font-size: 11px;
+        font-weight: 400;
+        width: 150px;
+        height: 30px;
     }
     .news-b-s-6 {
-        margin-left: 0;
         gap: 20px;
+        padding-left: 0;
     }
     .img-news-b-s-6 {
-        width: 240px;
-        height: 150px;
-        border-radius: 15px;
+        width: 230px;
+        height: 140px;
     }
     .judul-news-b-s-6 {
         font-size: 14px;
     }
+}
+@media screen and (max-width: 500px) {
+    .isi-beranda-s-6 {
+        flex-direction: column;
+        padding: 80px 20px;
+    }
+    .judul-b-s-6 {
+        align-self: end;
+        width: 80%;
+        padding-right: 20px;
+    }
+    .judul-b-s-6-1 {
+        font-size: 24px;
+    }
+    .desc-b-s-6 {
+        font-size: 14px;
+        justify-content: end;
+    }
+    .button-b-s-6 {
+        font-size: 10px;
+        font-weight: 400;
+        width: 125px;
+        height: 28px;
+        margin-top: 20px;
+    }
+    .news-b-s-6 {
+        gap: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .news-b-s-6-1 {
+        height: auto;
+        border-radius: 15px;
+    }
+    .img-news-b-s-6 {
+        width: 200px;
+        height: 120px;
+        border-radius: 15px 15px 0 0;
+    }
+    .judul-news-b-s-6 {
+        font-size: 13px;
+        padding-bottom: 40px;
+        margin: 10px;
+    }
     .button-b-s-6-1 {
         font-size: 11px;
+        margin: 20px 10px;
     }
 }
 
@@ -1411,87 +1408,64 @@ body {
     cursor: pointer;
     transition: width 0.3s ease-in-out;
 }
-/* @media screen and (max-width: 800px) {
+
+@media screen and (max-width: 900px) {
     .isi-beranda-s-7 {
-        align-self: baseline;
-        background-color: transparent;
-        width: 100%;
-        padding: 50px;
-        padding-top: 150px;
+        padding: 40px;
+        margin: 40px;
     }
     .judul-b-s-7 {
-        font-family: 'Red Hat Display';
-        font-size: 24px;
-        font-weight: 600;
-        color: #23230a;
-        margin-top: 0;
-        margin-bottom: 130px;
+        font-size: 20px;
     }
     .img-b-s-7 {
-        padding: 0 20px 20px 20px;
+        margin: 40px 0;
+        align-items: center;
+        gap: 20px;
     }
     .img-b-s-7-1 {
-        align-self: flex-end;
-        width: 75px;
-        height: 75px;
-    }
-    .button-b-s-7-1 {
+        width: 65px;
+    }.button-b-s-7-1 {
         width: 60px;
-        height: 35px;
-        font-size: 16px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 500;
     }
     .button-b-s-7-2 {
         width: 60px;
-        height: 35px;
-        font-size: 16px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 500;
     }
 }
 @media screen and (max-width: 500px) {
     .isi-beranda-s-7 {
-        display: flex;
-        flex-direction: column;
-        align-self: baseline;
-        background-color: transparent;
-        width: 100%;
-        padding: 20px;
-        padding-top: 150px;
+        padding: 40px;
+        margin: 40px;
     }
     .judul-b-s-7 {
-        font-family: 'Red Hat Display';
-        font-size: 16px;
-        font-weight: 600;
-        color: #23230a;
-        margin-top: 0;
-        margin-bottom: 0;
+        font-size: 20px;
     }
     .img-b-s-7 {
         flex-direction: column;
-        margin-top: 35px;
-        padding: 20px 20px 20px 0;
-        margin-bottom: 40px;
-        height: 600px;
-        width: 40px;
-        align-self: center;
+        margin: 40px 0;
+        align-items: center;
+        gap: 20px;
     }
     .img-b-s-7-1 {
-        align-self: flex-end;
-        width: 75px;
-        height: 75px;
-    }
-    .button-b-s-7 {
-        margin-bottom: 30px;
-    }
-    .button-b-s-7-1 {
+        width: 65px;
+    }.button-b-s-7-1 {
         width: 60px;
-        height: 35px;
-        font-size: 16px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 500;
     }
     .button-b-s-7-2 {
         width: 60px;
-        height: 35px;
-        font-size: 16px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 500;
     }
-} */
+}
   
 /* -------- FOOTER -------- */
 .footer {
@@ -1819,14 +1793,14 @@ body {
 }
 
 /* RESPONSIVE FOOTER */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .title-newsletter {
-        padding: 30px 30px;
+        padding-right: 30px; 
+        padding-left: 30px;
         font-size: 14px;
     }
     .f-newsletter-icon {
         gap: 40px;
-        margin-top: 0;
         margin-bottom: 30px;
         padding: 0;
     }
@@ -1913,12 +1887,12 @@ body {
 
 @media screen and (max-width: 500px) {
     .title-newsletter {
-        padding: 30px 30px;
+        padding-right: 30px; 
+        padding-left: 30px;
         font-size: 14px;
     }
     .f-newsletter-icon {
         gap: 40px;
-        margin-top: 0;
         margin-bottom: 30px;
         padding: 0;
     }
