@@ -336,6 +336,38 @@ main .contactUs .box .info .infoBox .sci li a:hover {
     /* color: #23230a; */
     color: #fff;
 }
+
+.contact{
+    padding: 0;
+}
+main .contactUs .box .info{
+    padding: 0;
+}
+.form h3{
+    padding: 0;
+    margin: 0;
+}
+main .contactUs .box .info h3{
+    padding: 40px 40px 20px 40px;
+    margin: 0;
+}
+.infoBox {
+    padding: 0 40px;
+}
+.infoBox div{
+    padding: 0;
+    padding-bottom: 15px;
+}
+.infoBox div p{
+    margin: 0;
+}
+main .contactUs .box .info .infoBox .sci {
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 40px;
+}
+
+
 /** -------- END INFO -------- */
 
 /** -------- MAP -------- */
