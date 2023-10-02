@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 html {
     scroll-behavior: smooth;
 }
@@ -10,7 +12,7 @@ html {
 
 body {
     overflow-x: hidden;
-    font-family: 'Red Hat Display';
+    font-family: 'Poppins';
 }
 
 /** -------- MAIN CONTENT -------- */
@@ -29,18 +31,9 @@ body {
     transition: opacity 1s ease-in-out;
 }
 
-.gambar-kontak-s-1-2 {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    /* font-size: 2em; */
-    transition: opacity 1s ease-in-out;
-}
-
 .container-kontak-s-1-1 {
     position: relative;
-    background: linear-gradient(90deg, #000000ce 0%, #00000000 100%);
+    /* background: linear-gradient(90deg, #000000ce 0%, #00000000 100%); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,16 +55,16 @@ body {
 .slogan-b-s-1 {
     text-align: center;
     font-size: 38px;
-    font-weight: 600;
+    font-weight: 700;
     color: white;
     text-shadow: 1px 1px 10px rgb(29, 29, 29);
 }
 
 .isi-kontak-s-1 p {
     margin-top: 7px;
-    color: #fff;
+    color: #50362A;
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 20px;
 }
 
@@ -101,7 +94,8 @@ body {
 
 /** -------- SECTION 2 -------- */
 .container-kontak-s-2 {
-    background: linear-gradient(#efe4d7 0%, #efe4d7 30%, #fcf5eb 30%, #fcf5eb 100%);
+    /* background: linear-gradient(#efe4d7 0%, #efe4d7 30%, #fcf5eb 30%, #fcf5eb 100%); */
+    background: #FFFFFF;
 }
 
 .container-kontak-s-2-1 {
@@ -155,10 +149,14 @@ main .contactUs .box {
 
 main .contactUs .box .form {
     grid-area: form;
+    border: 2px solid #957647;
+    border-radius: 10px;
 }
 
 main .contactUs .box .info {
     grid-area: info;
+    border: 1px solid #50362A;
+    border-radius: 10px;
 }
 
 main .contactUs .box .map {
@@ -201,7 +199,8 @@ main .contactUs .box .form .formBox .row100 .inputBox {
 }
 
 main .contactUs .box .form .formBox .inputBox label {
-    color: #654823;
+    /* color: #654823; */
+    color: #23230a;
     margin-top: 10px;
     margin-bottom: 5px;
     font-weight: 500;
@@ -211,8 +210,8 @@ main .contactUs .box .form .formBox .inputBox input {
     padding: 10px;
     font-size: 1.1em;
     outline: none;
-    border: 1px solid;
-    border-color: #333;
+    border: 2px solid;
+    border-color: #957647;
 }
 
 main .contactUs .box .form .formBox .inputBox input[type="submit"]:hover {
@@ -236,17 +235,20 @@ main .contactUs .box .form .formBox .inputBox textarea {
     padding: 10px;
     font-size: 1.1em;
     outline: none;
-    border: 1px solid;
-    border-color: #333;
+    border: 2px solid;
+    border-color: #957647;
     resize: none;
     min-height: 220px;
     margin-bottom: 10px;
 }
 
 main .contactUs .box .form .formBox .inputBox input[type="submit"] {
-    background: #8B4513;
+    /* background: #8B4513; */
+    background: #50362A;
     color: #fff;
-    border: none;
+    /* border: none; */
+    border: 2px solid;
+    border-color: #957647;
     font-size: 1.1em;
     max-width: 120px;
     font-weight: 500;
@@ -266,11 +268,13 @@ main .contactUs .box .form .formBox .inputBox ::placeholder {
 /** -------- INFO -------- */
 main .contactUs .box .info {
     /* background: #0e3959; */
-    background: #efe4d7;
+    /* background: #efe4d7; */
+    background: #50362A;
 }
 
 main .contactUs .box .info h3 {
-    color: #23230a;
+    /* color: #23230a; */
+    color: #fff;
 }
 
 main .contactUs .box .info .infoBox div {
@@ -293,12 +297,14 @@ main .contactUs .box .info .infoBox div span {
 }
 
 main .contactUs .box .info .infoBox div p {
-    color: #23230a;
+    /* color: #23230a; */
+    color: #fff;
     font-size: 1.1em;
 }
 
 main .contactUs .box .info .infoBox div a {
-    color: #23230a;
+    /* color: #23230a; */
+    color: #fff;
     text-decoration: none;
     font-size: 1.1em;
 }
@@ -327,7 +333,8 @@ main .contactUs .box .info .infoBox .sci li a:hover {
 }
 
 .sci i {
-    color: #23230a;
+    /* color: #23230a; */
+    color: #fff;
 }
 /** -------- END INFO -------- */
 
