@@ -1037,6 +1037,32 @@ body {
     margin-bottom: 30%;
 }
 
+.button-b-s-review {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 60px;
+    width: 225px;
+    height: 40px;
+    background-color: #50362A;
+    font-family: 'Red Hat Display';
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1.1px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+.button-b-s-review:hover {
+    color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 /* -------- SECTION 6 -------- */
 .container-beranda-s-6 {
     background-color: white;
