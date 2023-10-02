@@ -379,10 +379,10 @@ body {
     .desc-b-s-2 {
         padding: 0;
         margin: 20px 0;
-        font-size: 16px;
+        font-size: 14px;
     }
     .desc-b-s-2 span{
-        font-size: 16px;
+        font-size: 14px;
     }
     .button-b-s-2 {
         width: 150px;
@@ -422,9 +422,8 @@ body {
     border-radius: 20px;
 }
 .desc-b-s-3 {
-    font-family: 'Red Hat Display';
-    font-size: 28px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 450;
     letter-spacing: 1.1px;
     color: #50362A;
     padding: 0 80px;
@@ -437,36 +436,31 @@ body {
     margin-top: 150px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .video-b-s-3 {
         min-width: 100%;
         height: auto;
     }
     .desc-b-s-3 {
-        font-family: 'Red Hat Display';
         font-size: 22px;
-        font-weight: 600;
-        color: #23230a;
         margin-bottom: 50px;
+        padding: 0;
+    }
+    .isi-beranda-s-3 hr{
+        margin-top: 80px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .isi-beranda-s-3 {
-        background-color: transparent;
-        width: 100%;
-        padding: 30px;
+        padding: 25px;
     }
-    .video-b-s-3 {
-        max-width: 100%;
-        height: auto;
-    }
-    p.desc-b-s-3 {
-        font-family: 'Red Hat Display';
+    .desc-b-s-3 {
         font-size: 12px;
-        font-weight: 600;
-        color: #23230a;
         margin-bottom: 20px;
+    }
+    .isi-beranda-s-3 hr{
+        margin-top: 50px;
     }
 }
 
