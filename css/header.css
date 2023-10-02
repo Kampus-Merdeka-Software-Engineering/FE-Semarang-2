@@ -7,7 +7,7 @@
     background-color: transparent;
     border-radius: 0 0 25px 25px;
     transition-duration: 0.5s;
-    z-index: 2;
+    z-index: 3;
 }
 
 .navcount {
@@ -31,7 +31,6 @@
 .logo {
     color: white;
     text-shadow: 1px 1px 3.5px black;
-    font-family: 'Red Hat Display';
     font-weight: 600;
     font-size: 26px;
     letter-spacing: 1.5px;
@@ -49,9 +48,7 @@
     text-decoration: none;
     text-align: center;
     font-size: 18px;
-    font-weight: 550;
-    font-family: 'Red Hat Display';
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1.2px;
     border-bottom: 3px solid transparent;
     padding-top: 10px;
@@ -65,9 +62,7 @@
     text-decoration: none;
     text-align: center;
     font-size: 18px;
-    font-weight: 550;
-    font-family: 'Red Hat Display';
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1.2px;
     padding-top: 10px;
     padding-bottom: 10px;
