@@ -180,7 +180,7 @@ function openPopupError(desc) {
     const titlePopup = document.getElementById('title-popup')
     const descPopup = document.getElementById('desc-popup')
     const btnClose = document.getElementById('btnClose')
-    imgPopup.src = '../img/tick-error.png'
+    imgPopup.src = 'img/tick-error.png'
     titlePopup.innerHTML = 'Failed'
     titlePopup.style.color = colors.invalidColorHex
     descPopup.innerHTML = desc
