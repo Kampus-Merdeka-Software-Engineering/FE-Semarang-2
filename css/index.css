@@ -623,7 +623,64 @@ body {
     z-index: 0;
 }
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 1130px) {
+    .isi-dampak {
+        flex-direction: column;
+    }
+    .desc-dampak {
+        margin: 0 30px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .isi-beranda-s-4 {
+        padding: 40px;
+    }
+    .judul-b-s-4 {
+        font-size: 28px;
+    }
+    .judul-b-s-4 span{
+        font-size: 28px;
+    }
+    .dampak-b-s-4 {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+    }
+    .isi-dampak {
+        flex-direction: row;
+    }
+    .desc-dampak {
+        margin-right: 30px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .img-b-s-4 {
+        max-width: 135px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .isi-beranda-s-4 {
+        padding: 25px;
+    }
+    .judul-b-s-4 {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    .judul-b-s-4 span{
+        font-size: 20px;
+    }
+    .isi-dampak {
+        gap: 20px;
+    }
+    .img-b-s-4 {
+        max-width: 100px;
+    }
+    .desc-dampak {
+        font-size: 18px;
+    }
+}
+
+/* @media screen and (max-width: 800px) {
     .judul-b-s-4 {
         font-family: 'Red Hat Display';
         font-size: 28px;
@@ -705,7 +762,7 @@ body {
         align-self: end;
         border-radius: 10px 0 10px 0;
     }
-}
+} */
 
 /* -------- SECTION 5 -------- */
 .container-beranda-s-5 {
@@ -1408,7 +1465,7 @@ body {
     cursor: pointer;
     transition: width 0.3s ease-in-out;
 }
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
     .isi-beranda-s-7 {
         align-self: baseline;
         background-color: transparent;
@@ -1488,7 +1545,7 @@ body {
         height: 35px;
         font-size: 16px;
     }
-}
+} */
   
 /* -------- FOOTER -------- */
 .footer {
