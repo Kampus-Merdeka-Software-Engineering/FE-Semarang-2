@@ -1255,7 +1255,7 @@ body {
 
 @media screen and (max-width: 900px) {
     .isi-beranda-s-6 {
-        padding: 50px;
+        padding: 50px 0 50px 50px;
     }
     .judul-b-s-6-1 {
         font-size: 28px;
@@ -1285,12 +1285,12 @@ body {
 @media screen and (max-width: 500px) {
     .isi-beranda-s-6 {
         flex-direction: column;
-        padding: 80px 20px;
+        padding: 80px 0 80px 20px;
     }
     .judul-b-s-6 {
         align-self: end;
         width: 80%;
-        padding-right: 20px;
+        padding-right: 25px;
     }
     .judul-b-s-6-1 {
         font-size: 24px;
@@ -1441,6 +1441,9 @@ body {
     }
 }
 @media screen and (max-width: 500px) {
+    .container-beranda-s-7-1 {
+        height: 450px;
+    }
     .isi-beranda-s-7 {
         padding: 40px;
         margin: 40px;
