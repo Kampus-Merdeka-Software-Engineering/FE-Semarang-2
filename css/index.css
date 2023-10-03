@@ -567,7 +567,7 @@ body {
     margin-top: 150px;
 }
 
-.svg-bg {
+.svg-bg-1 {
     display: block;
     position: absolute;
     bottom: 0;
@@ -576,7 +576,10 @@ body {
     height: auto;
     z-index: 0;
 }
-.svg-bg-1 {
+.svg-bg-1-1 {
+    display: none;
+}
+.svg-bg-1-2 {
     display: none;
 }
 
@@ -590,6 +593,21 @@ body {
     }
 }
 @media screen and (max-width: 900px) {
+    .svg-bg-1 {
+        display: none;
+    }
+    .svg-bg-1-1 {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
+    .svg-bg-1-2 {
+        display: none;
+    }
     .isi-beranda-s-4 {
         padding: 40px;
     }
@@ -617,10 +635,13 @@ body {
     }
 }
 @media screen and (max-width: 500px) {
-    .svg-bg {
+    .svg-bg-1 {
         display: none;
     }
-    .svg-bg-1 {
+    .svg-bg-1-1 {
+        display: none;
+    }
+    .svg-bg-1-2 {
         display: block;
         position: absolute;
         bottom: 0;
@@ -849,6 +870,12 @@ body {
     height: auto;
     z-index: 0;
 }
+.svg-bg-2-1 {
+    display: none;
+}
+.svg-bg-2-2 {
+    display: none;
+}
 
 .isi-beranda-review {
     position: relative;
@@ -987,6 +1014,21 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+    .svg-bg-2 {
+        display: none;
+    }
+    .svg-bg-2-1 {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
+    .svg-bg-2-2 {
+        display: none;
+    }
     .isi-beranda-review {
         padding: 50px;
     }
@@ -1034,6 +1076,21 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+    .svg-bg-2 {
+        display: none;
+    }
+    .svg-bg-2-1 {
+        display: none;
+    }
+    .svg-bg-2-2 {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
     .isi-beranda-review {
         padding: 25px;
     }
