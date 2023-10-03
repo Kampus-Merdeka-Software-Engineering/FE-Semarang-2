@@ -95,7 +95,7 @@ body {
     color: white;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .navbar {
         display: block;
         padding-left: 0;
@@ -131,14 +131,14 @@ body {
         display: block;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .navbar-right a{display: none;}
     .navbar-left a.nav-icon {
       float: right;
       display: block;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .navbar-right.responsive {position: relative;}
   .navbar-left.responsive .nav-icon {
     position: absolute;
@@ -568,12 +568,16 @@ body {
 }
 
 .svg-bg {
+    display: block;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: auto;
     z-index: 0;
+}
+.svg-bg-1 {
+    display: none;
 }
 
 
@@ -613,6 +617,18 @@ body {
     }
 }
 @media screen and (max-width: 500px) {
+    .svg-bg {
+        display: none;
+    }
+    .svg-bg-1 {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
     .isi-beranda-s-4 {
         padding: 25px;
     }
