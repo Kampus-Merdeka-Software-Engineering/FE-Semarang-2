@@ -416,14 +416,16 @@
         font-weight: 500;
     }
 
+    .f-info-con4 {
+        padding: 0;
+    }
     .info-4-text {
         margin-left: 0;
         font-size: 15px;
     }
-
     .as-store,
     .ps-store {
-        max-width: 100px;
+        max-width: 120px;
     }
 
     .f-cpr-con {
