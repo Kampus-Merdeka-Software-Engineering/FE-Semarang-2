@@ -53,19 +53,22 @@ body {
 }
 
 .slogan-b-s-1 {
-    text-align: center;
-    font-size: 38px;
+    text-align: left;
+    font-size: 60px;
     font-weight: 700;
+    padding-left: 29vh;
     color: white;
     text-shadow: 1px 1px 10px rgb(29, 29, 29);
+    margin: 0;
 }
 
 .isi-kontak-s-1 p {
-    margin-top: 7px;
     color: #50362A;
-    text-align: center;
-    font-weight: 700;
-    font-size: 20px;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 600;
+    padding-left: 29vh;
+    margin: 0;
 }
 
 .fa-chevron-down {
@@ -90,6 +93,7 @@ body {
         opacity: 1;
     }
 }
+
 /** -------- END SECTION 1 -------- */
 
 /** -------- SECTION 2 -------- */
@@ -118,8 +122,8 @@ body {
 main .contactUs {
     /* background: linear-gradient(#0e3959 0%, #0e3959 30%, #03a9f5 30%, #03a9f5 100%); */
     position: relative;
-    width: 100%;
-    padding: 40px 0;
+    /* width: 100%; */
+    padding: 40px 10px;
     /* padding: 40px 100px; */
 }
 
@@ -263,6 +267,7 @@ main .contactUs .box .form .formBox .inputBox input[type="submit"]:disabled {
 main .contactUs .box .form .formBox .inputBox ::placeholder {
     color: #999;
 }
+
 /** -------- END FORM -------- */
 
 /** -------- INFO -------- */
@@ -337,30 +342,37 @@ main .contactUs .box .info .infoBox .sci li a:hover {
     color: #fff;
 }
 
-.contact{
+.contact {
     padding: 0;
 }
-main .contactUs .box .info{
+
+main .contactUs .box .info {
     padding: 0;
 }
-.form h3{
+
+.form h3 {
     padding: 0;
     margin: 0;
 }
-main .contactUs .box .info h3{
+
+main .contactUs .box .info h3 {
     padding: 40px 40px 20px 40px;
     margin: 0;
 }
+
 .infoBox {
     padding: 0 40px;
 }
-.infoBox div{
+
+.infoBox div {
     padding: 0;
     padding-bottom: 15px;
 }
-.infoBox div p{
+
+.infoBox div p {
     margin: 0;
 }
+
 main .contactUs .box .info .infoBox .sci {
     margin: 0;
     padding-left: 10px;
@@ -389,6 +401,7 @@ main .contactUs .box .map iframe:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+
 /** -------- END MAP -------- */
 /** -------- END CONTACT US -------- */
 /**-------- END SECTION 2 -------- */
@@ -398,6 +411,7 @@ main .contactUs .box .map iframe:hover {
 .info-text {
     margin-bottom: 10px;
 }
+
 /* .newsletter-box {
     width: 34.405%;
 }
@@ -438,10 +452,36 @@ main .contactUs .box .map iframe:hover {
     }
 } */
 
+@media screen and (min-width: 991px) {
+    .slogan-b-s-1 {
+        font-size: 55px;
+        padding-left: 13vh;
+    }
+
+    .isi-kontak-s-1 p {
+        font-size: 28px;
+        padding-left: 13vh;
+    }
+
+    main .contactUs .box {
+        padding: 0;
+    }
+}
+
 @media screen and (max-width: 991px) {
+    .slogan-b-s-1 {
+        font-size: 55px;
+        padding-left: 13vh;
+    }
+
+    .isi-kontak-s-1 p {
+        font-size: 28px;
+        padding-left: 13vh;
+    }
+
     main .contactUs {
         /* padding: 20px; */
-        padding: 10px;
+        /* padding: 10px; */
     }
 
     main #row1 .row1-1 .col {
@@ -485,8 +525,13 @@ main .contactUs .box .map iframe:hover {
 
 @media screen and (max-width: 800px) {
     .slogan-b-s-1 {
-        text-align: center;
-        font-size: 28px;
+        font-size: 50px;
+        padding-left: 10vh;
+    }
+
+    .isi-kontak-s-1 p {
+        font-size: 30px;
+        padding-left: 10vh;
     }
 
     .isi-review-s-1 p {
@@ -517,6 +562,16 @@ main .contactUs .box .map iframe:hover {
 }
 
 @media screen and (max-width: 600px) {
+    .slogan-b-s-1 {
+        font-size: 45px;
+        padding-left: 7vh;
+    }
+
+    .isi-kontak-s-1 p {
+        font-size: 28px;
+        padding-left: 7vh;
+    }
+
     main #row1 .row1-1 .col h2 {
         text-align: center;
         font-size: 24x;
@@ -537,7 +592,7 @@ main .contactUs .box .map iframe:hover {
     }
 
     .popup button {
-        margin-top:40px;
+        margin-top: 40px;
     }
 
     .open-popup {
@@ -548,6 +603,16 @@ main .contactUs .box .map iframe:hover {
 }
 
 @media screen and (max-width: 550px) {
+    .slogan-b-s-1 {
+        font-size: 45px;
+        padding-left: 5vh;
+    }
+
+    .isi-kontak-s-1 p {
+        font-size: 28px;
+        padding-left: 5vh;
+    }
+
     main .contactUs {
         padding: 20px 0;
     }
@@ -587,7 +652,7 @@ main .contactUs .box .map iframe:hover {
     }
 
     .popup button {
-        margin-top:40px;
+        margin-top: 40px;
     }
 
     .open-popup {
@@ -597,13 +662,14 @@ main .contactUs .box .map iframe:hover {
 
 @media screen and (max-width: 500px) {
     .slogan-b-s-1 {
-        text-align: center;
-        font-size: 22px;
+        font-size: 40px;
+        padding-left: 5vh;
+        /* padding-right: 30vh; */
     }
 
-    .isi-review-s-1 p {
-        text-align: center;
-        font-size: 14px;
+    .isi-kontak-s-1 p {
+        font-size: 25px;
+        padding-left: 5vh;
     }
 
     .popup {
@@ -620,7 +686,7 @@ main .contactUs .box .map iframe:hover {
     }
 
     .popup button {
-        margin-top:40px;
+        margin-top: 40px;
     }
 
     .open-popup {
@@ -630,13 +696,14 @@ main .contactUs .box .map iframe:hover {
 
 @media screen and (max-width:450px) {
     .slogan-b-s-1 {
-        text-align: center;
-        font-size: 24px;
+        font-size: 40px;
+        padding-left: 4vh;
+        /* padding-right: 30vh; */
     }
 
-    .isi-review-s-1 p {
-        text-align: center;
-        font-size: 14px;
+    .isi-kontak-s-1 p {
+        font-size: 25px;
+        padding-left: 4vh;
     }
 
     .popup {
@@ -662,6 +729,17 @@ main .contactUs .box .map iframe:hover {
 }
 
 @media screen and (max-width:400px) {
+    .slogan-b-s-1 {
+        font-size: 35px;
+        padding-left: 2vh;
+        /* padding-right: 30vh; */
+    }
+
+    .isi-kontak-s-1 p {
+        font-size: 20px;
+        padding-left: 2vh;
+    }
+
     main #row1 .row1-1 .col h2 {
         text-align: center;
         font-size: 22px;
@@ -671,6 +749,14 @@ main .contactUs .box .map iframe:hover {
         text-align: center;
         font-size: 14px;
     }
+
+    main .contactUs .box {
+        padding: 0 10px;
+    }
+
+    /* main .contactUs .box .contact {
+        padding: 30px;
+    } */
 
     .popup {
         width: 270px;
@@ -699,26 +785,28 @@ main .contactUs .box .map iframe:hover {
         padding: 5px;
     }
 
-    main .contactUs .box {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "form" "info" "map";
-        padding: 0;
-    }
-
     main .contactUs .box .map {
         min-height: 200px;
         padding: 0;
     }
 
+    main .contactUs .box {
+        background: wheat;
+    }
+
     main .contactUs .box .form .formBox .inputBox {
-        width: 100%;
+        /* width: 100%; */
+        width: 70%;
+    }
+
+    main .contactUs .box .form .formBox .inputBox textarea {
+        width: 70%;
     }
 
     main .contactUs .box .contact {
         /* padding: 30px; */
-        padding: 25px;
-        width: 100%;
+        /* padding: 25px; */
+        /* width: 100%; */
     }
 
     main .contactUs .box .info .infoBox div a {
@@ -731,4 +819,5 @@ main .contactUs .box .map iframe:hover {
         width: 101%;
     }
 }
+
 /** -------- END RESPONSIVE BREAKPOINT -------- */

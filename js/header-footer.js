@@ -2,7 +2,7 @@
 let navScroll = window.pageYOffset;
 let screenWidth = window.innerWidth;
 
-window.onscroll = function() {
+window.onscroll = function () {
     let currentNavScroll = window.pageYOffset;
     screenWidth = window.innerWidth;
     let navLinkScroll = document.querySelectorAll('.nav-link');
@@ -99,23 +99,24 @@ function handleEmailInputNewsletter(event) {
     }
 }
 
-/* Function to post data contact to server in form newsletter */
-async function postDataNewsletterToServer(email) {
+async function postDataNewsletterToServer(email, token) {
     const url = 'https://back-end-semarang-group-2-production.up.railway.app/api/newsletters/';
 
     try {
-        const response = await axios.post(url, { email }, {
-        });
+        const response = await axios.post(url, { email, token });
 
         if (!response.data) {
-            // throw new Error('Failed to create NewsLetter');
             openPopupError('Failed to create Newsletter')
         }
 
         return response.data;
     } catch (error) {
-        // error.response.data
-        if (error.response && error.response.data.error) {
+        console.error(error);
+        if (error.response && error.response.status === 429) {
+            const errorMessage = 'Terlalu banyak permintaan, coba lagi nanti.';
+            console.error(errorMessage);
+            handleErrorContact(errorMessage);
+        } else if (error.response && error.response.data.error) {
             const errorMessage = error.response.data.error;
             console.error(errorMessage);
             handleErrorNewsletter(errorMessage);
@@ -146,26 +147,40 @@ formNewsLetter.addEventListener('keydown', () => {
     emailInput.addEventListener('input', handleEmailInputNewsletter)
 })
 
-/* Submit a form with the id `formNewsLetter` for the process of saving new NewsLetter data to the database */
-formNewsLetter.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
+async function onSubmit(token) {
     const emailNewsLetter = document.getElementById('emailNewsLetter').value;
 
-    if (!emailPattern.test(emailNewsLetter)) {
-        openPopupError('Email Invalid')
-    } else {
+    try {
+        const response = await postDataNewsletterToServer(emailNewsLetter, token);
+        handleSuccessNewsletter(response);
+    } catch (error) {
+        handleErrorNewsletter(error.message);
+    }
+}
+
+async function onloadCallback() {
+    grecaptcha.render('btnNewsLetter', {
+        'sitekey' : '6LdZEzkoAAAAAD2jqYCvBJCOakjIo4qsStQlDAWd',
+        'callback' : onSubmit
+    });
+};
+
+
+document.getElementById('formNewsLetter').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    // grecaptcha.execute(); // Trigger reCAPTCHA execution
+
+    grecaptcha.ready(async () => {
         try {
-            await postDataNewsletterToServer(emailNewsLetter);
-            handleSuccessNewsletter();
+            const token = await grecaptcha.execute();
+            onSubmit(token);
         } catch (error) {
+            console.error(error);
             handleErrorNewsletter(error.message);
         }
-    }
-
-})
-
-// function onSubmit(token) {}
+    });
+});
 
 // Popup
 let popup = document.getElementById("popup");

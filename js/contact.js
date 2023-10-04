@@ -66,7 +66,7 @@ function handleEmailInputContact(event) {
 function setBorderColorInputChange(inputs) {
     for (let i = 0; i < inputs.length; i++) {
         if (i === 2) {
-            continue; /* Skip index 2, yaitu email */ 
+            continue; /* Skip index 2, yaitu email */
         }
 
         inputs[i].style.borderColor = inputs[i].value.length > 0 ? colors.validColorHex : colors.defaultColorHex;
@@ -113,8 +113,9 @@ function getFormContactValues() {
     const email = document.getElementById("email").value;
     const noHp = noHPElement.value;
     const message = document.getElementById("message").value;
+    const captchaResponse = grecaptcha.getResponse()
 
-    return { firstName, lastName, email, noHp, message };
+    return { firstName, lastName, email, noHp, message, captchaResponse };
 }
 
 /* Function to post data contact to server in form contact */
@@ -132,7 +133,11 @@ async function postDataContactToServer(data) {
         return response.data;
     } catch (error) {
         // throw new Error(error.message);
-        if (error.response && error.response.data.error) {
+        if (error.response && error.response.status === 429) {
+            const errorMessage = 'Terlalu banyak permintaan, coba lagi nanti.';
+            console.error(errorMessage);
+            handleErrorContact(errorMessage);
+        } else if (error.response && error.response.data.error) {
             const errorMessage = error.response.data.error;
             console.error(errorMessage);
             handleErrorContact(errorMessage);
@@ -187,20 +192,22 @@ form.addEventListener('keydown', () => {
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    // const captchaResponse = grecaptcha.getResponse()
-    // if (!captchaResponse.length > 0) {
-    //     throw new Error("Captcha not complete")
-    // }
+    const captchaResponse = grecaptcha.getResponse()
+    if (!captchaResponse.length > 0) {
+        openPopupError('Captcha not complete')
+    }
+
+    // console.log(captchaResponse)
 
     const emailContact = document.getElementById('email').value;
 
-    if(!emailPattern.test(emailContact)) {
+    if (!emailPattern.test(emailContact)) {
         openPopupError('Email Invalid')
     } else {
         try {
             const formData = getFormContactValues();
-        await postDataContactToServer(formData);
-        handleSuccessContact();
+            await postDataContactToServer(formData);
+            handleSuccessContact();
         } catch (error) {
             // console.log('error 2: ', error)
             handleErrorContact(error.message);
