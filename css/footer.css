@@ -114,6 +114,9 @@
     background-color: #614436;
     border: 1px solid #895e3f;
 }
+.button-newsletter:disabled {
+    cursor: not-allowed;
+}
 
 .text-newsletter:focus{
     outline: none;

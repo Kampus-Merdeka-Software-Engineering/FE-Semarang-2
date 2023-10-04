@@ -141,7 +141,7 @@ async function postDataNewsletterToServer(email, token) {
         const response = await axios.post(url, { email, token });
 
         if (!response.data) {
-            openPopupError('Failed to create Newsletter')
+            openPopupError('Failed to create Newsletter', "btnNewsLetter")
         }
 
         return response.data;
@@ -164,13 +164,13 @@ async function postDataNewsletterToServer(email, token) {
 
 /* Function to handle while success fetch in form newsletter */
 function handleSuccessNewsletter() {
-    openPopup()
+    openPopup("btnNewsLetter")
     resetInputNewsletter()
 }
 
 /* Function to handle while error fetch in form newsletter */
 function handleErrorNewsletter(desc) {
-    openPopupError(desc)
+    openPopupError(desc, "btnNewsLetter")
     resetInputNewsletter()
 }
 
@@ -221,11 +221,12 @@ document.getElementById('formNewsLetter').addEventListener('submit', async (even
 let popup = document.getElementById("popup");
 const btnClose = document.getElementById("btnClose");
 
-function openPopup() {
+function openPopup(button) {
     popup.classList.add("open-popup");
+    document.getElementById(button).disabled = true;
 }
 
-function openPopupError(desc) {
+function openPopupError(desc, button) {
     const imgPopup = document.getElementById('img-popup')
     const titlePopup = document.getElementById('title-popup')
     const descPopup = document.getElementById('desc-popup')
@@ -236,6 +237,7 @@ function openPopupError(desc) {
     descPopup.innerHTML = desc
     btnClose.style.backgroundColor = colors.invalidColorHex
     popup.classList.add("open-popup");
+    document.getElementById(button).disabled = true;
 }
 
 function closePopup() {
