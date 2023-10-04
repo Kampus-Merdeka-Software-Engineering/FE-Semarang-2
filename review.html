@@ -87,12 +87,12 @@
                                             </div>
                                         </div>
 
-                                        <!-- <div class="row100">
+                                        <div class="row100">
                                             <div class="inputBox">
                                                 <div class="g-recaptcha"
-                                                    data-sitekey="6LconTgoAAAAAGQhI0SQP_edUcqIwYMVPo5IIs5Z"></div>
+                                                    data-sitekey="6LcTXXQoAAAAACY8eiBkKSUENrQVvAPzKke14p7o"></div>
                                             </div>
-                                        </div> -->
+                                        </div>
 
                                         <div class="row100">
                                             <div class="inputBox">
@@ -194,7 +194,8 @@
                         <form class="newsletter" id="formNewsLetter">
                             <input class="text-newsletter" type="text" id="emailNewsLetter" name="emailNewsLetter"
                                 placeholder=" Masukkan e-mail kamu" required />
-                            <!-- <input type="hidden" class="g-recaptcha" data-sitekey="6LdZEzkoAAAAAD2jqYCvBJCOakjIo4qsStQlDAWd" data-callback="onSubmit"> -->
+                            <div class="g-recaptcha" data-sitekey="6LdZEzkoAAAAAD2jqYCvBJCOakjIo4qsStQlDAWd"
+                                data-callback="onSubmit" data-size="invisible"></div>
                             <input class="button-newsletter" type="submit" id="btnNewsLetter" value="Subscribe" />
                         </form>
                     </div>
@@ -284,6 +285,7 @@
     </footer>
 
     <!-- LINK JAVASCRIPT -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" nonce="nonce-randomnonce12345"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 

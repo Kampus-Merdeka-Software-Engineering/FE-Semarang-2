@@ -92,8 +92,9 @@ function getFormReviewValues() {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
+    const captchaResponse = grecaptcha.getResponse()
 
-    return { name, email, message };
+    return { name, email, message, captchaResponse };
 }
 
 /* Function to post data review to server in form review */
@@ -115,7 +116,11 @@ async function postDataReviewToServer(data) {
         // handleErrorReview();
 
         // error.response.data
-        if (error.response && error.response.data.error) {
+        if (error.response && error.response.status === 429) {
+            const errorMessage = 'Terlalu banyak permintaan, coba lagi nanti.';
+            console.error(errorMessage);
+            handleErrorContact(errorMessage);
+        } else if (error.response && error.response.data.error) {
             const errorMessage = error.response.data.error;
             console.error(errorMessage);
             handleErrorNewsletter(errorMessage);
@@ -165,10 +170,12 @@ form.addEventListener('keydown', () => {
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    // const captchaResponse = grecaptcha.getResponse()
-    // if (!captchaResponse.length > 0) {
-    //     throw new Error("Captcha not complete")
-    // }
+    const captchaResponse = grecaptcha.getResponse()
+    if (!captchaResponse.length > 0) {
+        openPopupError('Captcha not complete')
+    }
+
+    console.log(captchaResponse)
 
     const emailReview = document.getElementById('email').value;
 
