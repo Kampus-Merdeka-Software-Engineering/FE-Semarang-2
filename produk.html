@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk- Company</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Red Hat Display"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ae87e11e18.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/produk.css" />
+  </head>
+  <body>
+    <!-- HEADER/NAVBAR -->
+    <header class="header">
+      <div class="navcount">
+        <nav class="navbar">
+          <div class="navbar-left">
+            <a class="logo">Company</a>
+            <a
+              href="javascript:void(0);"
+              class="nav-icon"
+              onclick="myFunction()"
+            >
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div class="navbar-right" id="navbarRight">
+            <a href="index.html" class="nav-active nav-first">Beranda</a>
+            <a href="produk.html" class="nav-link">Produk</a>
+            <a href="tentang.html" class="nav-link">Tentang Kami</a>
+            <a href="kontak.html" class="nav-link">Kontak</a>
+          </div>
+        </nav>
+      </div>
+             
+    </header>
+    <section class="container-contoh-s-1">
+      <div class="container-contoh-s-1-1">
+        <div class="isi-contoh-s-1"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 1 (GAMBAR COVER) -->
+    <section class="container-produk-s-1">
+      <img class="gambar-produk-s-1-1" src="img/bannerproduk.png" alt="" />
+      <!-- <img class="gambar-produk-s-1-2" src="img/handmade.jpg" alt="" /> -->
+      <div class="container-produk-s-1-1">
+        <div class="isi-produk-s-1"></div>
+        <a href="#section2" class="fa-solid fa-chevron-down"></a>
+      </div>
+    </section>
+
+    <!-- SECTION 2 (INTRO COMPANY) -->
+    <section class="container-produk-s-2" id="section2">
+      <div class="container-produk-s-2-1">
+        <div class="isi-produk-s-2">
+          <div class="img-hp-p-s-2">
+            <img src="./img/handphone.png" alt="" />
+          </div>
+          <div class="caption-p-s-2">
+            <p class="desc-higlight-p-s-2">E-Commerce</p>
+            <p class="desc-p-s-2">
+              Creatopia menjamin tersedianya layanan bagi kegiatan seniman kami
+            </p>
+            <div class="another-caption-p-s-2">
+              <p>Layanan E-commerce melalui aplikasi seluler dan desktop.</p>
+              <p>
+                Platform teknologi periklanan untuk membantu seniman
+                mempromosikan bisnis.
+              </p>
+              <p>
+                Kerjasama dengan partner logistik untuk menjamin barang segera
+                sampai.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 (DAMPAK COMPANY) -->
+    <section class="container-produk-s-3">
+      <div class="container-produk-s-3-1">
+        <div class="isi-produk-s-3" id="isi-produk-s-3">
+          <h1 class="judul-p-s-3">Kategori Produk Kami</h1>
+
+          <!-- list Categories -->
+          <ul class="list-categories">
+            <li
+              class="category"
+              onclick="tampilkanKategori('list-produk-home&living')">Home & Living</li>
+            <li class="category" onclick="tampilkanKategori('list-produk-toys')">Toys & Entertaiment</li>
+            <li class="category" onclick="tampilkanKategori('list-produk-craft')">Craft Supplies & Tools</li>
+            <li class="category" onclick="tampilkanKategori('list-produk-clothing')">Clothing & Shoes</li>
+            <li class="category" onclick="tampilkanKategori('list-produk-jewelry')">Jewelry & Accessories</li>
+            <li class="category" onclick="tampilkanKategori('list-produk-vintage')">Vintage</li>
+          </ul>
+
+          <!-- button for return to category section -->
+          <button onclick="keSectionCategory()" id="buttonToCategory">
+            Back to Category
+          </button>
+
+          <!-- line -->
+          <div class="line"></div>
+
+          <!-- list Produk Home & Living -->
+          <div class="list-produk" id="list-produk-home&living">
+            <ul class="fashion  ">
+              <li class="produk-card">
+                <img
+                  src="./img/HomeAndLiving/lampu kerangka diamond hitam.png"
+                  alt="item1"
+                />
+                <p class="nama-produk">Lampu hias bambu</p>
+                <p class="harga">Rp 90.000</p>
+              </li>
+              <li class="produk-card">
+                <img
+                  src="./img/HomeAndLiving/pajangan dinding macrame.png"
+                  alt="fashion2"
+                />
+                <p class="nama-produk">Pajangan Dinding Macrame</p>
+                <p class="harga">Rp 70.000</p>
+              </li>
+              <li class="produk-card">
+                <img
+                  src="./img/HomeAndLiving/kursi rotan minimalist.png"
+                  alt="fashion3"
+                />
+                <p class="nama-produk">Kursi Rotan Minimalist</p>
+                <p class="harga">Rp 400.000</p>
+              </li>
+              <li class="produk-card">
+                <img
+                  src="./img/HomeAndLiving/kursi minimalist & selimut bulu.png"
+                  alt="fashion4"
+                />
+                <p class="nama-produk">Kursi Minimalist & Selimut Bulu</p>
+                <p class="harga">Rp 250.000</p>
+              </li>
+              <li class="produk-card">
+                <img
+                  src="./img/HomeAndLiving/vas bunga estetik (sand).png"
+                  alt="fashion4"
+                />
+                <p class="nama-produk">vas bunga estetik (sand)</p>
+                <p class="harga">Rp 70.000</p>
+              </li>
+              <li class="produk-card">
+                <img
+                  src="./img/HomeAndLiving/lampu kerangka diamond hitam.png"
+                  alt="fashion4"
+                />
+                <p class="nama-produk">Lampu kerangka diamond hitam</p>
+                <p class="harga">Rp 90.000</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- list Produk Toys and Entertaiment  -->
+          <div class="list-produk" id='list-produk-toys'>
+            <ul class="toys">
+              <li class="produk-card">
+                <img src="./img/toys/boneka rajut hewan.jpg" alt="toys1" />
+                <p>Boneka Rajut Hewan</p>
+                <p class="harga">Rp 300.000</p>
+              </li>
+              <li class="produk-card">
+                <img src="./img/toys/Hiasan gantungan burung.jpg" alt="toys2" />
+                <p>Hiasan Gantungan Burung Pernak Pernik</p>
+                <p class="harga">Rp 80.000</p>
+              </li>
+              <li class="produk-card">
+                <img src="./img/toys/Hiasan patung emas.jpg" alt="toys3" />
+                <p>Miniatur Patung Emas</p>
+                <p class="harga">Rp 100.000</p>
+              </li>
+              <li class="produk-card">
+                <img src="./img/toys/Mainan berhitung anak.jpg" alt="toys1" />
+                <p>Mainan Berhitung Anak</p>
+                <p class="harga">Rp 75.000</p>
+              </li>
+              <li class="produk-card">
+                <img src="./img/toys/Mainan toko.jpeg" alt="toys2" />
+                <p>Grocery Store Toys</p>
+                <p class="harga">Rp 300.000</p>
+              </li>
+              <li class="produk-card">
+                <img src="./img/toys/miniatur mobil kuning.jpg" alt="toys3" />
+                <p>Miniatur Mobil</p>
+                <p class="harga">Rp 90.000</p>
+              </li>
+            </ul>
+          </div>
+
+         <!-- list Produk Craft Supplies & Tools  -->
+         <div class="list-produk" id='list-produk-craft'>
+          <ul class="makeup">
+            <li class="produk-card">
+              <img src="./img/craft/Hiasan meja.png" alt="craft1" />
+              <p>Hiasan Meja</p>
+              <p class="harga">Rp 90.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/craft/Kalendar.jpg" alt="craft2" />
+              <p>Kalendar</p>
+              <p class="harga">Rp 50.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/craft/Lilin Pengharum Ruangan.png" alt="makeup3" />
+              <p>Lilin Penharum Ruangan</p>
+              <p class="harga">Rp 60.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/craft/stamp wax cap.jpg" alt="craft1" />
+              <p>Sampul Surat & Stamp Wax Cap</p>
+              <p class="harga">Rp 40.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/craft/Sulaman Kaktus.png" alt="craft2" />
+              <p>Sulaman Kaktus</p>
+              <p class="harga">Rp 50.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/craft/Sulaman Kucing.jpg" alt="craft3" />
+              <p>Sulaman Kucing</p>
+              <p class="harga">Rp 50.000</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- list Produk Clothing & Shoes  -->
+        <div class="list-produk" id='list-produk-clothing'>
+          <ul class="makeup">
+            <li class="produk-card">
+              <img src="./img/clothing/Cardigan Rajut.jpg" alt="clothing1" />
+              <p>Cardigan Rajut</p>
+              <p class="harga">Rp 50.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/clothing/Kemeja dan jas.png" alt="clothing2" />
+              <p>Kemeja dan Jas Pria</p>
+              <p class="harga">Rp 350.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/clothing/Aneka tas handmade.png" alt="clothing3" />
+              <p>Aneka Tas Handmade</p>
+              <p class="harga">Rp 150.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/clothing/Satu set pakaian wanita.jpg" alt="clothing1" />
+              <p>Satu Set Pakaian Wanita</p>
+              <p class="harga">Rp 200.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/clothing/Atasan rajut.jpg" alt="clothing2" />
+              <p>Atasan Rajut Wanita</p>
+              <p class="harga">Rp 80.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/clothing/Sepatu heels putih.jpg" alt="clothing3" />
+              <p>Sepatu Heels Putih</p>
+              <p class="harga">Rp 90.000</p>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="btn-kunjugi-creatopia"> Kunjungi Creatopia </a>
+      </div>
+    </div>
+
+
+        <!-- list Produk Jewelry & Accessories< -->
+        <div class="list-produk" id='list-produk-jewelry'>
+          <ul class="makeup">
+            <li class="produk-card">
+              <img src="./img/Jewelry/Gelang.jpg" alt="jewelry1" />
+              <p>Gelang</p>
+              <p class="harga">Rp 20.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/Jewelry/Gelang mutiara.jpg" alt="jewelry2" />
+              <p>Gelang Mutiara</p>
+              <p class="harga">Rp 100.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/Jewelry/Kalung gold.jpg" alt="jewelry3" />
+              <p>Kalung Gold</p>
+              <p class="harga">Rp 500.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/Jewelry/Gelang silver.jpg" alt="jewelry1" />
+              <p>Gelang Silver</p>
+              <p class="harga">Rp 2500.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/Jewelry/Anting silver.jpg" alt="jewelry2" />
+              <p>Anting Silver</p>
+              <p class="harga">Rp 300.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/Jewelry/Kalung liontin kupu kupu.jpg" alt="jewelry3" />
+              <p>Kalung Liontin Kupu-kupu</p>
+              <p class="harga">Rp 90.000</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- list Produk Vintage  -->
+        <div class="list-produk" id='list-produk-vintage'>
+          <ul class="makeup">
+            <li class="produk-card">
+              <img src="./img/vintage/alat makan vintage.jpg" alt="vintage1" />
+              <p>Alat Makan Vintage</p>
+              <p class="harga">Rp 500.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/vintage/Aneka tas anyaman.jpg" alt="vintage2" />
+              <p>Aneka Tas Anyaman</p>
+              <p class="harga">Rp 200.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/vintage/Topi.jpg" alt="vintage3" />
+              <p>Topi</p>
+              <p class="harga">Rp 150.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/vintage/Sampul surat.jpg" alt="vintage1" />
+              <p>Sampul Surat Vintagek</p>
+              <p class="harga">Rp 70.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/vintage/Kalung Jam Saku.jpg" alt="vintage2" />
+              <p>Kalung Jam Saku</p>
+              <p class="harga">Rp 200.000</p>
+            </li>
+            <li class="produk-card">
+              <img src="./img/vintage/Perhiasan vintage.jpg" alt="vintage3" />
+              <p>Perhiasan Tangan Vintage</p>
+              <p class="harga">Rp 500.000</p>
+            </li>
+          </ul>
+        </div>
+
+        
+      <!-- LINK JAVASCRIPT PRODUK-->
+      <script src="js/produk.js"></script>
+    </section>
+
+    <!-- SECTION SETERUSNYA (NAMA CONTENT) -->
+    <!-- FOOTER -->
+    <footer class="footer">
+      <section class="f-sec-0">
+        <div class="f-newsletter">
+          <p class="title-newsletter">
+            Jangan lewatkan informasi komunitas, acara, berita, promosi, dan
+            masih banyak lagi.
+          </p>
+          <div class="f-newsletter-icon">
+            <i class="icon-newsletter fa-solid fa-users-between-lines"></i>
+            <i class="icon-newsletter fa-regular fa-calendar"></i>
+            <i class="icon-newsletter fa-regular fa-newspaper"></i>
+            <i class="icon-newsletter fa-solid fa-percent"></i>
+          </div>
+          <div class="form-newsletter">
+            <div class="newsletter-box">
+              <p class="nesletter-isi-box1">SUBSCRIBE TO OUR</p>
+              <p class="nesletter-isi-box2">NEWSLETTER</p>
+            </div>
+            <div class="input-newsletter">
+              <form class="newsletter" action="">
+                <input
+                  class="text-newsletter"
+                  type="email"
+                  placeholder=" Masukkan e-mail kamu"
+                />
+                <input
+                  class="button-newsletter"
+                  type="button"
+                  value="Subscribe"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="f-sec-1">
+        <div class="f-info">
+          <div class="f-info-con">
+            <p class="info-logo">Company</p>
+            <p class="info-text">Dapatkan berita terbaru</p>
+            <ul class="sos-ul">
+              <li class="sos-li">
+                <a class="info-sos" href="https://facebook.com" target="_blank">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="sos-li">
+                <a
+                  class="info-sos"
+                  href="https://instagram.com"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li class="sos-li">
+                <a class="info-sos" href="https://x.com" target="_blank">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </li>
+              <li class="sos-li">
+                <a class="info-sos" href="https://youtube.com" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="f-info-con2">
+            <ul class="info-menu-list">
+              <li class="info-li">
+                <a class="info-menu" href="">Beranda</a>
+              </li>
+              <li class="info-li2">
+                <a class="info-menu" href="">Produk</a>
+              </li>
+              <li class="info-li3">
+                <a class="info-menu" href="">Tentang</a>
+              </li>
+              <li class="info-li4">
+                <a class="info-menu" href="">Kontak</a>
+              </li>
+            </ul>
+          </div>
+          <div class="f-info-con3">
+            <p class="info-3-text">Kantor Pusat</p>
+            <p class="info-3-text2">
+              Jalan Jend. A Yani No. 34, Kel. Panjunan, Kec. Kota Kudus, Kab.
+              Kudus, Jawa Tengah, 59317.
+            </p>
+          </div>
+          <div class="f-info-con4">
+            <p class="info-4-text">Unduh App Company</p>
+            <a
+              class="info-str"
+              target="_blank"
+              href="https://www.apple.com/id/app-store/"
+            >
+              <img class="as-store" src="img/as.png" alt="" />
+            </a>
+            <a
+              class="info-str"
+              target="_blank"
+              href="https://play.google.com/store/games?device=windows"
+            >
+              <img class="ps-store" src="img/ps.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="f-sec-2">
+        <div class="f-cpr">
+          <div class="f-cpr-con">
+            <div class="cpr">2023 Company, PT Company Tbk.</div>
+            <div class="tnc-plcy">
+              <a class="tnc" href="">Peraturan & Kebijakan</a>
+              <a class="plcy" href="">Pemberitahuan Privasi</a>
+            </div>
+          </div>
+        </div>
+      </section>
+             
+    </footer>
+
+    <!-- LINK JAVASCRIPT -->
+    <script src="js/produk.js"></script>
+  </body>
+</html>
