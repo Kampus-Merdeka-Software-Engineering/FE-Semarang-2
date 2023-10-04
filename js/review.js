@@ -106,7 +106,7 @@ async function postDataReviewToServer(data) {
 
         if (!response.data) {
             // throw new Error('Failed to create Review');
-            openPopupError('Failed to create Review')
+            openPopupError('Failed to create Review', 'btnSubmit')
         }
 
         return response.data;
@@ -133,13 +133,13 @@ async function postDataReviewToServer(data) {
 
 /* Function to handle while success fetch in form Review */
 function handleSuccessReview() {
-    openPopup()
+    openPopup('btnSubmit')
     resetInputReview();
 }
 
 /* Function to handle while error fetch in form Review */
 function handleErrorReview(desc) {
-    openPopupError(desc)
+    openPopupError(desc, 'btnSubmit')
 }
 
 /* `keydown` trigger for forms with id `formReview` */
@@ -172,7 +172,7 @@ form.addEventListener('submit', async (event) => {
 
     const captchaResponse = grecaptcha.getResponse()
     if (!captchaResponse.length > 0) {
-        openPopupError('Captcha not complete')
+        openPopupError('Captcha not complete', 'btnSubmit')
     }
 
     console.log(captchaResponse)
@@ -180,7 +180,7 @@ form.addEventListener('submit', async (event) => {
     const emailReview = document.getElementById('email').value;
 
     if(!emailPattern.test(emailReview)) {
-        openPopupError('Email Invalid')
+        openPopupError('Email Invalid', 'btnSubmit')
     } else {
         try {
             const formData = getFormReviewValues();

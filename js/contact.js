@@ -150,13 +150,13 @@ async function postDataContactToServer(data) {
 
 /* Function to handle while success fetch in form contact */
 function handleSuccessContact() {
-    openPopup()
+    openPopup("btnSubmit")
     resetInputContact();
 }
 
 /* Function to handle while error fetch in form contact */
 function handleErrorContact(desc) {
-    openPopupError(desc);
+    openPopupError(desc, "btnSubmit");
 }
 
 /* `keydown` trigger for forms with id `formContact` */
