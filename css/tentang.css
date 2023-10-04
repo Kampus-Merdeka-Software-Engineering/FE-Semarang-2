@@ -19,34 +19,75 @@ body {
 }
 
 /* -------- halaman 1 -------- */
-.container-contoh-s-1 {
-    background-repeat: no-repeat;
-    background-size: cover;
+.container-visimisi-s-1 {
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #50362A;
 }
 
-.container-contoh-s-1-1 {
+.container-visimisi-s-1-1 {
     position: relative;
     display: flex;
-    background-color: #614436;
+    background-color: transparent;
     justify-content: center;
-    width: 60%;
+    align-items: stretch;
+    width: 100%;
     max-width: 1300px;
     margin: auto;
     height: 100%;
 }
 
-.isi-contoh-s-1 {
-    /* display: flex; */
-    flex-direction: column;
+.isi-visimisi-s-1 {
+    flex: 60%;
+    align-self: center;
+    padding-left: 80px;
+    padding-right: 25px;
     background-color: transparent;
+}
+
+.judul-visi {
+    font-size: 20px;
+    font-weight: 700;
+    color: #F6F4F0;
+}
+
+.desc-visi {
+    font-size: 14px;
+    font-weight: 500;
+    color: #F6F4F0;
+}
+
+.judul-misi {
+    font-size: 20px;
+    font-weight: 700;
+    color: #F6F4F0;
+}
+
+.desc-misi {
+    font-size: 14px;
+    font-weight: 500;
+    color: #F6F4F0;
+}
+
+.container-img-visimisi {
+    display: flex;
+    flex: 40%;
+    background-color: yellow;
+}
+
+.img-visimisi {
+    width: 100%;
+    object-fit: cover;
+}
+/* .isi-contoh-s-1 {
+    flex-direction: column;
+    background-color: blue;
     color: rgb(255, 255, 255);
-    font-family: 'Red Hat Display';
-    font-size: 12px;
     padding: 80px;
     padding-top: 100px;
     width: auto;
     align-self: center;
-}
+} */
 
 /* .background-visi {
     background-color: rgba(0, 0, 0, 0.7);
@@ -62,7 +103,7 @@ body {
     border: 1px solid #e7c5ae;
 } */
 
-.misi-contoh-s-1 {
+/* .misi-contoh-s-1 {
     align-self: end;
     margin-top: 50px;
 }
@@ -73,7 +114,7 @@ body {
     padding: 10px 40px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
-}
+} */
 
 @media screen and (max-width: 550px) {
     .isi-contoh-s-1 {
@@ -90,10 +131,6 @@ body {
         border-radius: 10px;
         font-size: 18px;
     }
-}
-.img-t-c-1 {
-    float: right;
-    width: 40%;
 }
 
 /* -------- SECTION 1 -------- */
