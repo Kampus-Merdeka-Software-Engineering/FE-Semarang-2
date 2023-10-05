@@ -1,56 +1,119 @@
-function tampilkanKategori(kategori) {
-  // Menyembunyikan semua tab-content
-  var tabContents = document.querySelectorAll(".list-produk");
-  tabContents.forEach(function (tab) {
-    tab.classList.remove("active"); // Hilangkan kelas 'active'
-  });
+async function fetchDataByCategory(category) {
+  try {
+      const response = await axios.get(`https://back-end-semarang-group-2-production.up.railway.app/api/products/category/${category}`);
+      const products = response.data.slice(0, 6); // Ambil 6 data pertama
 
-  // Menampilkan tab-content yang sesuai dengan kategori yang dipilih
-  var selectedTab = document.getElementById(kategori);
-  if (selectedTab) {
-    selectedTab.classList.add("active"); // Tambahkan kelas 'active'
+      const productContainer = document.getElementById("product-container");
+      productContainer.innerHTML = '';
+
+      products.forEach(product => {
+          const productBox = document.createElement("div");
+          productBox.className = "product-box";
+
+          const productImage = document.createElement("img");
+          productImage.className = "product-image";
+          productImage.src = `data:image/jpeg;base64,${product.image}`;
+          productImage.alt = product.productName;
+
+          const productName = document.createElement("p");
+          productName.className = "product-name";
+          productName.textContent = product.productName;
+
+          const formatRupiah = (price) => {
+            const formatter = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR'
+            });
+            return formatter.format(price).replace(/,00$/, '');
+          };
+          const productPrice = document.createElement("p");
+          productPrice.className = "product-price";
+          productPrice.textContent = formatRupiah(product.productPrice);
+
+          productBox.appendChild(productImage);
+          productBox.appendChild(productName);
+          productBox.appendChild(productPrice);
+
+          productContainer.appendChild(productBox);
+      });
+  } catch (error) {
+      console.error("Error fetching data:", error);
   }
-
-  // view
-  var scrollView = document.getElementById("isi-produk-s-4");
-  scrollView.scrollIntoView({ behavior: "smooth" });
 }
 
-// scroll
-window.onscroll = function () {
-  scrollTampilkanButton();
-};
+const categories = document.querySelectorAll(".list-categories li");
 
-function scrollTampilkanButton() {
-  var buttonBackToCategory = document.getElementById("buttonToCategory");
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 1000) {
-      buttonBackToCategory.style.display = "block";
-    } else {
-      buttonBackToCategory.style.display = "none";
-    }
-  });
-}
-
-// function untuk kembali lagi ke atas
-function keSectionCategory() {
-  var sectionCategory = document.getElementById("container-produk-s-3");
-  sectionCategory.scrollIntoView({ behavior: "smooth" });
-}
-
-// for button active list category
-function buttonActiveCategory() {
-  const categories = document.querySelectorAll(".category");
-
-  categories.forEach((category) => {
+categories.forEach(category => {
     category.addEventListener("click", () => {
-      // Hilangkan kelas "active" dari semua elemen
-      categories.forEach((c) => c.classList.remove("active"));
+        categories.forEach(c => {
+            c.classList.remove("active");
+        });
 
-      // Tambahkan kelas "active" hanya ke elemen yang diklik
-      category.classList.add("active");
+        category.classList.add("active");
+
+        categories.forEach(c => {
+            if (c.classList.contains("active")) {
+                c.style.backgroundColor = "#50362A";
+                c.style.color = "white";
+            } else {
+                c.style.backgroundColor = "";
+                c.style.color = "black";
+            }
+        });
+
+        const categoryValue = category.id;
+        fetchDataByCategory(categoryValue);
     });
-  });
-}
+    category.addEventListener("mouseenter", () => {
+      if (!category.classList.contains("active")) {
+          category.style.color = "white";
+      }
+    });
 
-buttonActiveCategory();
+    category.addEventListener("mouseleave", () => {
+        if (!category.classList.contains("active")) {
+            category.style.color = "";
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const homeAndLivingCategory = document.getElementById("homeandliving");
+  const toysCategory = document.getElementById("toys");
+  const craftCategory = document.getElementById("craft");
+  const clothingCategory = document.getElementById("clothing");
+  const jewelryCategory = document.getElementById("jewelry");
+  const vintageCategory = document.getElementById("vintage");
+  
+  const defaultCategory = document.getElementById("homeandliving");
+  defaultCategory.classList.add("active");
+  defaultCategory.style.backgroundColor = "#50362A";
+  defaultCategory.style.color = "white";
+
+  fetchDataByCategory('homeandliving');
+
+  homeAndLivingCategory.addEventListener("click", () => {
+      fetchDataByCategory("homeandliving");
+  });
+
+  toysCategory.addEventListener("click", () => {
+      fetchDataByCategory("toys");
+  });
+
+  craftCategory.addEventListener("click", () => {
+      fetchDataByCategory("decoration");
+  });
+
+  clothingCategory.addEventListener("click", () => {
+      fetchDataByCategory("homeandliving");
+  });
+
+  jewelryCategory.addEventListener("click", () => {
+      fetchDataByCategory("toys");
+  });
+
+  vintageCategory.addEventListener("click", () => {
+      fetchDataByCategory("decoration");
+  });
+
+});

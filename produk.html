@@ -81,116 +81,24 @@
       <div class="container-produk-s-3-1">
         <div class="isi-produk-s-3" id="isi-produk-s-3">
           <h2 class="judul-p-s-3">Kategori Produk</h2>
-
           <ul class="list-categories">
-            <li class="category" onclick="tampilkanKategori('list-produk-home&living')">Home & Living</li>
-            <li class="category" onclick="tampilkanKategori('list-produk-toys')">Toys & Entertaiment</li>
-            <li class="category" onclick="tampilkanKategori('list-produk-craft')">Craft Supplies & Tools</li>
-            <li class="category" onclick="tampilkanKategori('list-produk-clothing')">Clothing & Shoes</li>
-            <li class="category" onclick="tampilkanKategori('list-produk-jewelry')">Jewelry & Accessories</li>
-            <li class="category" onclick="tampilkanKategori('list-produk-vintage')">Vintage</li>
+            <li class="category active" id="homeandliving">Home & Living</li>
+            <li class="category active" id="toys">Toys & Entertaiment</li>
+            <li class="category active" id="craft">Craft Supplies & Tools</li>
+            <li class="category active" id="clothing">Clothing & Shoes</li>
+            <li class="category active" id="jewelry">Jewelry & Accessories</li>
+            <li class="category active" id="vintage">Vintage</li>
           </ul>
-
-          <!-- button for return to category section -->
-          <button onclick="keSectionCategory()" id="buttonToCategory">
-            Back to Category
-          </button>
-
-          <!-- line -->
           <div class="line"></div>
-
-          <!-- list Produk Home & Living -->
-          <div class="list-produk" id="list-produk-home&living">
-            <ul class="fashion  ">
-              <li class="produk-card">
-                <img
-                  src="./img/HomeAndLiving/lampu kerangka diamond hitam.png"
-                  alt="item1"
-                />
-                <p class="nama-produk">Lampu hias bambu</p>
-                <p class="harga">Rp 90.000</p>
-              </li>
-              <li class="produk-card">
-                <img
-                  src="./img/HomeAndLiving/pajangan dinding macrame.png"
-                  alt="fashion2"
-                />
-                <p class="nama-produk">Pajangan Dinding Macrame</p>
-                <p class="harga">Rp 70.000</p>
-              </li>
-              <li class="produk-card">
-                <img
-                  src="./img/HomeAndLiving/kursi rotan minimalist.png"
-                  alt="fashion3"
-                />
-                <p class="nama-produk">Kursi Rotan Minimalist</p>
-                <p class="harga">Rp 400.000</p>
-              </li>
-              <li class="produk-card">
-                <img
-                  src="./img/HomeAndLiving/kursi minimalist & selimut bulu.png"
-                  alt="fashion4"
-                />
-                <p class="nama-produk">Kursi Minimalist & Selimut Bulu</p>
-                <p class="harga">Rp 250.000</p>
-              </li>
-              <li class="produk-card">
-                <img
-                  src="./img/HomeAndLiving/vas bunga estetik (sand).png"
-                  alt="fashion4"
-                />
-                <p class="nama-produk">vas bunga estetik (sand)</p>
-                <p class="harga">Rp 70.000</p>
-              </li>
-              <li class="produk-card">
-                <img
-                  src="./img/HomeAndLiving/lampu kerangka diamond hitam.png"
-                  alt="fashion4"
-                />
-                <p class="nama-produk">Lampu kerangka diamond hitam</p>
-                <p class="harga">Rp 90.000</p>
-              </li>
-            </ul>
+          <div class="product-container"  id="product-container">
+            <!-- <div class="product-box">
+                <img class="product-image" src="" alt="">
+                <p class="product-name"></p>
+                <p class="product-price"></p>
+            </div>-->
           </div>
 
-          <!-- list Produk Toys and Entertaiment  -->
-          <div class="list-produk" id='list-produk-toys'>
-            <ul class="toys">
-              <li class="produk-card">
-                <img src="./img/toys/boneka rajut hewan.jpg" alt="toys1" />
-                <p>Boneka Rajut Hewan</p>
-                <p class="harga">Rp 300.000</p>
-              </li>
-              <li class="produk-card">
-                <img src="./img/toys/Hiasan gantungan burung.jpg" alt="toys2" />
-                <p>Hiasan Gantungan Burung Pernak Pernik</p>
-                <p class="harga">Rp 80.000</p>
-              </li>
-              <li class="produk-card">
-                <img src="./img/toys/Hiasan patung emas.jpg" alt="toys3" />
-                <p>Miniatur Patung Emas</p>
-                <p class="harga">Rp 100.000</p>
-              </li>
-              <li class="produk-card">
-                <img src="./img/toys/Mainan berhitung anak.jpg" alt="toys1" />
-                <p>Mainan Berhitung Anak</p>
-                <p class="harga">Rp 75.000</p>
-              </li>
-              <li class="produk-card">
-                <img src="./img/toys/Mainan toko.jpeg" alt="toys2" />
-                <p>Grocery Store Toys</p>
-                <p class="harga">Rp 300.000</p>
-              </li>
-              <li class="produk-card">
-                <img src="./img/toys/miniatur mobil kuning.jpg" alt="toys3" />
-                <p>Miniatur Mobil</p>
-                <p class="harga">Rp 90.000</p>
-              </li>
-            </ul>
-          </div>
-
-          <!-- list Produk Craft Supplies & Tools  -->
-          <div class="list-produk" id='list-produk-craft'>
+          <!-- <div class="list-produk" id='list-produk-craft'>
             <ul class="makeup">
               <li class="produk-card">
                 <img src="./img/craft/Hiasan meja.png" alt="craft1" />
@@ -223,10 +131,9 @@
                 <p class="harga">Rp 50.000</p>
               </li>
             </ul>
-          </div>
+          </div> -->
 
-          <!-- list Produk Clothing & Shoes  -->
-          <div class="list-produk" id='list-produk-clothing'>
+          <!-- <div class="list-produk" id='list-produk-clothing'>
             <ul class="makeup">
               <li class="produk-card">
                 <img src="./img/clothing/Cardigan Rajut.jpg" alt="clothing1" />
@@ -259,10 +166,9 @@
                 <p class="harga">Rp 90.000</p>
               </li>
             </ul>
-          </div>
+          </div> -->
 
-          <!-- list Produk Jewelry & Accessories< -->
-          <div class="list-produk" id='list-produk-jewelry'>
+          <!-- <div class="list-produk" id='list-produk-jewelry'>
             <ul class="makeup">
               <li class="produk-card">
                 <img src="./img/Jewelry/Gelang.jpg" alt="jewelry1" />
@@ -295,10 +201,9 @@
                 <p class="harga">Rp 90.000</p>
               </li>
             </ul>
-          </div>
+          </div> -->
 
-          <!-- list Produk Vintage  -->
-          <div class="list-produk" id='list-produk-vintage'>
+          <!-- <div class="list-produk" id='list-produk-vintage'>
             <ul class="makeup">
               <li class="produk-card">
                 <img src="./img/vintage/alat makan vintage.jpg" alt="vintage1" />
@@ -331,14 +236,11 @@
                 <p class="harga">Rp 500.000</p>
               </li>
             </ul>
-          </div>
+          </div> -->
           
-          <a href="#" class="btn-kunjugi-creatopia"> Kunjungi Creatopia </a>
+          <a href="#" class="btn-kunjugi-creatopia">Jelajahi Lebih Lanjut</a>
         </div>
       </div>
-
-      <!-- LINK JAVASCRIPT PRODUK-->
-      <script src="js/produk.js"></script>
     </section>
 
     <!-- SECTION SETERUSNYA (NAMA CONTENT) -->
@@ -444,6 +346,7 @@
     </footer>
 
     <!-- LINK JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/produk.js"></script>
     <script src="js/header-footer.js"></script>
   </body>
