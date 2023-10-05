@@ -65,32 +65,18 @@ setInterval(toggleImages, 8000);
 
 
 // FETCH REVIEW
-
 async function fetchReviewAndDisplay() {
     try {
-        const response = await fetch('https://back-end-semarang-group-2-production.up.railway.app/api/reviews/analyze-reviews');
-        const data = await response.json();
+        const { data: firstThreeReviews } = await axios.get('https://back-end-semarang-group-2-production.up.railway.app/api/reviews/analyze-reviews');
 
-        const firstThreeReviews = data.slice(0, 3);
+        firstThreeReviews.slice(0, 3).forEach((review, index) => {
+            const element = document.querySelector(`.review${index + 1}`);
+            element.innerHTML = `
+                <p class="nama-review${index + 1}">${review.name}</p>
+                <p class="desc-review${index + 1}">${review.message}</p>`;
 
-        const conElement = document.querySelector('.review1');
-        const connElement = document.querySelector('.review2');
-        const connnElement = document.querySelector('.review3');
-
-        firstThreeReviews.forEach((review, index) => {
-            if (index === 0) {
-                conElement.innerHTML = `
-                <p class="nama-review1">${review.name}</p>
-                <p class="desc-review1">${review.message}</p>`;
-            } else if (index === 1) {
-                connElement.innerHTML = `
-                <p class="nama-review2">${review.name}</p>
-                <p class="desc-review2">${review.message}</p>`;
-            } else if (index === 2) {
-                connnElement.innerHTML = `
-                <p class="nama-review3">${review.name}</p>
-                <p class="desc-review3">${review.message}</p>
-                <img class="petik-review" src="img/left 1.png" alt="">`;
+            if (index === 2) {
+                element.innerHTML += `<img class="petik-review" src="img/left 1.png" alt="">`;
             }
         });
     } catch (error) {
@@ -100,26 +86,21 @@ async function fetchReviewAndDisplay() {
 
 fetchReviewAndDisplay();
 
-// FETCH MEDIA
 
+// FETCH MEDIA
 async function fetchNewestMedia() {
     try {
-        const response = await fetch('https://back-end-semarang-group-2-production.up.railway.app/api/media/latest');
-        const data = await response.json();
-
-        const firstThreeMedia = data.slice(0, 3);
+        const { data: firstThreeMedia } = await axios.get('https://back-end-semarang-group-2-production.up.railway.app/api/media/latest');
 
         const media1Elements = document.querySelectorAll('.news-b-s-6-1');
 
-        firstThreeMedia.forEach((media, index) => {
-            if (index < media1Elements.length) {
-                const media1Element = media1Elements[index];
-                media1Element.innerHTML = `
-                <img class="img-news-b-s-6" src="data:image/jpeg;base64,${media.mediaImage}" alt="">
-                <p class="judul-news-b-s-6">${media.mediaTitle}</p>
-                <a class="button-b-s-6-1" href="">Info Selengkapnya  ></a>
-                `;
-            }
+        firstThreeMedia.slice(0, media1Elements.length).forEach((media, index) => {
+            const media1Element = media1Elements[index];
+            media1Element.innerHTML = `
+            <img class="img-news-b-s-6" src="data:image/jpeg;base64,${media.mediaImage}" alt="">
+            <p class="judul-news-b-s-6">${media.mediaTitle}</p>
+            <a class="button-b-s-6-1" href="">Info Selengkapnya  ></a>
+            `;
         });
     } catch (error) {
         console.error('Terjadi kesalahan:', error);

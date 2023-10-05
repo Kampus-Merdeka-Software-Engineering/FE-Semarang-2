@@ -1,7 +1,7 @@
 async function fetchDataByCategory(category) {
   try {
       const response = await axios.get(`https://back-end-semarang-group-2-production.up.railway.app/api/products/category/${category}`);
-      const products = response.data.slice(0, 6); // Ambil 6 data pertama
+      const products = response.data.slice(0, 6);
 
       const productContainer = document.getElementById("product-container");
       productContainer.innerHTML = '';
