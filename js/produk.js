@@ -101,19 +101,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   craftCategory.addEventListener("click", () => {
-      fetchDataByCategory("decoration");
+      fetchDataByCategory("craft");
   });
 
   clothingCategory.addEventListener("click", () => {
-      fetchDataByCategory("homeandliving");
+      fetchDataByCategory("clothing");
   });
 
   jewelryCategory.addEventListener("click", () => {
-      fetchDataByCategory("toys");
+      fetchDataByCategory("jewelry");
   });
 
   vintageCategory.addEventListener("click", () => {
-      fetchDataByCategory("decoration");
+      fetchDataByCategory("vintage");
   });
 
 });
