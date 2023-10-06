@@ -3,14 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Tentang Kami - Creatopia</title>
+
         <link rel="icon" href="img/logo judul.png">
         <link href='https://fonts.googleapis.com/css?family=Red Hat Display' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-        <script src="https://kit.fontawesome.com/ae87e11e18.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/tentang.css">
         <link rel="stylesheet" href="css/header.css" />
         <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/popup.css">
+        <link rel="stylesheet" href="css/tentang.css">
     </head>
     <body>
         <!-- HEADER/NAVBAR -->
@@ -126,6 +128,7 @@
                 </div>
             </div>
         </section>
+
         <!-- SECTION 2 (PERJALANAN COMPANY) -->
         <section class="container-tentang-s-2">
             <div class="container-tentang-s-2-1">
@@ -181,6 +184,25 @@
                 <a class="button-tentang-s-4" href="#">Produk Creatopia</a>
             </div>
         </section>
+
+        <!-- SECTION POP UP -->
+        <section class="container-popup-s-n">
+            <div class="container-popup-s-n-1">
+                <div class="isi-popup-s-n">
+                    <div class="container-popup-1">
+                        <div class="container-popup-2">
+                            <div class="popup" id="popup">
+                                <img src="img/tick.png" alt="tick" id="img-popup" />
+                                <h2 id="title-popup">Thank you</h2>
+                                <p id="desc-popup">We got your message</p>
+                                <button type="submit" id="btnClose">OKE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION POP UP -->
     
         <!-- FOOTER -->
         <footer class="footer">
@@ -282,8 +304,12 @@
                 </div>
             </section>
         </footer>
+
         <!-- LINK JAVASCRIPT -->
+        <script src="https://kit.fontawesome.com/ae87e11e18.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="js/header-footer.js"></script>
+        <script src="js/popup.js"></script>
         <script src="js/tentang.js"></script>
     </body>
 </html>
