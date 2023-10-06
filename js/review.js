@@ -101,20 +101,15 @@ function getFormReviewValues() {
 async function postDataReviewToServer(data) {
     try {
         const apiUrl = 'https://back-end-semarang-group-2-production.up.railway.app/api/reviews/';
-        const response = await axios.post(apiUrl, data, {
-        });
+        // const apiUrl = 'http://localhost:3000/api/reviews/';
+        const response = await axios.post(apiUrl, data);
 
         if (!response.data) {
-            // throw new Error('Failed to create Review');
             openPopupError('Failed to create Review', 'btnSubmit')
         }
 
         return response.data;
     } catch (error) {
-        // console.log('error 1: ', error.message)
-        // throw new Error(error.message);
-        // handleErrorReview();
-
         // error.response.data
         if (error.response && error.response.status === 429) {
             const errorMessage = 'Terlalu banyak permintaan, coba lagi nanti.';
@@ -146,7 +141,6 @@ function handleErrorReview(desc) {
 form.addEventListener('keydown', () => {
     const emailInput = document.getElementById('email');
     const inputs = form.querySelectorAll('input[type=text], textarea');
-
     /* `input` trigger for forms with id `formReview` in email input */
     emailInput.addEventListener('input', handleEmailInputReview)
 
@@ -162,8 +156,20 @@ form.addEventListener('keydown', () => {
 
         input.addEventListener('blur', () => {
             setBorderColorEmail();
+            // checkRecaptcha()
         });
     });
+
+    // const isRecaptchaChecked = grecaptcha.getResponse().length !== 0;
+
+    // if (isRecaptchaChecked) {
+    //     console.log('reCAPTCHA telah dicentang');
+    //     document.getElementById("btnSubmit").removeAttribute("disabled");
+    // } else {
+    //     console.log('reCAPTCHA belum dicentang');
+    //     document.getElementById("btnSubmit").disabled = true;
+    // }
+    // checkRecaptcha()
 })
 
 /* Submit a form with the id `formReview` for the process of saving new Review data to the database */
@@ -175,11 +181,11 @@ form.addEventListener('submit', async (event) => {
         openPopupError('Captcha not complete', 'btnSubmit')
     }
 
-    console.log(captchaResponse)
+    // console.log(captchaResponse)
 
     const emailReview = document.getElementById('email').value;
 
-    if(!emailPattern.test(emailReview)) {
+    if (!emailPattern.test(emailReview)) {
         openPopupError('Email Invalid', 'btnSubmit')
     } else {
         try {
@@ -187,8 +193,53 @@ form.addEventListener('submit', async (event) => {
             await postDataReviewToServer(formData);
             handleSuccessReview();
         } catch (error) {
-            // console.log('error 2: ', error)
             handleErrorReview('Failed to create Review');
         }
     }
 })
+
+function setupFormEventListeners() {
+    // const isRecaptchaChecked = grecaptcha.getResponse().length !== 0;
+
+    // if (isRecaptchaChecked) {
+    //     console.log('reCAPTCHA telah dicentang');
+    // } else {
+    //     console.log('reCAPTCHA belum dicentang');
+    // }
+
+    // document.getElementById("btnSubmit").removeAttribute("disabled");
+    checkRecaptcha()
+}
+
+function enableSubmitButton() {
+    setupFormEventListeners()
+}
+
+const checkRecaptcha = function () {
+    const isRecaptchaChecked = grecaptcha.getResponse().length !== 0;
+
+    if (isRecaptchaChecked) {
+        document.getElementById("btnSubmit").removeAttribute("disabled");
+    } else {
+        document.getElementById("btnSubmit").disabled = true;
+    }
+}
+
+/* event listener untuk elemen formulir */
+form.addEventListener('click', checkRecaptcha);
+form.addEventListener('keyup', checkRecaptcha);
+
+/* TRANSITION */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        // console.log(entry)
+        if(entry.isIntersecting) {
+            entry.target.classList.add('show-section')
+        } else {
+            entry.target.classList.remove('show-section')
+        }
+    })
+})
+
+const hiddenSectionElements = document.querySelectorAll('.hidden-section');
+hiddenSectionElements.forEach((el) => observer.observe(el))

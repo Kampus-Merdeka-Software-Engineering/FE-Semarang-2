@@ -1,21 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 /**-------- SECTION POP UP -------- */
+/**-------- MAIN CONTAINER POP UP -------- */
+.container-popup-s-n {
+    display: block;
+}
+
+.container-popup-s-n-1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.isi-popup-s-n {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    text-align: center;
+    justify-content: center;
+}
+
 .container-popup-1 {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.btn {
-    padding: 10px 60px;
-    background-color: #fff;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 30px;
-}
+/**-------- END MAIN CONTAINER POP UP -------- */
 
 .container-popup-2 {
     z-index: 2;
@@ -26,10 +50,9 @@
     background: #fff;
     border-radius: 6px;
     position: fixed;
-    top: 50%;
-    left: 20%;
-    /* transform: translate(-50%, -50%) scale(0.1); */
-    transform: translate(50%, -50%) scale(0.1);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 0 30px 30px;
     color: #333;
@@ -40,8 +63,7 @@
 .open-popup {
     visibility: visible;
     top: 50%;
-    transform: translate(50%, -50%) scale(1);
-    text-align: center;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .popup img {
@@ -75,3 +97,127 @@
     visibility: hidden;
 }
 /**-------- END SECTION POP UP -------- */
+
+/** -------- RESPONSIVE BREAKPOINT -------- */
+@media screen and (max-width: 991px) {
+    .popup p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .popup {
+        width: 390px;
+    }
+
+    .popup h2 {
+        font-size: 28px;
+        margin: 10px 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .popup {
+        width: 360px;
+    }
+
+    .popup h2 {
+        font-size: 24px;
+    }
+
+    .popup button {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .popup {
+        width: 330px;
+    }
+
+    .popup h2 {
+        font-size: 28px;
+    }
+
+    .popup p {
+        font-size: 16px;
+    }
+
+    .popup button {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .popup {
+        width: 330px;
+    }
+
+    .popup h2 {
+        font-size: 28px;
+    }
+
+    .popup p {
+        font-size: 16px;
+    }
+
+    .popup button {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .popup {
+        width: 300px;
+    }
+
+    .popup h2 {
+        font-size: 24px;
+    }
+
+    .popup p {
+        font-size: 14px;
+    }
+
+    .popup button {
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .popup {
+        width: 270px;
+    }
+
+    .popup h2 {
+        font-size: 22px;
+        margin: 0 0 10px;
+    }
+
+    .popup p {
+        font-size: 14px;
+    }
+
+    .popup button {
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .popup {
+        width: 220px;
+    }
+
+    .popup h2 {
+        font-size: 20px;
+    }
+
+    .popup p {
+        font-size: 12px;
+    }
+
+    .popup button {
+        margin-top: 35px;
+    }
+}
+/** -------- END RESPONSIVE BREAKPOINT -------- */
