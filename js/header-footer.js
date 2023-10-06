@@ -99,11 +99,12 @@ function handleEmailInputNewsletter(event) {
     }
 }
 
-async function postDataNewsletterToServer(email, token) {
+async function postDataNewsletterToServer(email) {
     const url = 'https://back-end-semarang-group-2-production.up.railway.app/api/newsletters/';
+    // const url = 'http://localhost:3000/api/newsletters/';
 
     try {
-        const response = await axios.post(url, { email, token });
+        const response = await axios.post(url, { email });
 
         if (!response.data) {
             openPopupError('Failed to create Newsletter', "btnNewsLetter")
@@ -116,11 +117,14 @@ async function postDataNewsletterToServer(email, token) {
             const errorMessage = 'Terlalu banyak permintaan, coba lagi nanti.';
             console.error(errorMessage);
             handleErrorContact(errorMessage);
-        } else if (error.response && error.response.data.error) {
+        } 
+        else if (error.response && error.response.data.error) {
             const errorMessage = error.response.data.error;
             console.error(errorMessage);
-            handleErrorNewsletter(errorMessage);
-        } else {
+            // handleErrorNewsletter(errorMessage);
+            handleSuccessNewsletter(); // agar tidak mengirimkan pesan error yang spesifik ke end user
+        } 
+        else {
             console.error(error.message);
             handleErrorNewsletter(error.message);
         }
@@ -147,69 +151,54 @@ formNewsLetter.addEventListener('keydown', () => {
     emailInput.addEventListener('input', handleEmailInputNewsletter)
 })
 
-async function onSubmit(token) {
+/* Submit a form with the id `formNewsLetter` for the process of saving new NewsLetter data to the database */
+formNewsLetter.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    
     const emailNewsLetter = document.getElementById('emailNewsLetter').value;
 
-    try {
-        const response = await postDataNewsletterToServer(emailNewsLetter, token);
-        handleSuccessNewsletter(response);
-    } catch (error) {
-        handleErrorNewsletter(error.message);
-    }
-}
-
-async function onloadCallback() {
-    grecaptcha.render('btnNewsLetter', {
-        'sitekey' : '6LdZEzkoAAAAAD2jqYCvBJCOakjIo4qsStQlDAWd',
-        'callback' : onSubmit
-    });
-};
-
-
-document.getElementById('formNewsLetter').addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    // grecaptcha.execute(); // Trigger reCAPTCHA execution
-
-    grecaptcha.ready(async () => {
+    if (!emailPattern.test(emailNewsLetter)) {
+        openPopupError('Email Invalid')
+    } else {
         try {
-            const token = await grecaptcha.execute();
-            onSubmit(token);
+            const response = await postDataNewsletterToServer(emailNewsLetter);
+            // handleSuccessNewsletter(response);
+            handleSuccessNewsletter();
         } catch (error) {
             console.error(error);
             handleErrorNewsletter(error.message);
         }
-    });
-});
-
-// Popup
-let popup = document.getElementById("popup");
-const btnClose = document.getElementById("btnClose");
-
-function openPopup(button) {
-    popup.classList.add("open-popup");
-    document.getElementById(button).disabled = true;
-}
-
-function openPopupError(desc, button) {
-    const imgPopup = document.getElementById('img-popup')
-    const titlePopup = document.getElementById('title-popup')
-    const descPopup = document.getElementById('desc-popup')
-    const btnClose = document.getElementById('btnClose')
-    imgPopup.src = 'img/tick-error.png'
-    titlePopup.innerHTML = 'Failed'
-    titlePopup.style.color = colors.invalidColorHex
-    descPopup.innerHTML = desc
-    btnClose.style.backgroundColor = colors.invalidColorHex
-    popup.classList.add("open-popup");
-    document.getElementById(button).disabled = true;
-}
-
-function closePopup() {
-    popup.classList.remove("open-popup");
-}
-
-btnClose.addEventListener('click', () => {
-    closePopup()
-    location.reload(true); // Halaman akan direfresh dan memaksa pengambilan ulang sumber daya dari server
+    }
 })
+
+// // Popup
+// let popup = document.getElementById("popup");
+// const btnClose = document.getElementById("btnClose");
+
+// function openPopup(button) {
+//     popup.classList.add("open-popup");
+//     document.getElementById(button).disabled = true;
+// }
+
+// function openPopupError(desc, button) {
+//     const imgPopup = document.getElementById('img-popup')
+//     const titlePopup = document.getElementById('title-popup')
+//     const descPopup = document.getElementById('desc-popup')
+//     const btnClose = document.getElementById('btnClose')
+//     imgPopup.src = 'img/tick-error.png'
+//     titlePopup.innerHTML = 'Failed'
+//     titlePopup.style.color = colors.invalidColorHex
+//     descPopup.innerHTML = desc
+//     btnClose.style.backgroundColor = colors.invalidColorHex
+//     popup.classList.add("open-popup");
+//     document.getElementById(button).disabled = true;
+// }
+
+// function closePopup() {
+//     popup.classList.remove("open-popup");
+// }
+
+// btnClose.addEventListener('click', () => {
+//     closePopup()
+//     location.reload(true); // Halaman akan direfresh dan memaksa pengambilan ulang sumber daya dari server
+// })

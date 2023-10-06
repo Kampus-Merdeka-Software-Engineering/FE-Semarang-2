@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    
     <script src="https://kit.fontawesome.com/ae87e11e18.js" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -12,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Red Hat Display" rel="stylesheet" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/contact.css" />
 
     <title>Contact Us - Creatopia</title>
@@ -45,113 +46,123 @@
             <img class="gambar-kontak-s-1-1" src="img/bg-contact.png" alt="" />
             <div class="container-kontak-s-1-1">
                 <div class="isi-kontak-s-1">
-                    <h1 class="slogan-b-s-1">Hubungi Kami</h1>
-                    <p class="desc">untuk segala pertanyaan anda</p>
+                    <h1 class="slogan-b-s-1 hidden-section">Hubungi Kami</h1>
+                    <p class="desc hidden-section">untuk segala pertanyaan anda</p>
                 </div>
-                <a href="#row2" class="fa-solid fa-chevron-down"></a>
+                <a href="#section-2" class="fa-solid fa-chevron-down"></a>
             </div>
         </section>
         <!-- END SECTION 1 (GAMBAR COVER) -->
 
         <!-- SECTION 2 -->
-        <section class="container-kontak-s-2" id="row2">
+        <section class="container-kontak-s-2" id="section-2">
             <div class="container-kontak-s-2-1">
                 <div class="isi-kontak-s-2">
-                    <div class="contactUs">
-                        <div class="box">
-                            <div class="contact form">
-                                <h3>Send a message</h3>
-                                <form id="formContact">
-                                    <div class="formBox">
-                                        <div class="row50">
-                                            <div class="inputBox">
-                                                <label for="firstName">First Name</label>
-                                                <input type="text" id="firstName" name="firstName" placeholder="John"
-                                                    required />
+                    <div class="container-kontak">
+                        <div class="flex-container">
+                            <div class="item1 hidden-section">
+                                <div class="contact form">
+                                    <h3>Send a message</h3>
+                                    <form id="formContact">
+                                        <div class="formBox">
+                                            <div class="row50">
+                                                <div class="inputBox">
+                                                    <label for="firstName">First Name</label>
+                                                    <input type="text" id="firstName" name="firstName" placeholder="John"
+                                                        required />
+                                                </div>
+                                                <div class="inputBox">
+                                                    <label for="lastName">Last Name</label>
+                                                    <input type="text" id="lastName" name="lastName" placeholder="Doe"
+                                                        required />
+                                                </div>
                                             </div>
-                                            <div class="inputBox">
-                                                <label for="lastName">Last Name</label>
-                                                <input type="text" id="lastName" name="lastName" placeholder="Doe"
-                                                    required />
+    
+                                            <div class="row50">
+                                                <div class="inputBox">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" id="email" name="email"
+                                                        placeholder="vivece@gmail.com" required />
+                                                    <span id="text"></span>
+                                                </div>
+                                                <div class="inputBox">
+                                                    <label for="noHp">Mobile</label>
+                                                    <input type="number" inputmode="numeric" id="noHp" name="noHp"
+                                                        pattern="[0-9]*" placeholder="(+62)81234567890" />
+                                                </div>
+                                            </div>
+    
+                                            <div class="row100">
+                                                <div class="inputBox">
+                                                    <label for="message">Message</label>
+                                                    <textarea id="message" name="message"
+                                                        placeholder="Write your message here..." required></textarea>
+                                                </div>
+                                            </div>
+    
+                                            <div class="row100">
+                                                <div class="inputBox">
+                                                    <div class="g-recaptcha"
+                                                        data-sitekey="6LconTgoAAAAAGQhI0SQP_edUcqIwYMVPo5IIs5Z"></div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="row100">
+                                                <div class="inputBox">
+                                                    <input type="submit" id="btnSubmit" value="Send" />
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <div class="row50">
-                                            <div class="inputBox">
-                                                <label for="email">Email</label>
-                                                <input type="text" id="email" name="email"
-                                                    placeholder="vivece@gmail.com" required />
-                                                <span id="text"></span>
-                                            </div>
-                                            <div class="inputBox">
-                                                <label for="noHp">Mobile</label>
-                                                <input type="number" inputmode="numeric" id="noHp" name="noHp"
-                                                    pattern="[0-9]*" placeholder="(+62)81234567890" />
-                                            </div>
-                                        </div>
-
-                                        <div class="row100">
-                                            <div class="inputBox">
-                                                <label for="message">Message</label>
-                                                <textarea id="message" name="message"
-                                                    placeholder="Write your message here..." required></textarea>
-                                            </div>
-                                        </div>
-
-                                        <div class="row100">
-                                            <div class="inputBox">
-                                                <div class="g-recaptcha"
-                                                    data-sitekey="6LconTgoAAAAAGQhI0SQP_edUcqIwYMVPo5IIs5Z"></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row100">
-                                            <div class="inputBox">
-                                                <input type="submit" id="btnSubmit" value="Send" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="contact info">
-                                <h3>Contact Info</h3>
-                                <div class="infoBox">
-                                    <div>
-                                        <span><ion-icon name="location"></ion-icon></span>
-                                        <p>Creatopia, Jakarta <br />INDONESIA</p>
-                                    </div>
-                                    <div>
-                                        <span><ion-icon name="mail"></ion-icon></span>
-                                        <a href="mailto:loremipsum@email.com">socmed@creatopia.com</a>
-                                    </div>
-                                    <div>
-                                        <span><ion-icon name="call"></ion-icon></span>
-                                        <a href="tel:+62 812 3456 7890">+62 812-3456-7890</a>
-                                    </div>
-
-                                    <ul class="sci">
-                                        <li>
-                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                        </li>
-                                    </ul>
+                                    </form>
                                 </div>
                             </div>
 
-                            <div class="contact map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.276983007019!2d106.82385307384129!3d-6.22716549376093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e4734a8de3%3A0xb2ad7eacc88d7f3e!2sRevoU!5e0!3m2!1sen!2sid!4v1694417961568!5m2!1sen!2sid"
-                                    style="border: 0" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="item2">
+                                <div class="item2-1 hidden-section">
+                                    <div class="contact info">
+                                        <h3>Contact Info</h3>
+                                        <div class="infoBox">
+                                            <div>
+                                                <span><i class="fa-solid fa-location-dot"></i></span>
+                                                <!-- <p>Creatopia, Jakarta <br />INDONESIA</p> -->
+                                                <p>Creatopia, Jakarta INDONESIA</p>
+                                            </div>
+                                            <div>
+                                                <span><i class="fa-solid fa-envelope"></i></span>
+                                                <a href="mailto:loremipsum@email.com">creatopia@yahoo.com</a>
+                                            </div>
+                                            <div>
+                                                <span><i class="fa-solid fa-phone"></i></span>
+                                                <a href="tel:+62 812 3456 7890">+62 812-3456-7890</a>
+                                            </div>
+
+                                            <ul class="sci">
+                                                <li>
+                                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item2-2 hidden-section">
+                                    <div class="contact map">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.276983007019!2d106.82385307384129!3d-6.22716549376093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e4734a8de3%3A0xb2ad7eacc88d7f3e!2sRevoU!5e0!3m2!1sen!2sid!4v1694417961568!5m2!1sen!2sid"
+                                            style="border: 0" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -160,10 +171,10 @@
         </section>
         <!-- END SECTION 2 -->
 
-        <!-- SECTION Pop Up -->
-        <section class="container-kontak-s-2" id="row3">
-            <div class="container-kontak-s-2-1">
-                <div class="isi-kontak-s-2">
+        <!-- SECTION POP UP -->
+        <section class="container-popup-s-n">
+            <div class="container-popup-s-n-1">
+                <div class="isi-popup-s-n">
                     <div class="container-popup-1">
                         <div class="container-popup-2">
                             <div class="popup" id="popup">
@@ -177,7 +188,7 @@
                 </div>
             </div>
         </section>
-        <!-- SECTION Pop Up -->
+        <!-- SECTION POP UP -->
     </main>
 
     <!-- FOOTER -->
@@ -204,8 +215,6 @@
                         <form class="newsletter" id="formNewsLetter">
                             <input class="text-newsletter" type="text" id="emailNewsLetter" name="emailNewsLetter"
                                 placeholder=" Masukkan e-mail kamu" required />
-                            <div class="g-recaptcha" data-sitekey="6LdZEzkoAAAAAD2jqYCvBJCOakjIo4qsStQlDAWd"
-                                data-callback="onSubmit" data-size="invisible"></div>
                             <input class="button-newsletter" type="submit" id="btnNewsLetter" value="Subscribe" />
                         </form>
                     </div>
@@ -295,12 +304,12 @@
     </footer>
 
     <!-- LINK JAVASCRIPT -->
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
         nonce="nonce-randomnonce12345"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script src="js/header-footer.js"></script>
+    <script src="js/popup.js"></script>
     <script src="js/contact.js"></script>
 </body>
 
