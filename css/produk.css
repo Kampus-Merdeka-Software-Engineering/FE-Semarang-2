@@ -1,0 +1,404 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Poppins';
+}
+
+/* -------- SECTION 1 -------- */
+.container-produk-s-1 {
+  position: relative;
+  display: flex;
+}
+
+.container-produk-s-1-1 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.isi-produk-s-1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  text-align: center;
+  justify-content: center;
+}
+
+.gambar-produk-s-1-1 {
+  width: 100%;
+  object-fit: cover;
+}
+
+.slogan-p-s-1 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 10px rgb(29, 29, 29);
+}
+
+.fa-chevron-down {
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #9ad4d8;
+  animation: appearDisappear 3s infinite;
+}
+
+@keyframes appearDisappear {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .slogan-p-s-1 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 700px) {
+  .slogan-p-s-1 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 500px) {
+  .slogan-p-s-1 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+/* -------- SECTION 2 -------- */
+.container-produk-s-2 {
+  background-color: white;
+}
+
+.container-produk-s-2-1 {
+  background-color: transparent;
+  display: flex;
+  /* text-align: center; */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.isi-produk-s-2 {
+  background-color: transparent;
+  width: 100%;
+  padding: 80px;
+  display: flex;
+  gap: 20px;
+}
+
+.img-hp-p-s-2 img {
+  width: 337px;
+  height: auto;
+  flex: 1;
+}
+
+.caption-p-s-2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
+  align-self: center;
+  padding-right: 50px;
+}
+
+.desc-higlight-p-s-2 {
+  color: #cbcbcb;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.desc-p-s-2 {
+  color: #957647;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.container-caption-p-s-2 {
+  display: flex;
+  padding-left: 40px;
+  margin-bottom: 50px;
+}
+
+.vertical-line {
+  height: auto;
+  width: 2px;
+  background-color: #957647;
+}
+
+.another-caption-p-s-2 p {
+  color: #50362A;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.another-caption-p-s-2 ul{
+  padding-left: 16px;
+}
+
+.another-caption-p-s-2 ul li{
+  font-size: 24px;
+  padding-left: 25px;
+  color: #D9D9D9;
+}
+
+@media screen and (max-width: 900px) {
+  .isi-produk-s-2 {
+    flex-direction: column-reverse;
+    padding: 50px;
+    gap: 20px;
+  }
+  .caption-p-s-2 {
+    padding-right: 0;
+  }
+  .desc-p-s-2 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .img-hp-p-s-2 {
+    align-self: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .isi-produk-s-2 {
+    padding: 20px;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  .desc-higlight-p-s-2 {
+    font-size: 14px;
+  }
+  .desc-p-s-2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .container-caption-p-s-2 {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .another-caption-p-s-2 p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .another-caption-p-s-2 ul li{
+    padding-left: 10px;
+  }
+  .img-hp-p-s-2 img {
+    width: 280px;
+  }
+}
+
+/* -------- SECTION 3 -------- */
+.container-produk-s-3 {
+  background-color: white;
+}
+
+.container-produk-s-3-1 {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.isi-produk-s-3 {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.judul-p-s-3 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #50362A;
+  margin-bottom: 30px;
+}
+
+.list-categories {
+  list-style: none;
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list-categories .category {
+  background-color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+  border: 2px solid #725b38;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #151515;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.list-categories .category:hover {
+  background-color: #50362a;
+  color: #f6f4f0;
+}
+
+.line{
+  width: 100%;
+}
+.line div{
+  height: 1px;
+  background-color: black;
+  margin: 0 50px 20px 50px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  background-color: white;
+  padding: 0 50px;
+}
+.product-box {
+  background-color: white;
+  text-align: left;
+}
+.product-image {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.product-name {
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.product-price {
+  padding-left: 20px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn-kunjugi-creatopia {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 225px;
+  height: 40px;
+  background-color: #50362A;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1.1px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn-kunjugi-creatopia:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 900px) {
+  .judul-p-s-3 {
+    font-size: 35px;
+  }
+  .list-categories {
+    padding: 0 30px;
+  }
+  .line div{
+    margin: 0 30px 15px 30px;
+  }
+  .product-container {
+    padding: 0 30px;
+    gap: 10px;
+  }
+  .product-name {
+    padding-left: 15px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .product-price {
+    padding-left: 15px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .btn-kunjugi-creatopia {
+    width: 200px;
+    height: 34px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 500px) {
+  .judul-p-s-3 {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+  .list-categories {
+    padding: 0 15px;
+  }
+  .list-categories .category {
+    font-size: 11px;
+    border: 1.5px solid #725b38;
+  }
+  .line div{
+    margin: 0 15px 8px 15px;
+  }
+  .product-container {
+    padding: 0 15px;
+    gap: 7px;
+  }
+  .product-name {
+    padding-left: 8px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .product-price {
+    padding-left: 8px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .btn-kunjugi-creatopia {
+    width: 180px;
+    height: 30px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+}

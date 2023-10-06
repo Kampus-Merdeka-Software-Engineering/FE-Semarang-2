@@ -43,7 +43,6 @@ body {
 .logo {
     color: white;
     text-shadow: 1px 1px 3.5px black;
-    font-family: 'Red Hat Display';
     font-weight: 600;
     font-size: 26px;
     letter-spacing: 1.5px;
@@ -61,9 +60,7 @@ body {
     text-decoration: none;
     text-align: center;
     font-size: 18px;
-    font-weight: 550;
-    font-family: 'Red Hat Display';
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1.2px;
     border-bottom: 3px solid transparent;
     padding-top: 10px;
@@ -77,9 +74,7 @@ body {
     text-decoration: none;
     text-align: center;
     font-size: 18px;
-    font-weight: 550;
-    font-family: 'Red Hat Display';
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1.2px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -100,7 +95,7 @@ body {
     color: white;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .navbar {
         display: block;
         padding-left: 0;
@@ -136,14 +131,14 @@ body {
         display: block;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .navbar-right a{display: none;}
     .navbar-left a.nav-icon {
       float: right;
       display: block;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .navbar-right.responsive {position: relative;}
   .navbar-left.responsive .nav-icon {
     position: absolute;
@@ -222,7 +217,6 @@ body {
 }
 
 .slogan-b-s-1 {
-    font-family: 'Red Hat Display';
     text-align: left;
     font-size: 40px;
     font-weight: 600;
@@ -253,7 +247,6 @@ body {
 
 @media screen and (max-width: 800px) {
     .slogan-b-s-1 {
-        font-family: 'Red Hat Display';
         text-align: left;
         font-size: 30px;
         font-weight: 600;
@@ -264,7 +257,6 @@ body {
 }
 @media screen and (max-width: 600px) {
     .slogan-b-s-1 {
-        font-family: 'Red Hat Display';
         text-align: left;
         font-size: 26px;
         font-weight: 600;
@@ -324,7 +316,6 @@ body {
 }
 
 .judul-b-s-2 {
-    font-family: 'Red Hat Display';
     font-size: 38px;
     font-weight: 600;
     color: #23230a;
@@ -332,16 +323,14 @@ body {
 }
 
 .desc-b-s-2 {
-    font-family: 'Red Hat Display';
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 400;
     color: #23230a;
     margin-bottom: 50px;
-    padding: 0px 50px;
+    padding: 0px 30px;
 }
 
 .desc-b-s-2 span{
-    font-family: 'Red Hat Display';
     font-size: 28px;
     font-weight: 600;
     color: #957647;
@@ -356,7 +345,6 @@ body {
     width: 225px;
     height: 40px;
     background-color: #50362A;
-    font-family: 'Red Hat Display';
     font-size: 14px;
     font-weight: 600;
     color: white;
@@ -373,63 +361,34 @@ body {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 800px) {
-    .judul-b-s-2 {
-        font-family: 'Red Hat Display';
-        font-size: 30px;
-        font-weight: 600;
-        color: #23230a;
-        margin-bottom: 50px;
+@media screen and (max-width: 900px) {
+    .isi-beranda-s-2 {
+        padding: 50px;
     }
     .desc-b-s-2 {
-        font-family: 'Red Hat Display';
-        font-size: 20px;
-        color: #23230a;
-        margin-bottom: 50px;
+        font-size: 22px;
     }
-    .button-b-s-2 {
-        width: 200px;
-        height: 40px;
-        background-color: transparent;
-        font-family: 'Red Hat Display';
-        font-size: 14px;
-        font-weight: 600;
-        color: #23230a;
-        border: 2px outset #e8b897;
-        border-radius: 30px 5px 30px 5px;
-        cursor: pointer;
+    .desc-b-s-2 span{
+        font-size: 22px;
     }
 }
 @media screen and (max-width: 500px) {
     .isi-beranda-s-2 {
-        background-color: transparent;
-        width: 100%;
-        padding: 30px;
-    }
-    .judul-b-s-2 {
-        font-family: 'Red Hat Display';
-        font-size: 20px;
-        font-weight: 600;
-        color: #23230a;
-        margin-bottom: 50px;
+        padding: 20px;
     }
     .desc-b-s-2 {
-        font-family: 'Red Hat Display';
-        font-size: 15px;
-        color: #23230a;
-        margin-bottom: 50px;
+        padding: 0;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+    .desc-b-s-2 span{
+        font-size: 14px;
     }
     .button-b-s-2 {
-        width: 130px;
-        height: 35px;
-        background-color: transparent;
-        font-family: 'Red Hat Display';
-        font-size: 12px;
-        font-weight: 600;
-        color: #23230a;
-        border: 2px outset #e8b897;
-        border-radius: 30px 5px 30px 5px;
-        cursor: pointer;
+        width: 150px;
+        height: 30px;
+        font-size: 10px;
+        font-weight: 300;
     }
 }
 
@@ -463,9 +422,8 @@ body {
     border-radius: 20px;
 }
 .desc-b-s-3 {
-    font-family: 'Red Hat Display';
-    font-size: 28px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 450;
     letter-spacing: 1.1px;
     color: #50362A;
     padding: 0 80px;
@@ -478,36 +436,31 @@ body {
     margin-top: 150px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .video-b-s-3 {
         min-width: 100%;
         height: auto;
     }
     .desc-b-s-3 {
-        font-family: 'Red Hat Display';
         font-size: 22px;
-        font-weight: 600;
-        color: #23230a;
         margin-bottom: 50px;
+        padding: 0;
+    }
+    .isi-beranda-s-3 hr{
+        margin-top: 80px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .isi-beranda-s-3 {
-        background-color: transparent;
-        width: 100%;
-        padding: 30px;
+        padding: 25px;
     }
-    .video-b-s-3 {
-        max-width: 100%;
-        height: auto;
-    }
-    p.desc-b-s-3 {
-        font-family: 'Red Hat Display';
+    .desc-b-s-3 {
         font-size: 12px;
-        font-weight: 600;
-        color: #23230a;
         margin-bottom: 20px;
+    }
+    .isi-beranda-s-3 hr{
+        margin-top: 50px;
     }
 }
 
@@ -614,13 +567,20 @@ body {
     margin-top: 150px;
 }
 
-.svg-bg {
+.svg-bg-1 {
+    display: block;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: auto;
     z-index: 0;
+}
+.svg-bg-1-1 {
+    display: none;
+}
+.svg-bg-1-2 {
+    display: none;
 }
 
 
@@ -633,6 +593,21 @@ body {
     }
 }
 @media screen and (max-width: 900px) {
+    .svg-bg-1 {
+        display: none;
+    }
+    .svg-bg-1-1 {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
+    .svg-bg-1-2 {
+        display: none;
+    }
     .isi-beranda-s-4 {
         padding: 40px;
     }
@@ -648,6 +623,7 @@ body {
     }
     .isi-dampak {
         flex-direction: row;
+        gap: 20px;
     }
     .desc-dampak {
         margin-right: 30px;
@@ -655,114 +631,48 @@ body {
         margin-top: 30px;
     }
     .img-b-s-4 {
-        max-width: 135px;
+        max-width: 130px;
     }
 }
 @media screen and (max-width: 500px) {
+    .svg-bg-1 {
+        display: none;
+    }
+    .svg-bg-1-1 {
+        display: none;
+    }
+    .svg-bg-1-2 {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
     .isi-beranda-s-4 {
         padding: 25px;
     }
     .judul-b-s-4 {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 40px;
     }
     .judul-b-s-4 span{
-        font-size: 20px;
+        font-size: 18px;
     }
     .isi-dampak {
-        gap: 20px;
-    }
-    .img-b-s-4 {
-        max-width: 100px;
-    }
-    .desc-dampak {
-        font-size: 18px;
-    }
-}
-
-/* @media screen and (max-width: 800px) {
-    .judul-b-s-4 {
-        font-family: 'Red Hat Display';
-        font-size: 28px;
-        font-weight: 600;
-        color: #23230a;
-        margin-bottom: 50px;
-    }
-    .isi-beranda-s-4 {
-        background-color: transparent;
-        width: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .dampak-b-s-4 {
-        gap: 1.5rem;
-    }
-    .img-b-s-4 {
-        max-width: 100px;
-        height: auto;
-        margin-left: 20px;
-        margin-top: 20px;
-    }
-
-    .desc-dampak {
-        font-family: 'Red Hat Display';
-        font-size: 20px;
-        font-weight: 600;
-        color: #895e3f;
-        margin-bottom: 40px;
-        text-align: left;
-        margin-right: 20px;
-        margin-top: 20px;
-    }
-    .ornamen-b-s-4 {
-        height: 40px;
-        background-color: #895e3f23;
-        align-self: end;
-        border-radius: 10px 0 10px 0;
-    }
-}
-@media screen and (max-width: 500px) {
-    .judul-b-s-4 {
-        font-family: 'Red Hat Display';
-        font-size: 18px;
-        font-weight: 600;
-        color: #23230a;
-        margin-bottom: 50px;
-    }
-    .isi-beranda-s-4 {
-        background-color: transparent;
-        width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .dampak-b-s-4 {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
+        gap: 0;
     }
     .img-b-s-4 {
         max-width: 80px;
-        height: auto;
-        margin-left: 20px;
-        margin-top: 20px;
     }
-
     .desc-dampak {
-        font-family: 'Red Hat Display';
         font-size: 16px;
-        font-weight: 600;
-        color: #895e3f;
-        margin-bottom: 40px;
-        text-align: left;
-        margin-right: 20px;
-        margin-top: 20px;
     }
-    .ornamen-b-s-4 {
-        height: 40px;
-        background-color: #895e3f23;
-        align-self: end;
-        border-radius: 10px 0 10px 0;
+    .isi-beranda-s-4 hr{
+        margin-top: 80px;
     }
-} */
+}
 
 /* -------- SECTION 5 -------- */
 .container-beranda-s-5 {
@@ -783,7 +693,6 @@ body {
     display: flex;
     background-color: transparent;
     width: 100%;
-    height: 500px;
     padding: 30px;
     gap: 35px;
     border-radius: 20px;
@@ -877,82 +786,60 @@ body {
     box-shadow: 1px 2px 3px rgb(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .isi-beranda-s-5 {
         flex-direction: column;
         align-items: center;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin: 0 50px;
         padding-right: 0;
     }
     .img-b-s-5 {
-        max-width: 80%;
-        padding-left: 0;
+        max-width: 85%;
     }
     .judul-b-s-5 {
         display: flex;
-        font-family: 'Red Hat Display';
         font-size: 24px;
-        font-weight: 600;
-        color: #23230a;
     }
     .desc-b-s-5 {
         max-width: 85%;
-        height: auto;
         text-align: left;
     }
     .desc-b-s-5-1 {
-        font-family: 'Red Hat Display';
         font-size: 16px;
-        font-weight: 500;
-        color: #766a61;
-        line-height: 30px;
+    }
+    .desc-b-s-5-1 span{
+        font-size: 30px;
     }
     .button-b-s-5 {
-        text-decoration: none;
-        font-family: 'Red Hat Display';
         font-size: 14px;
-        font-weight: 600;
-        color: #e8a273;
     }
 }
 @media screen and (max-width: 500px) {
     .isi-beranda-s-5 {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 20px;
-        margin-right: 20px;
-        padding-right: 0;
+        margin: 0;
         gap: 10px;
+        padding-top: 20px;
     }
     .img-b-s-5 {
         max-width: 80%;
     }
     .judul-b-s-5 {
-        display: flex;
-        font-family: 'Red Hat Display';
-        font-size: 20px;
-        font-weight: 600;
-        color: #23230a;
+        font-size: 18px;
     }
     .desc-b-s-5 {
         max-width: 85%;
-        height: auto;
         text-align: left;
     }
     .desc-b-s-5-1 {
-        font-family: 'Red Hat Display';
         font-size: 14px;
-        font-weight: 500;
-        color: #766a61;
-        line-height: 30px;
+    }
+    .desc-b-s-5-1 span{
+        font-size: 24px;
     }
     .button-b-s-5 {
-        text-decoration: none;
-        font-family: 'Red Hat Display';
-        font-size: 12px;
-        font-weight: 600;
-        color: #e8a273;
+        font-size: 11px;
+        width: 150px;
+        height: 30px;
     }
 }
 
@@ -983,6 +870,12 @@ body {
     height: auto;
     z-index: 0;
 }
+.svg-bg-2-1 {
+    display: none;
+}
+.svg-bg-2-2 {
+    display: none;
+}
 
 .isi-beranda-review {
     position: relative;
@@ -1010,7 +903,7 @@ body {
     border-radius: 20px;
     width: 30%;
     text-align: right;
-    padding-top: 120px;
+    padding-top: 80px;
 }
 .review1 {
     background-color: #FFFFFF;
@@ -1118,6 +1011,132 @@ body {
 .button-b-s-review:hover {
     color: white;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 900px) {
+    .svg-bg-2 {
+        display: none;
+    }
+    .svg-bg-2-1 {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
+    .svg-bg-2-2 {
+        display: none;
+    }
+    .isi-beranda-review {
+        padding: 50px;
+    }
+    .judul-and-review1 {
+        flex-direction: column;
+    }
+    .judul-review {
+        font-size: 34px;
+    }
+    .desc-review {
+        font-size: 18px;
+    }
+    .review2-and-review1 {
+        flex-direction: column;
+    }
+    .judul-desc-review {
+        width: 100%;
+        padding-top: 50px;
+    }
+    .review1 {
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+    }
+    .review2 {
+        align-self: end;
+        text-align: right;
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+    }
+    .review3 {
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+    }
+    .nama-review1, .desc-review1, .nama-review2, .desc-review2, .nama-review3, .desc-review3 {
+        font-size: 15px;
+    }
+    .petik-review {
+        width: 70px;
+        margin-right: 10%;
+        margin-bottom: 25%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .svg-bg-2 {
+        display: none;
+    }
+    .svg-bg-2-1 {
+        display: none;
+    }
+    .svg-bg-2-2 {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
+    .isi-beranda-review {
+        padding: 25px;
+    }
+    .judul-review {
+        font-size: 30px;
+    }
+    .desc-review {
+        font-size: 14px;
+    }
+    .review1 {
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    .review2 {
+        align-self: end;
+        text-align: right;
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    .review3 {
+        border: 1px solid #93846d;
+        border-radius: 15px;
+        width: 70%;
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    .nama-review1, .desc-review1, .nama-review2, .desc-review2, .nama-review3, .desc-review3 {
+        font-size: 12px;
+    }
+    .petik-review {
+        width: 60px;
+        margin-right: 10%;
+        margin-bottom: 35%;
+    }
+    .button-b-s-review {
+        width: 160px;
+        height: 30px;
+        font-size: 11px;
+        font-weight: 400;
+    }
 }
 
 /* -------- SECTION 6 -------- */
@@ -1307,84 +1326,81 @@ body {
     margin: 20px;
 }
 
-@media screen and (max-width: 800px) {
-    .container-beranda-s-6-1 {
-        height: 180px;
-    }
+@media screen and (max-width: 900px) {
     .isi-beranda-s-6 {
-        display: flex;
-        align-self: baseline;
-        background-color: transparent;
-        width: 100%;
-        padding: 50px;
-        padding-right: 0;
-        overflow: hidden;
+        padding: 50px 0 50px 50px;
     }
     .judul-b-s-6-1 {
-        display: flex;
-        font-family: 'Red Hat Display';
-        font-size: 24px;
-        font-weight: 600;
-        color: #23230a;
+        font-size: 28px;
         margin-top: 0;
     }
     .desc-b-s-6 {
-        display: flex;
-        font-family: 'Red Hat Display';
         font-size: 14px;
-        font-weight: 500;
-        color: #766a61;
     }
-    .img-news-b-s-6 {
-        width: 280px;
-        height: 170px;
-        border-radius: 15px;
-    }
-}
-@media screen and (max-width: 500px) {
-    .container-beranda-s-6-1 {
-        height: 180px;
-    }
-    .isi-beranda-s-6 {
-        display: flex;
-        flex-direction: column;
-        align-self: baseline;
-        background-color: transparent;
-        width: 100%;
-        padding: 20px;
-        padding-right: 0;
-        overflow: hidden;
-    }
-    .judul-b-s-6-1 {
-        display: flex;
-        font-family: 'Red Hat Display';
-        font-size: 20px;
-        font-weight: 600;
-        color: #23230a;
-        margin-top: 0;
-    }
-    .desc-b-s-6 {
-        display: flex;
-        font-family: 'Red Hat Display';
-        font-size: 14px;
-        font-weight: 500;
-        width: 65%;
-        color: #766a61;
+    .button-b-s-6 {
+        font-size: 11px;
+        font-weight: 400;
+        width: 150px;
+        height: 30px;
     }
     .news-b-s-6 {
-        margin-left: 0;
         gap: 20px;
+        padding-left: 0;
     }
     .img-news-b-s-6 {
-        width: 240px;
-        height: 150px;
-        border-radius: 15px;
+        width: 230px;
+        height: 140px;
     }
     .judul-news-b-s-6 {
         font-size: 14px;
     }
+}
+@media screen and (max-width: 500px) {
+    .isi-beranda-s-6 {
+        flex-direction: column;
+        padding: 80px 0 80px 20px;
+    }
+    .judul-b-s-6 {
+        align-self: end;
+        width: 80%;
+        padding-right: 25px;
+    }
+    .judul-b-s-6-1 {
+        font-size: 24px;
+    }
+    .desc-b-s-6 {
+        font-size: 14px;
+        justify-content: end;
+    }
+    .button-b-s-6 {
+        font-size: 10px;
+        font-weight: 400;
+        width: 125px;
+        height: 28px;
+        margin-top: 20px;
+    }
+    .news-b-s-6 {
+        gap: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .news-b-s-6-1 {
+        height: auto;
+        border-radius: 15px;
+    }
+    .img-news-b-s-6 {
+        width: 200px;
+        height: 120px;
+        border-radius: 15px 15px 0 0;
+    }
+    .judul-news-b-s-6 {
+        font-size: 13px;
+        padding-bottom: 40px;
+        margin: 10px;
+    }
     .button-b-s-6-1 {
         font-size: 11px;
+        margin: 20px 10px;
     }
 }
 
@@ -1465,87 +1481,70 @@ body {
     cursor: pointer;
     transition: width 0.3s ease-in-out;
 }
-/* @media screen and (max-width: 800px) {
+
+@media screen and (max-width: 900px) {
+    .container-beranda-s-7-1 {
+        height: 250px;
+    }
     .isi-beranda-s-7 {
-        align-self: baseline;
-        background-color: transparent;
-        width: 100%;
-        padding: 50px;
-        padding-top: 150px;
+        padding: 60px;
+        margin: 30px;
     }
     .judul-b-s-7 {
-        font-family: 'Red Hat Display';
-        font-size: 24px;
-        font-weight: 600;
-        color: #23230a;
-        margin-top: 0;
-        margin-bottom: 130px;
+        font-size: 20px;
     }
     .img-b-s-7 {
-        padding: 0 20px 20px 20px;
+        margin: 60px 0;
+        align-items: center;
+        gap: 20px;
     }
     .img-b-s-7-1 {
-        align-self: flex-end;
-        width: 75px;
-        height: 75px;
-    }
-    .button-b-s-7-1 {
+        width: 65px;
+    }.button-b-s-7-1 {
         width: 60px;
-        height: 35px;
-        font-size: 16px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 500;
     }
     .button-b-s-7-2 {
         width: 60px;
-        height: 35px;
-        font-size: 16px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 500;
     }
 }
 @media screen and (max-width: 500px) {
+    .container-beranda-s-7-1 {
+        height: 450px;
+    }
     .isi-beranda-s-7 {
-        display: flex;
-        flex-direction: column;
-        align-self: baseline;
-        background-color: transparent;
-        width: 100%;
-        padding: 20px;
-        padding-top: 150px;
+        padding: 40px;
+        margin: 40px;
     }
     .judul-b-s-7 {
-        font-family: 'Red Hat Display';
-        font-size: 16px;
-        font-weight: 600;
-        color: #23230a;
-        margin-top: 0;
-        margin-bottom: 0;
+        font-size: 20px;
     }
     .img-b-s-7 {
         flex-direction: column;
-        margin-top: 35px;
-        padding: 20px 20px 20px 0;
-        margin-bottom: 40px;
-        height: 600px;
-        width: 40px;
-        align-self: center;
+        margin: 40px 0;
+        align-items: center;
+        gap: 20px;
     }
     .img-b-s-7-1 {
-        align-self: flex-end;
-        width: 75px;
-        height: 75px;
-    }
-    .button-b-s-7 {
-        margin-bottom: 30px;
-    }
-    .button-b-s-7-1 {
+        width: 65px;
+    }.button-b-s-7-1 {
         width: 60px;
-        height: 35px;
-        font-size: 16px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 500;
     }
     .button-b-s-7-2 {
         width: 60px;
-        height: 35px;
-        font-size: 16px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 500;
     }
-} */
+}
   
 /* -------- FOOTER -------- */
 .footer {
@@ -1873,14 +1872,14 @@ body {
 }
 
 /* RESPONSIVE FOOTER */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .title-newsletter {
-        padding: 30px 30px;
+        padding-right: 30px; 
+        padding-left: 30px;
         font-size: 14px;
     }
     .f-newsletter-icon {
         gap: 40px;
-        margin-top: 0;
         margin-bottom: 30px;
         padding: 0;
     }
@@ -1944,13 +1943,16 @@ body {
         font-size: 13px;
         font-weight: 500;
     }
+    .f-info-con4 {
+        padding: 0;
+    }
     .info-4-text {
         margin-left: 0;
         font-size: 15px;
     }
     .as-store,
     .ps-store {
-        max-width: 100px;
+        max-width: 120px;
     }
     .f-cpr-con {
         flex-direction: column;
@@ -1967,12 +1969,12 @@ body {
 
 @media screen and (max-width: 500px) {
     .title-newsletter {
-        padding: 30px 30px;
+        padding-right: 30px; 
+        padding-left: 30px;
         font-size: 14px;
     }
     .f-newsletter-icon {
         gap: 40px;
-        margin-top: 0;
         margin-bottom: 30px;
         padding: 0;
     }

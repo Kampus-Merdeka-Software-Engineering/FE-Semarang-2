@@ -39,7 +39,7 @@
     font-weight: 600;
     text-align: center;
     color: #e6d5ca;
-    padding-top: 300px;
+    padding-top: 80px;
     letter-spacing: 0.5px;
     margin: 0;
 }
@@ -419,14 +419,16 @@
         font-weight: 500;
     }
 
+    .f-info-con4 {
+        padding: 0;
+    }
     .info-4-text {
         margin-left: 0;
         font-size: 15px;
     }
-
     .as-store,
     .ps-store {
-        max-width: 100px;
+        max-width: 120px;
     }
 
     .f-cpr-con {
