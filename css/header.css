@@ -7,7 +7,7 @@
     background-color: transparent;
     border-radius: 0 0 25px 25px;
     transition-duration: 0.5s;
-    z-index: 2;
+    z-index: 3;
 }
 
 .navcount {
@@ -31,7 +31,6 @@
 .logo {
     color: white;
     text-shadow: 1px 1px 3.5px black;
-    font-family: 'Red Hat Display';
     font-weight: 600;
     font-size: 26px;
     letter-spacing: 1.5px;
@@ -49,9 +48,7 @@
     text-decoration: none;
     text-align: center;
     font-size: 18px;
-    font-weight: 550;
-    font-family: 'Red Hat Display';
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1.2px;
     border-bottom: 3px solid transparent;
     padding-top: 10px;
@@ -65,9 +62,7 @@
     text-decoration: none;
     text-align: center;
     font-size: 18px;
-    font-weight: 550;
-    font-family: 'Red Hat Display';
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1.2px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -88,7 +83,7 @@
     color: white;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .navbar {
         display: block;
         padding-left: 0;
@@ -132,7 +127,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .navbar-right a {
         display: none;
     }
@@ -143,7 +138,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .navbar-right.responsive {
         position: relative;
     }
@@ -161,7 +156,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .logo {
         font-size: 18px;
         padding-left: 25px;
