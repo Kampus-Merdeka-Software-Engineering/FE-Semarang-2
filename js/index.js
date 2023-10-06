@@ -108,3 +108,17 @@ async function fetchNewestMedia() {
 }
 
 fetchNewestMedia();
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        // console.log(entry)
+        if(entry.isIntersecting) {
+            entry.target.classList.add('show-section')
+        } else {
+            entry.target.classList.remove('show-section')
+        }
+    })
+})
+
+const hiddenSectionElements = document.querySelectorAll('.hidden-section');
+hiddenSectionElements.forEach((el) => observer.observe(el))

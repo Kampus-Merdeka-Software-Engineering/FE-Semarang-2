@@ -2028,3 +2028,16 @@ body {
         font-size: 12px;
     }
 }
+
+.hidden-section {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100px);
+    transition: all 1.2s;
+}
+
+.show-section {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
