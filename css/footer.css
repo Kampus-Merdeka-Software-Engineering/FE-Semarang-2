@@ -171,7 +171,11 @@
     margin-top: 10px;
 }
 
-.fa-facebook-f,.fa-instagram,.fa-x-twitter,.fa-youtube {
+.fa-brands {
+    color: #50362A;
+}
+
+.fa .fa-brands .fa-facebook-f, .fa .fa-brands .fa-instagram, .fa .fa-brands .fa-x-twitter, .fa .fa-brands .fa-youtube {
     display: flex;
     flex-direction: column;
     font-size: 18px;

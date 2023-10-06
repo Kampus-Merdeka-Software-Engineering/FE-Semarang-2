@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
+* {
+    font-family: 'Poppins';
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -7,7 +11,6 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: 'Poppins';
 }
 
 /* -------- HEADER -------- */
@@ -1716,7 +1719,11 @@ body {
     margin-top: 10px;
 }
 
-.fa-facebook-f,.fa-instagram,.fa-x-twitter,.fa-youtube {
+.fa-brands {
+    color: #50362A;
+}
+
+.fa .fa-brands .fa-facebook-f, .fa .fa-brands .fa-instagram, .fa .fa-brands .fa-x-twitter, .fa .fa-brands .fa-youtube {
     display: flex;
     flex-direction: column;
     font-size: 18px;

@@ -12,6 +12,10 @@
     --dark-shade-of-gray: #23230a;
 }
 
+* {
+    font-family: 'Poppins';
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -19,7 +23,6 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: 'Poppins';
 }
 
 /** -------- SECTION 1 -------- */
