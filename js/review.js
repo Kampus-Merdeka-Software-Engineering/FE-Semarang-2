@@ -100,7 +100,7 @@ function getFormReviewValues() {
 /* Function to post data review to server in form review */
 async function postDataReviewToServer(data) {
     try {
-        const apiUrl = 'https://back-end-semarang-group-2-production.up.railway.app/api/reviews/';
+        const apiUrl = 'https://be-semarang-2-production.up.railway.app/api/reviews/';
         // const apiUrl = 'http://localhost:3000/api/reviews/';
         const response = await axios.post(apiUrl, data);
 
@@ -156,20 +156,8 @@ form.addEventListener('keydown', () => {
 
         input.addEventListener('blur', () => {
             setBorderColorEmail();
-            // checkRecaptcha()
         });
     });
-
-    // const isRecaptchaChecked = grecaptcha.getResponse().length !== 0;
-
-    // if (isRecaptchaChecked) {
-    //     console.log('reCAPTCHA telah dicentang');
-    //     document.getElementById("btnSubmit").removeAttribute("disabled");
-    // } else {
-    //     console.log('reCAPTCHA belum dicentang');
-    //     document.getElementById("btnSubmit").disabled = true;
-    // }
-    // checkRecaptcha()
 })
 
 /* Submit a form with the id `formReview` for the process of saving new Review data to the database */
@@ -180,8 +168,6 @@ form.addEventListener('submit', async (event) => {
     if (!captchaResponse.length > 0) {
         openPopupError('Captcha not complete', 'btnSubmit')
     }
-
-    // console.log(captchaResponse)
 
     const emailReview = document.getElementById('email').value;
 
@@ -199,15 +185,6 @@ form.addEventListener('submit', async (event) => {
 })
 
 function setupFormEventListeners() {
-    // const isRecaptchaChecked = grecaptcha.getResponse().length !== 0;
-
-    // if (isRecaptchaChecked) {
-    //     console.log('reCAPTCHA telah dicentang');
-    // } else {
-    //     console.log('reCAPTCHA belum dicentang');
-    // }
-
-    // document.getElementById("btnSubmit").removeAttribute("disabled");
     checkRecaptcha()
 }
 
@@ -232,7 +209,6 @@ form.addEventListener('keyup', checkRecaptcha);
 /* TRANSITION */
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        // console.log(entry)
         if(entry.isIntersecting) {
             entry.target.classList.add('show-section')
         } else {

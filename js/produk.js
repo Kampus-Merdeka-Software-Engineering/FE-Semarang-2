@@ -1,6 +1,6 @@
 async function fetchDataByCategory(category) {
   try {
-      const response = await axios.get(`https://back-end-semarang-group-2-production.up.railway.app/api/products/category/${category}`);
+      const response = await axios.get(`https://be-semarang-2-production.up.railway.app/api/products/category/${category}`);
       const products = response.data.slice(0, 6);
 
       const productContainer = document.getElementById("product-container");
@@ -117,3 +117,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+/* TRANSITION */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('show-section')
+        } else {
+            entry.target.classList.remove('show-section')
+        }
+    })
+})
+
+const hiddenSectionElements = document.querySelectorAll('.hidden-section');
+hiddenSectionElements.forEach((el) => observer.observe(el))

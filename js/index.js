@@ -67,7 +67,7 @@ setInterval(toggleImages, 8000);
 // FETCH REVIEW
 async function fetchReviewAndDisplay() {
     try {
-        const { data: firstThreeReviews } = await axios.get('https://back-end-semarang-group-2-production.up.railway.app/api/reviews/analyze-reviews');
+        const { data: firstThreeReviews } = await axios.get('https://be-semarang-2-production.up.railway.app/api/reviews/analyze-reviews');
 
         firstThreeReviews.slice(0, 3).forEach((review, index) => {
             const element = document.querySelector(`.review${index + 1}`);
@@ -90,7 +90,7 @@ fetchReviewAndDisplay();
 // FETCH MEDIA
 async function fetchNewestMedia() {
     try {
-        const { data: firstThreeMedia } = await axios.get('https://back-end-semarang-group-2-production.up.railway.app/api/media/latest');
+        const { data: firstThreeMedia } = await axios.get('https://be-semarang-2-production.up.railway.app/api/media/latest');
 
         const media1Elements = document.querySelectorAll('.news-b-s-6-1');
 

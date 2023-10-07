@@ -123,7 +123,7 @@ function getFormContactValues() {
 /* Function to post data contact to server in form contact */
 async function postDataContactToServer(data) {
     try {
-        const apiUrl = 'https://back-end-semarang-group-2-production.up.railway.app/api/contacts/';
+        const apiUrl = 'https://be-semarang-2-production.up.railway.app/api/contacts/';
         // const apiUrl = 'http://localhost:3000/api/contacts/';
         const response = await axios.post(apiUrl, data);
 
@@ -189,40 +189,6 @@ form.addEventListener('keydown', () => {
     else enableSubmitButton();
 })
 
-/* Invisible */
-// async function onSubmitContact(token) {
-//     const formData = getFormContactValues(token);
-
-//     try {
-//         const response = await postDataContactToServer(formData);
-//         handleSuccessContact(response);
-//     } catch (error) {
-//         handleErrorContact(error.message);
-//     }
-// }
-
-// async function onloadCallbackContact() {
-//     grecaptcha.render('btnSubmit', {
-//         'sitekey' : '6LeSV3YoAAAAAEtbDS_U4xQMNR-RrjkUtTKuXPbT',
-//         'callback' : onSubmitContact
-//     });
-// };
-
-// form.addEventListener('submit', async (event) => {
-//     event.preventDefault();
-
-//     grecaptcha.ready(async () => {
-//         try {
-//             const token = await grecaptcha.execute();
-//             onSubmitContact(token);
-//         } catch (error) {
-//             console.error(error);
-//             handleErrorContact(error.message);
-//         }
-//     });
-// });
-/* End Invisible */
-
 /* Submit a form with the id `formContact` for the process of saving new Contact data to the database */
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -282,7 +248,6 @@ form.addEventListener('keyup', checkRecaptcha);
 /* TRANSITION */
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        // console.log(entry)
         if(entry.isIntersecting) {
             entry.target.classList.add('show-section')
         } else {
