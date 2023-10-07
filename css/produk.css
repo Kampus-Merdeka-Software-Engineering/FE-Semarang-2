@@ -5,18 +5,20 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    overflow-x: hidden;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 /* -------- SECTION 1 -------- */
 .container-produk-s-1 {
-  position: relative;
-  display: flex;
+  /* position: relative;
+  display: flex; */
+  display: block;
+  height: 100vh;
 }
 
 .container-produk-s-1-1 {
@@ -41,7 +43,11 @@ body {
 
 .gambar-produk-s-1-1 {
   width: 100%;
+  height: 100vh;
   object-fit: cover;
+  position: absolute;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
 }
 
 .slogan-p-s-1 {
@@ -64,10 +70,12 @@ body {
 }
 
 @keyframes appearDisappear {
+
   0%,
   100% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
@@ -79,18 +87,21 @@ body {
     font-weight: 600;
   }
 }
+
 @media screen and (max-width: 700px) {
   .slogan-p-s-1 {
     font-size: 25px;
     font-weight: 600;
   }
 }
+
 @media screen and (max-width: 500px) {
   .slogan-p-s-1 {
     font-size: 16px;
     font-weight: 500;
   }
 }
+
 /* -------- SECTION 2 -------- */
 .container-produk-s-2 {
   background-color: white;
@@ -163,11 +174,11 @@ body {
   font-weight: 400;
 }
 
-.another-caption-p-s-2 ul{
+.another-caption-p-s-2 ul {
   padding-left: 16px;
 }
 
-.another-caption-p-s-2 ul li{
+.another-caption-p-s-2 ul li {
   font-size: 24px;
   padding-left: 25px;
   color: #D9D9D9;
@@ -179,41 +190,51 @@ body {
     padding: 50px;
     gap: 20px;
   }
+
   .caption-p-s-2 {
     padding-right: 0;
   }
+
   .desc-p-s-2 {
     font-size: 30px;
     font-weight: 700;
   }
+
   .img-hp-p-s-2 {
     align-self: center;
   }
 }
+
 @media screen and (max-width: 500px) {
   .isi-produk-s-2 {
     padding: 20px;
     gap: 10px;
     margin-top: 40px;
   }
+
   .desc-higlight-p-s-2 {
     font-size: 14px;
   }
+
   .desc-p-s-2 {
     font-size: 24px;
     font-weight: 600;
   }
+
   .container-caption-p-s-2 {
     padding-left: 20px;
     margin-bottom: 20px;
   }
+
   .another-caption-p-s-2 p {
     font-size: 14px;
     font-weight: 400;
   }
-  .another-caption-p-s-2 ul li{
+
+  .another-caption-p-s-2 ul li {
     padding-left: 10px;
   }
+
   .img-hp-p-s-2 img {
     width: 280px;
   }
@@ -276,10 +297,11 @@ body {
   color: #f6f4f0;
 }
 
-.line{
+.line {
   width: 100%;
 }
-.line div{
+
+.line div {
   height: 1px;
   background-color: black;
   margin: 0 50px 20px 50px;
@@ -292,21 +314,25 @@ body {
   background-color: white;
   padding: 0 50px;
 }
+
 .product-box {
   background-color: white;
   text-align: left;
 }
+
 .product-image {
   max-width: 100%;
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
+
 .product-name {
   padding-left: 20px;
   font-size: 16px;
   font-weight: 400;
 }
+
 .product-price {
   padding-left: 20px;
   padding-bottom: 30px;
@@ -340,27 +366,33 @@ body {
   .judul-p-s-3 {
     font-size: 35px;
   }
+
   .list-categories {
     padding: 0 30px;
   }
-  .line div{
+
+  .line div {
     margin: 0 30px 15px 30px;
   }
+
   .product-container {
     padding: 0 30px;
     gap: 10px;
   }
+
   .product-name {
     padding-left: 15px;
     font-size: 14px;
     font-weight: 400;
   }
+
   .product-price {
     padding-left: 15px;
     padding-bottom: 20px;
     font-size: 16px;
     font-weight: 700;
   }
+
   .btn-kunjugi-creatopia {
     width: 200px;
     height: 34px;
@@ -368,40 +400,62 @@ body {
     font-weight: 500;
   }
 }
+
 @media screen and (max-width: 500px) {
   .judul-p-s-3 {
     font-size: 25px;
     margin-bottom: 0;
   }
+
   .list-categories {
     padding: 0 15px;
   }
+
   .list-categories .category {
     font-size: 11px;
     border: 1.5px solid #725b38;
   }
-  .line div{
+
+  .line div {
     margin: 0 15px 8px 15px;
   }
+
   .product-container {
     padding: 0 15px;
     gap: 7px;
   }
+
   .product-name {
     padding-left: 8px;
     font-size: 12px;
     font-weight: 400;
   }
+
   .product-price {
     padding-left: 8px;
     padding-bottom: 20px;
     font-size: 14px;
     font-weight: 700;
   }
+
   .btn-kunjugi-creatopia {
     width: 180px;
     height: 30px;
     font-size: 11px;
     font-weight: 500;
   }
+}
+
+/** -------- TRANSITION -------- */
+.hidden-section {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100px);
+  transition: all 1.2s;
+}
+
+.show-section {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }

@@ -16,6 +16,7 @@ body {
 .icon {
     size: 100px;
 }
+
 /* HEADER */
 .logo-tentang {
     width: 150px;
@@ -91,6 +92,7 @@ body {
     width: 100%;
     object-fit: cover;
 }
+
 @media screen and (max-width: 900px) {
     .isi-visimisi-s-1 {
         padding: 80px 20px 80px 50px;
@@ -98,31 +100,39 @@ body {
     }
 
 }
+
 @media screen and (max-width: 500px) {
     .container-visimisi-s-1-1 {
         flex-direction: column-reverse;
     }
+
     .isi-visimisi-s-1 {
         padding: 40px 30px 40px 30px;
         background-color: transparent;
     }
+
     .container-img-visimisi {
         height: 250px;
     }
+
     .img-visimisi {
         height: inherit;
     }
+
     .judul-visi {
         font-size: 16px;
         padding: 3px 13px;
     }
+
     .desc-visi {
         font-size: 11px;
     }
+
     .judul-misi {
         font-size: 16px;
         padding: 3px 13px;
     }
+
     .desc-misi {
         font-size: 11px;
     }
@@ -235,7 +245,7 @@ body {
     margin-left: 5px;
 }
 
-.isi-tentang-s-1 hr{
+.isi-tentang-s-1 hr {
     height: 0.8px;
     background-color: #957647;
     margin-top: 150px;
@@ -245,37 +255,45 @@ body {
     .isi-tentang-s-1 {
         padding: 50px;
     }
+
     .judul-t-s-1 {
         font-size: 32px;
     }
+
     .desc-t-s-1 {
         font-size: 20px;
     }
+
     .isi-t-s-1 {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
         margin: 50px 0;
         padding: 0;
     }
+
     .img-t-s-1 {
         width: 125px;
         height: 125px;
     }
+
     .team-name {
         font-size: 17px;
         padding: 0 20px;
     }
+
     .team-contact {
         margin-top: 15px;
     }
+
     .text-team-contact {
         font-size: 10px;
     }
+
     .logo-team-contact {
         max-height: 12px;
     }
-    
-    .isi-tentang-s-1 hr{
+
+    .isi-tentang-s-1 hr {
         margin-top: 100px;
     }
 }
@@ -284,39 +302,49 @@ body {
     .isi-tentang-s-1 {
         padding: 20px;
     }
+
     .judul-t-s-1 {
         font-size: 24px;
     }
+
     .desc-t-s-1 {
         font-size: 16px;
     }
+
     .isi-t-s-1 {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 15px;
         margin: 35px 0;
         padding: 0;
     }
+
     .isi-t-s-1-1 {
         border: 1px solid rgb(200, 200, 200);
     }
+
     .img-t-s-1 {
         width: 100px;
         height: 100px;
     }
+
     .team-name {
         font-size: 15px;
         padding: 0 20px;
     }
+
     .team-contact {
         margin-top: 15px;
     }
+
     .text-team-contact {
         font-size: 9px;
     }
+
     .logo-team-contact {
         max-height: 10px;
     }
-    .isi-tentang-s-1 hr{
+
+    .isi-tentang-s-1 hr {
         margin-top: 80px;
     }
 }
@@ -327,10 +355,10 @@ body {
     z-index: 0;
     background: white;
     width: 100%;
-    
+
 }
 
-.container-tentang-s-2-1{
+.container-tentang-s-2-1 {
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -339,6 +367,7 @@ body {
     max-width: 1300px;
     margin: auto;
 }
+
 .isi-tentang-s-2 {
     display: flex;
     flex-direction: column;
@@ -347,6 +376,7 @@ body {
     padding: 80px;
     padding-bottom: 300px;
 }
+
 .judul-tentang-s-2 {
     text-align: center;
     font-size: 40px;
@@ -354,6 +384,7 @@ body {
     color: #50362A;
     margin: 0;
 }
+
 .desc-tentang-s-2 {
     text-align: center;
     font-size: 20px;
@@ -367,25 +398,30 @@ body {
         padding: 50px;
         padding-bottom: 300px;
     }
+
     .judul-tentang-s-2 {
         font-size: 32px;
         font-weight: 600;
     }
+
     .desc-tentang-s-2 {
         font-size: 17px;
         font-weight: 400;
         margin-top: 30px;
     }
 }
+
 @media screen and (max-width: 500px) {
     .isi-tentang-s-2 {
         padding: 20px;
         padding-bottom: 200px;
     }
+
     .judul-tentang-s-2 {
         font-size: 24px;
         font-weight: 600;
     }
+
     .desc-tentang-s-2 {
         font-size: 14px;
         font-weight: 400;
@@ -401,7 +437,7 @@ body {
 .container-tentang-s-3-1 {
     position: relative;
     height: 500px;
-    background-color:  transparent;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -410,7 +446,7 @@ body {
     margin: auto;
 }
 
-.isi-t-s-3{
+.isi-t-s-3 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -443,6 +479,7 @@ body {
     font-size: 22px;
     color: #957647;
 }
+
 .desc-t-s-3 p {
     font-weight: 400;
     font-size: 16px;
@@ -450,7 +487,8 @@ body {
     margin-top: 50px;
     line-height: 35px;
 }
-.desc-t-s-3 p span{
+
+.desc-t-s-3 p span {
     font-weight: 700;
     font-size: 34px;
     color: #F6F4F0;
@@ -460,52 +498,64 @@ body {
     .container-tentang-s-3-1 {
         height: 650px;
     }
-    .isi-t-s-3{
+
+    .isi-t-s-3 {
         flex-direction: column;
         padding: 0 50px;
         gap: 20px;
     }
+
     .img-t-s-3-bg {
         width: 70%;
         padding-bottom: 0;
     }
+
     .desc-t-s-3 {
         width: 100%;
         padding-bottom: 40px;
     }
+
     .desc-t-s-3 p {
         font-weight: 400;
         font-size: 14px;
     }
-    .desc-t-s-3 p span{
+
+    .desc-t-s-3 p span {
         font-weight: 700;
         font-size: 30px;
     }
 }
+
 @media screen and (max-width: 500px) {
     .container-tentang-s-3-1 {
         height: 650px;
     }
-    .isi-t-s-3{
+
+    .isi-t-s-3 {
         padding: 0 20px;
         gap: 10px;
     }
+
     .img-t-s-3-bg {
         width: 90%;
     }
+
     .desc-t-s-3 {
         padding-bottom: 20px;
     }
+
     .desc-t-s-3 h2 {
         font-weight: 500;
         font-size: 15px;
     }
+
     .desc-t-s-3 p {
         font-weight: 400;
         font-size: 12px;
         margin-top: 20px;
     }
-    .desc-t-s-3 p span{
+
+    .desc-t-s-3 p span {
         font-weight: 700;
         font-size: 20px;
     }
@@ -518,7 +568,7 @@ body {
 }
 
 .container-tentang-s-4-1 {
-    background-color:  transparent;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -527,6 +577,7 @@ body {
     max-width: 1300px;
     margin: auto;
 }
+
 .isi-t-s-4 {
     display: flex;
     gap: 50px;
@@ -534,7 +585,8 @@ body {
     align-items: center;
     padding: 80px;
 }
-.judul-t-s-4{
+
+.judul-t-s-4 {
     display: flex;
     flex-direction: column;
     flex: 50%;
@@ -556,7 +608,7 @@ body {
     margin: 0;
 }
 
-.desc-t-s-4 span{
+.desc-t-s-4 span {
     font-weight: 700;
     font-size: 34px;
     color: #50362A;
@@ -592,44 +644,66 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-    .isi-t-s-4{
+    .isi-t-s-4 {
         flex-direction: column;
         padding: 50px;
         gap: 20px;
     }
+
     .img-t-s-4-bg {
         width: 70%;
     }
+
     .desc-t-s-4 {
         font-weight: 400;
         font-size: 16px;
     }
-    .desc-t-s-4 span{
+
+    .desc-t-s-4 span {
         font-weight: 700;
         font-size: 30px;
     }
 }
+
 @media screen and (max-width: 500px) {
-    .isi-t-s-4{
+    .isi-t-s-4 {
         padding: 20px;
         gap: 10px;
     }
+
     .img-t-s-4-bg {
         width: 90%;
     }
+
     .desc-t-s-4 {
         font-weight: 400;
         font-size: 14px;
     }
-    .desc-t-s-4 span{
+
+    .desc-t-s-4 span {
         font-weight: 700;
         font-size: 24px;
     }
+
     .button-tentang-s-4 {
         width: 180px;
         height: 30px;
         font-size: 12px;
         font-weight: 500;
     }
-    
+
+}
+
+/** -------- TRANSITION -------- */
+.hidden-section {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100px);
+    transition: all 1.2s;
+}
+
+.show-section {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }

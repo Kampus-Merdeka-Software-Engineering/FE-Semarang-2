@@ -401,7 +401,7 @@ body {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 1.2s;
+    transition: all 2.7s;
 }
 
 .show-section {
@@ -420,9 +420,9 @@ body {
 /** -------- END TRANSITION -------- */
 
 /** -------- RESPONSIVE BREAKPOINT -------- */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
     .item1 .form {
-        width: 860px;
+        width: 780px;
     }
 }
 
@@ -435,7 +435,8 @@ body {
         /* height: calc(100% - 219px); */
         /* height: calc(100% - 195px); */
         /* height: calc(100% - 168px); */
-        height: calc(100% - 174px);
+        /* height: calc(100% - 174px); */
+        height: calc(100% - 207px);
     }
     
     .item2-2 .map {

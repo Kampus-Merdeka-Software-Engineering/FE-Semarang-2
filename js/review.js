@@ -205,17 +205,3 @@ const checkRecaptcha = function () {
 /* event listener untuk elemen formulir */
 form.addEventListener('click', checkRecaptcha);
 form.addEventListener('keyup', checkRecaptcha);
-
-/* TRANSITION */
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if(entry.isIntersecting) {
-            entry.target.classList.add('show-section')
-        } else {
-            entry.target.classList.remove('show-section')
-        }
-    })
-})
-
-const hiddenSectionElements = document.querySelectorAll('.hidden-section');
-hiddenSectionElements.forEach((el) => observer.observe(el))

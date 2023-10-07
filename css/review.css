@@ -421,31 +421,8 @@ body {
 
 /** -------- END FOOTER -------- */
 
-/** -------- TRANSITION -------- */
-.hidden-section {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1.2s;
-}
-
-.show-section {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-
-/* .info {
-    transition-delay: 550ms;
-}
-
-.map {
-    transition-delay: 550ms;
-} */
-/** -------- END TRANSITION -------- */
-
 /** -------- RESPONSIVE BREAKPOINT -------- */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
     .item1 .form {
         width: 840px;
     }
@@ -462,7 +439,8 @@ body {
         /* height: calc(100% - 219px); */
         /* height: calc(100% - 201px); */
         /* height: calc(100% - 173px); */
-        height: calc(100% - 178px);
+        /* height: calc(100% - 178px); */
+        height: calc(100% - 212px);
     }
 
     .item2-2 .map {
@@ -478,8 +456,8 @@ body {
     .slogan-b-s-1 {
         font-size: 55px;
         /* padding-left: 13vh; */
-        padding-left: 29vh;
-        padding-right: 27vh;
+        padding-left: 20vh;
+        padding-right: 20vh;
     }
 }
 
@@ -487,8 +465,8 @@ body {
     .slogan-b-s-1 {
         font-size: 55px;
         /* padding-left: 13vh; */
-        padding-left: 21vh;
-        padding-right: 21vh;
+        padding-left: 13vh;
+        padding-right: 13vh;
     }
 
     .isi-review-s-1 p {
@@ -539,8 +517,8 @@ body {
 @media screen and (max-width: 800px) {
     .slogan-b-s-1 {
         font-size: 50px;
-        padding-left: 14vh;
-        padding-right: 14vh;
+        padding-left: 6vh;
+        padding-right: 6vh;
     }
 
     .isi-review-s-1 p {
@@ -565,8 +543,8 @@ body {
 @media screen and (max-width: 600px) {
     .slogan-b-s-1 {
         font-size: 42px;
-        padding-left: 14vh;
-        padding-right: 14vh;
+        padding-left: 7vh;
+        padding-right: 7vh;
     }
 
     .isi-review-s-1 p {
@@ -582,8 +560,8 @@ body {
 @media screen and (max-width: 550px) {
     .slogan-b-s-1 {
         font-size: 42px;
-        padding-left: 17vh;
-        padding-right: 17vh;
+        padding-left: 3vh;
+        padding-right: 3vh;
     }
 
     .isi-review-s-1 p {
@@ -621,8 +599,8 @@ body {
 @media screen and (max-width: 500px) {
     .slogan-b-s-1 {
         font-size: 40px;
-        padding-left: 13vh;
-        padding-right: 13vh;
+        padding-left: 3vh;
+        padding-right: 3vh;
     }
 
     .isi-review-s-1 p {
@@ -639,9 +617,8 @@ body {
 @media screen and (max-width:450px) {
     .slogan-b-s-1 {
         font-size: 40px;
-        padding-left: 5vh;
-        /* padding-right: 3vh; */
-        padding-right: 5vh;
+        padding-left: 0vh;
+        padding-right: 0vh;
     }
 
     .isi-review-s-1 p {
@@ -657,8 +634,6 @@ body {
 @media screen and (max-width:400px) {
     .slogan-b-s-1 {
         font-size: 35px;
-        padding-left: 2vh;
-        padding-right: 2vh;
     }
 
     .isi-review-s-1 p {
@@ -699,7 +674,6 @@ body {
     .slogan-b-s-1 {
         text-align: center;
         font-size: 30px;
-        /* padding-left: 0vh; */
     }
 
     .isi-review-s-1 p {
@@ -761,5 +735,4 @@ body {
         -webkit-transform-origin: 0 0;
     }
 }
-
 /** -------- END RESPONSIVE BREAKPOINT -------- */
