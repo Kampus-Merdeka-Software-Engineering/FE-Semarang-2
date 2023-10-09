@@ -85,7 +85,7 @@ body {
 .container-img-visimisi {
     display: flex;
     flex: 40%;
-    background-color: yellow;
+    background-color: transparent;
 }
 
 .img-visimisi {
