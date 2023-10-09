@@ -133,7 +133,6 @@ async function postDataContactToServer(data) {
 
         return response.data;
     } catch (error) {
-        // throw new Error(error.message);
         if (error.response && error.response.status === 429) {
             const errorMessage = 'Terlalu banyak permintaan, coba lagi nanti.';
             console.error(errorMessage);
@@ -197,8 +196,6 @@ form.addEventListener('submit', async (event) => {
     if (!captchaResponse.length > 0) {
         openPopupError('Captcha not complete')
     }
-
-    // console.log(captchaResponse)
 
     const emailContact = document.getElementById('email').value;
 
